@@ -35,4 +35,14 @@ HTTPS y el dominio `www.e-evhsa.com.ar` se configuran en Firebase Hosting / App 
 
 ## Variables sensibles
 
-La `apiKey` web de Firebase es pública por diseño y se protege con reglas. Las credenciales de cuenta de servicio (`FIREBASE_PRIVATE_KEY`) solo van en el servidor.
+La `apiKey` web de Firebase es un identificador de cliente (no un secreto de servidor) y se protege con restricciones de API, App Check y reglas de Firestore/Storage. Aun así **no se commitea**: GitHub Secret Scanning la detecta como Google API Key.
+
+Antes del primer rollout, crear el secreto en el proyecto:
+
+```bash
+firebase apphosting:secrets:set NEXT_PUBLIC_FIREBASE_API_KEY --project vercelli-2665c
+```
+
+Localmente va en `.env.local` (ignorado por git). Las credenciales de cuenta de servicio (`FIREBASE_PRIVATE_KEY`) solo van en el servidor.
+
+Si GitHub avisó que la clave quedó en el historial, rotarla en Google Cloud Console → APIs y servicios → Credenciales, actualizar `.env.local` y el secreto, y recién entonces GitHub cierra la alerta.

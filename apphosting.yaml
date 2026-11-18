@@ -14,8 +14,11 @@ env:
     availability:
       - BUILD
       - RUNTIME
+  # No commitear la apiKey: GitHub Secret Scanning la marca como Google API Key.
+  # Crear el secreto con:
+  #   firebase apphosting:secrets:set NEXT_PUBLIC_FIREBASE_API_KEY --project vercelli-2665c
   - variable: NEXT_PUBLIC_FIREBASE_API_KEY
-    value: AIzaSyDa4H7Sl0zfhYvvwxHlun_cPtG4ZbMAm9o
+    secret: NEXT_PUBLIC_FIREBASE_API_KEY
     availability:
       - BUILD
       - RUNTIME
