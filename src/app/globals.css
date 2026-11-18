@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-evhsa-sand text-evhsa-ink antialiased;
+}
+
+:focus-visible {
+  outline: 3px solid #11671b;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[80] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:shadow-card;
+}
+
+.prose-evhsa p {
+  @apply mb-4 text-base leading-7 text-evhsa-muted;
+}
+
+.prose-evhsa ul {
+  @apply mb-6 list-disc space-y-2 pl-5 text-evhsa-muted;
+}
+
+.prose-evhsa li {
+  @apply leading-7;
+}
+
+.leaflet-container {
+  font-family: inherit;
+}
+
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+}

@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+    <title> Evhsa - Cargar Curriculum Vitae </title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=ABeeZee:400,400italic' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css' />
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Bootstrap  -->
+    <link href="/css/Site.css" rel="stylesheet" type="text/css" />
+    <link href="/css/button.css" rel="stylesheet" type="text/css" />
+    <link href="/css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/jquery.galleryview-3.0-dev.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/sweetalert2.min.css">
+    <link rel="stylesheet" href="/css/spinner.css">
+    <style type="text/css">
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        .modal-contenido {
+            width: 100vw;
+            height: 100vh;
+            left: 50vw;
+            top: 50vh;
+            position: relative;
+            font-size: 24px !important;
+        }
+
+        .modal {
+            z-index: 4000;
+            background-color: rgba(0, 0, 0, .8);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            pointer-events: none;
+            transition: all .5s;
+        }
+
+        .mostrar {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .input-error {
+            border: 1px solid #ff0000;
+            background-color: #ffeeee;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        textarea:focus {
+            background-color: #c8d8e3;
+        }
+
+        .msg-error {
+            color: red;
+        }
+
+        .alert-primary {
+            color: #004085;
+            background-color: #cce5ff;
+            border-color: #b8daff;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+
+        .alert {
+            position: relative;
+            padding: .75rem 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            border-radius: .25rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- MODAL CARGANDO -->
+    <div class="loading" style="display:none;">Cargando</div>
+
+    
+    
+
+    <div class="page">
+        <div id="header">
+            <div style="position:absolute;top:10px;left:0px;" class="no-print">
+                <a id="lnkHome" href="/"><img src="/images/logo.png" alt="Evhsa" style="vertical-align:middle;"
+                        border="0" /></a>
+            </div>
+
+            
+
+            <div id="menusuperiorderecho" class="no-print">
+                <ul id="topMenuList">
+                    <li>
+                        <a href="#">EMPRESA&nbsp;&nbsp;&nbsp;</a>
+                        <ul>
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Antecedentes">ANTECEDENTES SOCIALES</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Historia">HISTORIA</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Objetivos">OBJETIVOS</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/QuienesSomos">QUIENES SOMOS</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Servicios">EL SERVICIO</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Calidad">NORMAS Y POLÍTICAS DE CALIDAD</a></li> -->
+                            <li><a href="/Empresa/Antecedentes">ANTECEDENTES SOCIALES</a></li>
+                            <li><a href="/Empresa/Historia">HISTORIA</a></li>
+                            <li><a href="/Empresa/Objetivos">OBJETIVOS</a></li>
+                            <li><a href="/Empresa/QuienesSomos">QUIENES SOMOS</a></li>
+                            <li><a href="/Empresa/Servicios">EL SERVICIO</a></li>
+                            <li><a href="/Empresa/Calidad">NORMAS Y POLÍTICAS DE CALIDAD</a></li>
+                        </ul>
+                    </li>
+                    <li>|</li>
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="http://www.e-evhsa.com.ar/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;
+                    </li> -->
+                    <li>&nbsp;&nbsp;&nbsp;<a href="/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;
+                    </li>
+                    <li>|</li>
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a
+                            href="http://www.e-evhsa.com.ar/Contacto?m=CONSULTA">CONTACTO</a>&nbsp;&nbsp;&nbsp;</li> -->
+                    <!-- PARA WEB NODE -->
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;</li> -->
+                    <!-- PARA WEB PERI -->
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="http://www.e-evhsa.com.ar/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;</li> -->
+                    <!-- <li>|</li> -->
+                    <!-- PARA WEB NODE -->
+                    <li>&nbsp;&nbsp;&nbsp;<a href="/Contacto?m=CONSULTA">CONTACTO</a></li>
+                    <!-- PARA WEB PERI -->
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="http://www.e-evhsa.com.ar/Contacto?m=CONSULTA">CONTACTO</a>&nbsp;&nbsp;&nbsp;</li> -->
+                </ul>
+            </div>
+
+            <!-- Esto es para que tome el MARGIN del div siguiente -->
+            <div style="clear:both;"></div>
+
+            <div id="submenusuperiorderecho" class="no-print">
+                <ul id="topSubMenuList">
+                    <!-- PARA WEB NODE -->
+                    <li><a href="/Horarios">HORARIOS</a></li>
+                    <!-- PARA WEB PERI -->
+                    <!-- <li><a href="http://www.e-evhsa.com.ar/SalidasCabecera/Horarios">HORARIOS</a></li> -->
+                </ul>
+            </div>
+        </div>
+
+        <div id="main">
+            
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<div class="imageOnTop">
+    <img id="imgHeader" src="/images/header/hdr_ccv.jpg" alt="Imagen institucional" title="EVHSA" border="0" style="display: inline;">
+</div>
+
+
+
+
+
+
+<input type="hidden" id="mensaje" data-tipo="" data-titulo="" data-mensaje="">
+
+<div class="pageBody">    
+    <h1><span class="menu">CURRICULUM VITAE.</span>&nbsp;<span class="submenu">Estamos en constante búsqueda de nuevos valores para nuestra empresa.</span></h1>
+
+    <div style="padding-left:10px;">
+
+        <p class="fillClass">Complete el formulario con los datos personales y laborales y nos pondremos en contacto con usted ni bien tengamos la necesidad.</p>
+
+        
+
+        <form action="/Curriculum/CargarCV" id="formulario" method="POST" enctype="multipart/form-data">
+            <fieldset style="float:left;width:45%;">
+                <legend>DATOS PERSONALES</legend>
+                <div class="editor-label"><label for="Foto">Foto</label></div>
+                <input type="file" id="Archivo" name="Archivo" style="display: none;">
+                <div style="position:relative;width:130px;">
+                    <img id="imgLogo" src="/images/ico_user.png" alt="Foto" border="1" style="width:128px;height:128px;" />
+                    <div id="imgTag" class="divTagOverImg">Seleccionar foto..</div>
+                </div>
+
+                <span style="display:none;"><input class="text-box single-line" id="Foto" name="Foto" type="text"></span>
+                <div style="font-size:95%;color:#999;">[Tamaño máximo: 150Kb]</div>
+            
+                <div class="editor-label"><label for="Nombre">(*) Nombre:</label></div>
+                <div class="editor-field">
+                    <input class="text-box single-line" id="Nombre" name="Nombre" type="text" maxlength="75">
+                    <span class="msg-error errores" id="Nombre-error"></span>
+                </div>
+
+                <div class="editor-label"><label for="Apellido">(*) Apellido:</label></div>
+                <div class="editor-field">
+                    <input class="text-box single-line" id="Apellido" name="Apellido" type="text" maxlength="75">
+                    <span class="msg-error errores" id="Apellido-error"></span>
+                </div>
+
+                <div class="editor-label"><label for="TipoDocumento">(*) TipoDocumento</label></div>
+                <div class="editor-field">
+                    <select id="TipoDocumento" name="TipoDocumento">
+                        
+                        <option value="DNI">DNI</option>
+                        
+                        <option value="LC">LC</option>
+                        
+                        <option value="DU">DU</option>
+                        
+                        <option value="LE">LE</option>
+                        
+                        <option value="PASAPORTE">PASAPORTE</option>
+                    </select>
+                </div>
+
+                <div class="editor-label"><label for="NroDocumento">(*) Nro.Documento:</label></div>
+                <div class="editor-field">
+                    <input class="text-box single-line" id="NroDocumento" name="NroDocumento" type="text" onKeyPress="return soloNumeros(event)" maxlength="10">
+                    <span class="msg-error errores" id="DNI-error"></span>
+                </div>
+
+                <div class="editor-label"><label for="FechaNacimiento">(*) Fec.Nacimiento:</label></div>
+                <div class="editor-field">
+                    <input class="text-box single-line" readonly id="FechaNacimiento" name="FechaNacimiento" type="text" value="" style="width: 95%; margin-right: 2px;">
+                    <img class="ui-datepicker-trigger" src="/images/ico_calendar.png">
+                    <span class="msg-error errores" id="Fecha-error"></span>
+                </div>
+
+                <div class="editor-label"><label for="Sexo">Sexo</label></div>
+                <div class="editor-field">
+                    <select id="Sexo" name="Sexo">
+                        <option value="S">Seleccione..</option>
+                        <option value="M">MASCULINO</option>
+                        <option value="F">FEMENINO</option>
+                    </select>
+                </div>
+
+                <div class="editor-label"><label for="EstadoCivilID">(*) Estado civil:</label></div>
+                <div class="editor-field">
+                    <select id="EstadoCivilID" name="EstadoCivilID">
+                        <option value="">Seleccione..</option>
+                        
+                        <option value="1">SOLTERO/A</option>
+                        
+                        <option value="2">CASADO/A</option>
+                        
+                        <option value="3">DIVORCIADO/A</option>
+                        
+                        <option value="4">VIUDO/A</option>
+                        
+                        <option value="5">SEPARADO/A</option>
+                        
+                    </select>
+                    <span class="msg-error errores" id="EstadoCivil-error"></span>
+                </div>
+
+                <div class="editor-label"><label for="Direccion">Dirección:</label></div>
+                <div class="editor-field">
+                    <input class="text-box single-line" id="Direccion" name="Direccion" type="text" maxlength="75">
+                </div>
+
+                <div class="editor-label"><label for="CiudadID">Localidad:</label></div>
+                <div class="editor-field">
+                    <select id="CiudadID" name="CiudadID">
+                        <option value="">Seleccione..</option>
+                        
+                        <option value="1">San Nicolás</option>
+                        
+                        <option value="2">Ramallo Pueblo</option>
+                        
+                        <option value="3">Ramallo Villa</option>
+                        
+                        <option value="4">Sanchez</option>
+                        
+                        <option value="39">Teobald</option>
+                        
+                        <option value="40">La Emilia</option>
+                        
+                        <option value="41">Pergamino</option>
+                        
+                        <option value="42">Villa Constitución</option>
+                        
+                        <option value="43">Gbor. Castro</option>
+                        
+                        <option value="45">Villa Riccio</option>
+                        
+                        <option value="46">San Pedro</option>
+                        
+                        <option value="9">OTRA</option>
+                    </select>
+                </div>
+
+                <div id="divOtraCiudad" style="display:none;">
+                    <div class="editor-label"><label for="Ciudad">Otra Ciudad</label></div>
+                    <div class="editor-field">
+                        <input class="text-box single-line" id="Ciudad"  name="Ciudad" type="text" maxlength="75">
+                    </div>            
+                </div>
+
+                <div class="editor-label"><label for="Telefono">Teléfono:</label></div>
+                <div class="editor-field">
+                    <input class="text-box single-line" id="Telefono" name="Telefono" type="text" maxlength="75">
+                    <span class="msg-error errores email-telefono-error"></span>                    
+                </div>
+
+                <div class="editor-label"><label for="Email">E-mail:</label></div>
+                <div class="editor-field">
+                    <input class="text-box single-line" id="Email" name="Email" type="text" maxlength="150">
+                    <span class="msg-error errores email-telefono-error"></span>                    
+                </div>
+            </fieldset>
+
+            <fieldset style="float:left; width:45%;">
+                <legend style="margin-bottom: 0; width: 140px;">DATOS LABORALES</legend>
+
+                <div class="editor-label"><label for="TipoEstudioID">Estudio finalizado:</label></div>
+                <div class="editor-field">
+                    <select id="TipoEstudioID" name="TipoEstudioID">
+                        <option value="">Seleccione..</option>
+                        
+                        <option value="1">PRIMARIO</option>
+                        
+                        <option value="2">SECUNDARIO</option>
+                        
+                        <option value="3">TERCIARIO</option>
+                        
+                        <option value="4">UNIVERSITARIO</option>
+                        
+                    </select>
+                </div>
+
+                <div class="editor-label"><label for="Titulo">Título:</label></div>
+                <div class="editor-field">
+                    <input class="text-box single-line" id="Titulo" name="Titulo" type="text" maxlength="150">
+                </div>
+
+                <div class="editor-label"><label for="Institucion">Institución:</label></div>
+                <div class="editor-field">
+                    <input class="text-box single-line" id="Institucion" name="Institucion" type="text" maxlength="150">
+                </div>
+
+                <div class="editor-label"><label for="PuestoID">Puesto:</label></div>
+                <div class="editor-field">
+                    <select id="PuestoID" name="PuestoID">
+                        
+                        <option value="1">INDISTINTO</option>
+                        
+                        <option value="2">CONDUCTOR</option>
+                        
+                        <option value="3">SUPERVISOR</option>
+                        
+                        <option value="4">INSPECTOR</option>
+                        
+                        <option value="5">ADMINISTRATIVO</option>
+                        
+                        <option value="6">ORDENANZA</option>
+                        
+                        <option value="7">TÉCNICO ELECTRICISTA</option>
+                        
+                        <option value="8">TÉCNICO ELECTRÓNICO</option>
+                        
+                        <option value="9">TÉCNICO MECÁNICO</option>
+                        
+                        <option value="10">GOMERO</option>
+                        
+                        <option value="11">CARROCERO</option>
+                        
+                        <option value="12">RECAUDADOR</option>
+                        
+                    </select>
+                </div>
+
+                <div id="divCategoriaCarnet" style="display:none;">
+                    <div class="editor-label"><label for="CategoriaCarnetID">Categoría carnet:</label></div>
+                    <div class="editor-field">
+                        <select id="CategoriaCarnetID" name="CategoriaCarnetID">
+                            <option value=""></option>
+                            
+                            <option value="1">Automóviles y Camionetas</option>
+                            
+                            <option value="2">Colectivo Omnibus</option>
+                            
+                        </select>
+                    </div>            
+                </div>
+
+                <div class="editor-label"><label for="ExperienciaLaboral">(*) Experiencia laboral:</label></div>
+                <div class="editor-field">
+                    <textarea class="text-box multi-line" id="ExperienciaLaboral" name="ExperienciaLaboral"></textarea>
+                    <div id="charsExpLab" style="text-align:right;font-size:11px;">Caracteres restantes: 8000</div>
+                    <span class="msg-error errores" id="ExperienciaLaboral-error"></span>
+                </div>
+
+                <div class="editor-label"><label for="Referencias">Referencias:</label></div>
+                <div class="editor-field">
+                    <textarea class="text-box multi-line" id="Referencias" name="Referencias"></textarea>
+                    <div id="charsRef" style="text-align:right;font-size:11px;">Caracteres restantes: 8000</div>
+                </div>
+
+                <div class="editor-label"><label for="Observaciones">Observaciones:</label></div>
+                <div class="editor-field">
+                    <textarea class="text-box multi-line" id="Observaciones" name="Observaciones"></textarea>
+                    <div id="charsObs" style="text-align:right;font-size:11px;">Caracteres restantes: 8000</div>
+                </div>
+            </fieldset>
+            
+            <div style="float:left;font-weight:bold;color:Red;">(*) Los campos con asteríscos son obligatorios.-</div>
+            
+            <p style="clear:both;float:right;">
+                <input type="submit" value="enviar" class="SubmitButton" id="btnSubmit" />
+                <input type="reset" value="borrar" class="SubmitButton" style="margin-bottom:0px;" id="btnReset" />
+            </p>
+        </form>
+    </div>
+</div>
+
+
+        </div>
+
+        <div style="clear:both;"></div>
+
+        <div id="footer" class="no-print">
+            <ul class="verticalUL" style="width:120px;">
+                <li><a href="/Empresa/Historia">EMPRESA</a></li>
+                <li><a href="/Curriculum/CargarCV">RRHH</a></li>
+                <li><a href="/Contacto?m=CONSULTA">CONTACTO</a></li>
+            </ul>
+
+            <ul class="verticalUL" style="width:120px;">
+                <li><a href="/Horarios">HORARIOS</a></li>
+                <li><a href="/Recorridos">RECORRIDOS</a></li>
+                <li><a href="/Paradas">PARADAS</a></li>
+            </ul>
+
+            <ul class="verticalUL" style="width:120px;">
+                <li>&nbsp;</li>
+            </ul>
+
+            <ul class="verticalUL" style="width:160px;">
+                <li><a href="/ObjetosPerdidos">OBJETOS PERDIDOS</a></li>
+                <li><a href="/Contacto?m=RECLAMO">RECLAMOS Y SUGERENCIAS</a></li>
+                <li><a href="/PreguntasFrecuentes/Faqs">PREGUNTAS FRECUENTES</a></li>
+            </ul>
+
+            <div class="box">
+                <div class="contentLeft">
+                    EMPRESA VERCELLI HNOS S.A. Av. Perón 2425. San Nicolás. Bs As. Argentina.<br />
+                    Línea telefónica <b>4449400</b>. Por horarios y servicios <b>4449450</b>. Mail:
+                    evhsa@e-evhsa.com.ar<br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal_novedad" title="Novedades en Evhsa" style="display:none;"></div>
+
+    <div id="underconstruction-window" title="Pantalla en construcción" style="display:none;">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Pantalla en construcción
+        </p>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script src="/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+<script src="/js/jquery.unobtrusive-ajax.min.js" type="text/javascript"></script>
+<script src="/js/jquery.ui.effect.js" type="text/javascript"></script>
+<script src="/js/jquery.ui.effect-fade.js" type="text/javascript"></script>
+<script src="/js/startup_master.js" type="text/javascript"></script>
+<script src="/js/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="/js/jquery.galleryview-3.0-dev.js" type="text/javascript"></script>
+<script src="/js/jquery.timers-1.2.js" type="text/javascript"></script>
+<script src="/js/jquery.slides.min.js" type="text/javascript"></script>
+<script src="/js/startup.config.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<script src="/js/sweetalert2.min.js"></script>
+<script>
+
+    $(function () {
+        $(".ver").on("click", function () {
+            var data = $(this).data('src');
+            window.open(data);
+        });
+        $("#modal_novedad, #modalObjetosEncontrados").dialog({
+            position: "top",
+            autoOpen: false,
+            modal: true,
+            dialogClass: 'alert',
+            buttons:
+                [{
+                    text: 'Cerrar',
+                    id: 'btnCloseNews',
+                    click: function () { $(this).dialog("close"); }
+                }],
+            open: function (event, ui) { $("body").css("overflow", "hidden") },
+            close: function (event, ui) { $("body").css("overflow", "auto") },
+            show: { effect: "fade", duration: 500 },
+            hide: { effect: "fade", duration: 200 }
+        });
+        $('#btnCloseNews').focus(function () { $(this).blur() });
+        $("#accordion").accordion({ heightStyle: "content" });
+        $.datepicker.regional['es'] = {
+            closeText: 'Cerrar',
+            prevText: '< Anterior',
+            nextText: 'Siguiente >',
+            currentText: 'Hoy',
+            monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+            dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+            dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
+            dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+            weekHeader: 'Sm',
+            dateFormat: 'dd/mm/yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''
+        };
+        $.datepicker.setDefaults($.datepicker.regional['es']);
+    });
+    function setCharsLeft(src, tgt) {
+        var len = src.val().length;
+        if (len >= 8000) {
+            src.val(src.value.substring(0, 8000));
+        } else {
+            var characters = 8000 - len;
+            tgt.text('Caracteres restantes: ' + characters);
+        }
+    }
+
+    $(".btnNovedad").on("click", async function () {
+        let id = $(this).data("id");
+        const novedad = await $.getJSON("/Novedades/GetNovedadById/" + id);
+        let html = "<div style='max-height: 70vh; overflow-y: scroll;'><h2>" + novedad[0].Titulo + "</h2>";
+        let contImg = 0;
+        if (novedad[0].PathImagen1 != null || novedad[0].PathImagen2 != null || novedad[0].PathImagen3 != null || novedad[0].PathImagen4 != null || novedad[0].PathImagen5 != null) {
+            html += `<div class="photoNews">
+                <ul id="myGallery">`;
+            if (novedad[0].PathImagen1 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen1 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen1 + `" data-description="" border="0" title="` + novedad[0].NombreImagen1 + `" alt="` + novedad[0].NombreImagen1 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen2 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen2 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen2 + `" data-description="" border="0" title="` + novedad[0].NombreImagen2 + `" alt="` + novedad[0].NombreImagen2 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen3 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen3 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen3 + `" data-description="" border="0" title="` + novedad[0].NombreImagen3 + `" alt="` + novedad[0].NombreImagen3 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen4 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen4 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen4 + `" data-description="" border="0" title="` + novedad[0].NombreImagen4 + `" alt="` + novedad[0].NombreImagen4 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen5 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen5 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen5 + `" data-description="" border="0" title="` + novedad[0].NombreImagen5 + `" alt="` + novedad[0].NombreImagen5 + `"/></li>`;
+                contImg++;
+            }
+            html += `</ul> </div>`;
+        }
+
+        html += "<h3>" + novedad[0].Brief + "</h3>" +
+            novedad[0].Descripcion+"</div>";
+        $("#modal_novedad").html(html);
+        $("#modal_novedad").dialog("option", "width", "650").dialog("open");
+
+        if (contImg > 0) {
+            let estado = false;
+            if (contImg > 1) estado = true;
+            $('#myGallery').galleryView({
+                panel_width: 350,
+                panel_height: 275,
+                panel_animation: 'crossfade',
+                panel_scale: 'fit',
+                show_captions: true,
+                autoplay: estado,
+                show_panel_nav: estado,
+                show_filmstrip: estado,
+                show_filmstrip_nav: false
+            });
+        }
+    });
+
+</script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(function () {
+        const tipo = $("#mensaje").attr("data-tipo")
+        const titulo = $("#mensaje").attr("data-titulo")
+        const mensaje = $("#mensaje").attr("data-mensaje")
+
+        if (tipo && titulo && mensaje) {
+            Swal.fire({
+                type: tipo,
+                title: titulo,
+                text: mensaje,
+            })
+        }
+
+        $("#FechaNacimiento").datepicker({ 
+            showAnim: "slideDown",
+            changeMonth: true,
+            changeYear: true,
+            monthNamesShort: [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ],
+            dayNamesMin: [ "Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa" ],
+            yearRange: "-60:+0",
+        });
+
+        $("#btnBrowse").on("click", function () { $('#Archivo').click(); });
+        $("#Logo").on("click", function () { $('#Archivo').click(); });
+
+        $("#imgLogo").on("click", function () { $('#Archivo').click(); });
+        $("#imgLogo").css('cursor', 'pointer');
+        $("#imgLogo").mouseover(function () { $('#imgTag').show("fade", null, 300, null); });
+        $("#imgLogo").mouseout(function () { $('#imgTag').hide("fade", null, 300, null); });
+
+        if ($("#PuestoID option:selected").text() == "CONDUCTOR") {
+            $('#divCategoriaCarnet').show(1000);
+        } else {
+            $('#divCategoriaCarnet').hide(1000);
+        }
+
+        if ($("#CiudadID option:selected").text() == "OTRA") {
+            $('#divOtraCiudad').show(1000);
+        } else {
+            $('#divOtraCiudad').hide(1000);
+        }
+
+        $("#CiudadID").on("change", function () {
+            if ($("#CiudadID option:selected").text() == "OTRA") {
+                $('#divOtraCiudad').show(1000);
+            } else {
+                $('#divOtraCiudad').hide(1000);
+            }
+        });
+
+        $("#ExperienciaLaboral").on("keyup", function () {
+            setCharsLeft($(this), $('#charsExpLab'));
+        });
+
+        $("#Referencias").on("keyup", function () {
+            setCharsLeft($(this), $('#charsRef'));
+        });
+
+        $("#Observaciones").on("keyup", function () {
+            setCharsLeft($(this), $('#charsObs'));
+        });
+    });
+
+    function setCharsLeft(src, tgt) {
+        var len = src.val().length;
+        //
+        if (len >= 8000) {
+            src.val(src.value.substring(0, 8000));
+        } else {
+            var characters = 8000 - len;
+            tgt.text('Caracteres restantes: ' + characters);
+        }
+    }
+
+    function checkEmail(str) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(!re.test(str))
+        alert("Please enter a valid email address");
+    }
+
+    $("#PuestoID").change(function () {
+        if ($("#PuestoID option:selected").text() == "CONDUCTOR") {
+            $('#divCategoriaCarnet').show(1000);
+        } else {
+            $('#divCategoriaCarnet').hide(1000);
+        }
+    });
+
+    $("#btnSubmit").click((e) => {
+        e.preventDefault();
+
+        $("input, textarea, select").removeClass("input-error");
+        $(".errores").text("");
+
+        if(!Validaciones()) return;
+
+        let errores = new Object();
+
+        // OTRAS VALIDACIONES
+        if(!$("#EstadoCivilID").val()) {
+            errores.estadocivil = "Seleccione un estado civil.";
+            $("#EstadoCivilID").addClass("input-error");
+            $("#EstadoCivil-error").text(errores.estadocivil);
+        }
+
+        let dni = parseFloat($("#NroDocumento").val())
+        if(dni < 100000 || dni > 900000000){
+            errores.dni = "Ingrese un número de documento válido.";
+            $("#NroDocumento").addClass("input-error");
+            $("#DNI-error").text(errores.dni);
+        }
+
+        let email = $("#Email").val();
+        let telefono = $("#Telefono").val();
+
+        if(!email && !telefono) {
+            errores.emailOtelefono = "Dejenos algún medio de contacto para que podamos comunicarnos en un futura, ya sea teléfono o su dirección de email.";
+            $("#Email").addClass("input-error");
+            $("#Telefono").addClass("input-error");
+            $(".email-telefono-error").text(errores.emailOtelefono);
+        }
+
+        if(Object.keys(errores).length > 0) return;
+
+        $(".loading").css('display', 'block');
+
+        $("#formulario").submit();
+    });
+
+    function Validaciones() {
+        let errores = new Object();
+
+        if(!$("#Nombre").val()) {
+            errores.nombre = "Debe ingresar su nombre.";
+            $("#Nombre").addClass("input-error");
+            $("#Nombre-error").text(errores.nombre);
+        }
+        if(!$("#Apellido").val()) {
+            errores.apellido = "Debe ingresar su apellido.";
+            $("#Apellido").addClass("input-error");
+            $("#Apellido-error").text(errores.apellido);
+        }
+        if(!$("#NroDocumento").val()) {
+            errores.dni = "Debe ingresar su número de documento.";
+            $("#NroDocumento").addClass("input-error");
+            $("#DNI-error").text(errores.dni);
+        }
+        if(!$("#FechaNacimiento").val()) {
+            errores.fecha = "Debe ingresar su fecha de nacimiento.";
+            $("#FechaNacimiento").addClass("input-error");
+            $("#Fecha-error").text(errores.fecha);
+        }
+        if(!$("#ExperienciaLaboral").val()) {
+            errores.experiencia = "Debe ingresar su experiencia laboral. En caso de no poseer, coloque 'Ninguna'.";
+            $("#ExperienciaLaboral").addClass("input-error");
+            $("#ExperienciaLaboral-error").text(errores.experiencia);
+        }
+
+        if(Object.keys(errores).length > 0) return;
+
+        return true;
+    }
+</script>
+
+
+</html>

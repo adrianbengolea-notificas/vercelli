@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+    <title> Evhsa - Objetos Perdidos </title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=ABeeZee:400,400italic' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css' />
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Bootstrap  -->
+    <link href="/css/Site.css" rel="stylesheet" type="text/css" />
+    <link href="/css/button.css" rel="stylesheet" type="text/css" />
+    <link href="/css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/jquery.galleryview-3.0-dev.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/sweetalert2.min.css">
+    <link rel="stylesheet" href="/css/spinner.css">
+    <style type="text/css">
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        .modal-contenido {
+            width: 100vw;
+            height: 100vh;
+            left: 50vw;
+            top: 50vh;
+            position: relative;
+            font-size: 24px !important;
+        }
+
+        .modal {
+            z-index: 4000;
+            background-color: rgba(0, 0, 0, .8);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            pointer-events: none;
+            transition: all .5s;
+        }
+
+        .mostrar {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .input-error {
+            border: 1px solid #ff0000;
+            background-color: #ffeeee;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        textarea:focus {
+            background-color: #c8d8e3;
+        }
+
+        .msg-error {
+            color: red;
+        }
+
+        .alert-primary {
+            color: #004085;
+            background-color: #cce5ff;
+            border-color: #b8daff;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+
+        .alert {
+            position: relative;
+            padding: .75rem 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            border-radius: .25rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- MODAL CARGANDO -->
+    <div class="loading" style="display:none;">Cargando</div>
+
+    
+    
+
+    <div class="page">
+        <div id="header">
+            <div style="position:absolute;top:10px;left:0px;" class="no-print">
+                <a id="lnkHome" href="/"><img src="/images/logo.png" alt="Evhsa" style="vertical-align:middle;"
+                        border="0" /></a>
+            </div>
+
+            
+
+            <div id="menusuperiorderecho" class="no-print">
+                <ul id="topMenuList">
+                    <li>
+                        <a href="#">EMPRESA&nbsp;&nbsp;&nbsp;</a>
+                        <ul>
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Antecedentes">ANTECEDENTES SOCIALES</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Historia">HISTORIA</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Objetivos">OBJETIVOS</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/QuienesSomos">QUIENES SOMOS</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Servicios">EL SERVICIO</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Calidad">NORMAS Y POLÍTICAS DE CALIDAD</a></li> -->
+                            <li><a href="/Empresa/Antecedentes">ANTECEDENTES SOCIALES</a></li>
+                            <li><a href="/Empresa/Historia">HISTORIA</a></li>
+                            <li><a href="/Empresa/Objetivos">OBJETIVOS</a></li>
+                            <li><a href="/Empresa/QuienesSomos">QUIENES SOMOS</a></li>
+                            <li><a href="/Empresa/Servicios">EL SERVICIO</a></li>
+                            <li><a href="/Empresa/Calidad">NORMAS Y POLÍTICAS DE CALIDAD</a></li>
+                        </ul>
+                    </li>
+                    <li>|</li>
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="http://www.e-evhsa.com.ar/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;
+                    </li> -->
+                    <li>&nbsp;&nbsp;&nbsp;<a href="/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;
+                    </li>
+                    <li>|</li>
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a
+                            href="http://www.e-evhsa.com.ar/Contacto?m=CONSULTA">CONTACTO</a>&nbsp;&nbsp;&nbsp;</li> -->
+                    <!-- PARA WEB NODE -->
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;</li> -->
+                    <!-- PARA WEB PERI -->
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="http://www.e-evhsa.com.ar/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;</li> -->
+                    <!-- <li>|</li> -->
+                    <!-- PARA WEB NODE -->
+                    <li>&nbsp;&nbsp;&nbsp;<a href="/Contacto?m=CONSULTA">CONTACTO</a></li>
+                    <!-- PARA WEB PERI -->
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="http://www.e-evhsa.com.ar/Contacto?m=CONSULTA">CONTACTO</a>&nbsp;&nbsp;&nbsp;</li> -->
+                </ul>
+            </div>
+
+            <!-- Esto es para que tome el MARGIN del div siguiente -->
+            <div style="clear:both;"></div>
+
+            <div id="submenusuperiorderecho" class="no-print">
+                <ul id="topSubMenuList">
+                    <!-- PARA WEB NODE -->
+                    <li><a href="/Horarios">HORARIOS</a></li>
+                    <!-- PARA WEB PERI -->
+                    <!-- <li><a href="http://www.e-evhsa.com.ar/SalidasCabecera/Horarios">HORARIOS</a></li> -->
+                </ul>
+            </div>
+        </div>
+
+        <div id="main">
+            
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/south-street/jquery-ui.css" />
+<style>
+    .input-error {
+        border: 1px solid #ff0000;
+        background-color: #ffeeee;
+    }
+    input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+        background-color: #c8d8e3;
+    }
+    .ui-dialog-content.ui-widget-content {
+        max-height: 70vh !important;
+        overflow-y: scroll !important;
+    }
+</style>
+
+<div class="imageOnTop">
+    <img id="imgHeader" src="/images/header/hdr_objetosperdidos.jpg" alt="Imagen institucional" title="EVHSA" border="0" style="display: inline;">
+</div>
+
+<div class="pageBody">
+    
+    <span class="sectionMenu">ENVIENOS INFORMACIÓN SOBRE EL OBJETO QUE HA PERDIDO.</span>
+
+    <div style="position:relative;">
+        <a class="RoundedGreenButton" id="linkObjetosEncontrados" style="position:absolute;top:10px;right:10px;text-align:center;max-width:160px;">Ver obj. existentes en la empresa</a>
+    </div>
+    
+    <div style="padding-left:10px;">
+        <p class="fillClass">Complete el formulario con los datos necesarios para rastrear el objeto extraviado y nos pondremos en contacto<br>con usted a la brevedad.</p>
+        <form action="/ObjetosPerdidos" method="post" id="formulario">
+            <table class="tblForms" style="width:100%;">
+                <tbody>
+                    <tr>
+                        <td id="colLabels"><span class="bulletSpan">•</span><label for="FechaPerdida">Fecha:</label></td>
+                        <td colspan="2">
+                            <input id="FechaPerdida" name="FechaPerdida" style=" width:95%; margin-right:2px;" type="text">
+                            <img class="ui-datepicker-trigger" src="/images/ico_calendar.png">
+                            <span class="msg-error errores" id="FechaPerdida-error"></span>
+                        </td>
+                        <td colspan="2" class="commands">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><span class="bulletSpan">•</span><label for="LineaID">Linea</label></td>
+                        <td colspan="2">
+                            <select id="LineaID" name="LineaID">
+                                <option value=""></option>
+                                
+                                <option value="42">CONESA - PERGAMINO</option>
+                                
+                                <option value="43">SAN NICOLAS - PERGAMINO</option>
+                                
+                                <option value="44">SAN NICOLAS - RAMALLO</option>
+                                
+                                <option value="45">PARADOR - SIDERAR</option>
+                                
+                                <option value="58">Aº DEL MEDIO - SIDERAR</option>
+                                
+                                <option value="61">TERMINAL - CONESA</option>
+                                
+                                <option value="62">Bº 25 DE MAYO - Bº SOMISA</option>
+                                
+                                <option value="46">FLORESTA - B° GOLF</option>
+                                
+                                <option value="63">Aº DEL MEDIO - Bº 7 DE SETIEMBRE</option>
+                                
+                                <option value="47">SUIZO - SANTA ROSA</option>
+                                
+                                <option value="48">LAS VIÑAS - FRAGA</option>
+                                
+                                <option value="49">12 DE MARZO - FONAVI</option>
+                                
+                                <option value="64">Bº SAN JORGE - SANDRINA</option>
+                                
+                                <option value="50">SAN FRANCISCO - GUEMES</option>
+                                
+                                <option value="51">LA EMILIA - LOS FRESNOS</option>
+                                
+                                <option value="52">GDOR CASTRO - SANTA LUCIA</option>
+                                
+                                <option value="53">ESCUELA 10 - Bº CASINI</option>
+                                
+                                <option value="54">RIO TALA - Bº CASSINI</option>
+                                
+                                <option value="55">LAS CANALETAS - CEMENTERIO</option>
+                                
+                                <option value="56">SEC TRANSFER - VUELTA OBLIGADO</option>
+                                
+                                <option value="87">ARENAL - ARENAL</option>
+                                
+                                <option value="88">PTE PERON - PTE PERON</option>
+                                
+                                <option value="84">RAMALLO - SAN NICOLAS</option>
+                                
+                                <option value="86">500 RAMALLO</option>
+                                
+                                <option value="69">SAN NICOLAS-PARAISO-SAN PEDRO</option>
+                                
+                                <option value="70">SAN NICOLAS-GDOR SANCHEZ</option>
+                                
+                                <option value="71">SANCHEZ-RAMALLO</option>
+                                
+                            </select>
+                            <span class="msg-error errores" id="LineaID-error"></span>
+                        </td>
+                        <td colspan="2" class="commands">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><span class="bulletSpan">•</span><label for="RubroID">Rubro</label></td>
+                        <td>
+                            <select id="RubroID" name="RubroID">
+                                <option value=""></option>
+                                
+                                <option value="1">Objetos Personales</option>
+                                
+                                <option value="2">Documentos</option>
+                                
+                                <option value="3">Jueguete</option>
+                                
+                                <option value="4">Ropa</option>
+                                
+                            </select>
+                            <span class="msg-error errores" id="RubroID-error"></span>
+                        </td>
+                        <td colspan="2">&nbsp;</td>
+                        <td class="commands">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><span class="bulletSpan">•</span><label for="DNI">DNI</label></td>
+                        <td>
+                            <input class="text-box single-line" id="DNI" name="DNI" type="text" onKeyPress="return soloNumeros(event)">
+                            <span class="msg-error errores" id="DNI-error"></span>
+                        </td>
+
+                        <td><span class="bulletSpan">•</span><label for="NombreApellido">Nombre completo</label></td>
+                        <td>
+                            <span>
+                                <input class="text-box single-line" id="NombreApellido" name="NombreApellido" type="text" maxlength="75">
+                            </span>
+                            <span class="msg-error errores" id="NombreApellido-error"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="bulletSpan">•</span><label for="Contacto">Teléfono</label></td>
+                        <td>
+                            <input class="text-box single-line" id="Contacto" name="Contacto" type="text" maxlength="100" onKeyPress="return soloNumeros(event)">
+                        </td>
+                        <td><span class="bulletSpan">•</span><label for="Email">E-mail</label></td>
+                        <td>
+                            <input class="text-box single-line" id="Email" name="Email" type="text" value="" maxlength="100">
+                            <span class="msg-error errores" id="Email-error"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="bulletSpan">•</span><label for="Descripcion">Descripción</label></td>
+                        <td colspan="3">
+                            <div class="textwrapper">
+                                <textarea class="text-box multi-line" data-val="true" data-val-required="Detalle el objeto perdido." id="Descripcion" name="Descripcion" maxlength="1000"></textarea>
+                                <span class="msg-error errores" id="Descripcion-error"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="3"></td>
+                        <td class="commands">
+                            <input type="submit" value="enviar" class="SubmitButton" id="btnSubmit">
+                            <input type="reset" value="borrar" class="SubmitButton" style="margin-bottom:0px;" id="btnReset">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    
+</div>
+
+<div id="modalObjetosEncontrados" title="Objetos disponibles en Evhsa" style="display:none;">
+    <div style="font-size:11px;margin:5px auto;">Preséntese en nuestras oficinas si encuentra algún objeto extraviado que le pertenzca en el siguiente listado:</div>
+    <table class="table-objetos">
+        <tbody>
+            <tr>
+                <th style="width: 44%;">Descripcion</th>
+                <th style="width: 44%;">Nombre</th>
+                <th style="width: 12%">Encontrado</th>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>BENITEZ SOLANGE</td>
+                <td>29/05/2017</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>INZA ALEXIS EMANUEL </td>
+                <td>18/05/2017</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>TOLEDO DIEGO MARTIN </td>
+                <td>11/05/2017</td>
+            </tr>
+            
+            <tr>
+                <td>CARNET DE CONDUCIR</td>
+                <td>ALBARRACIN BLANCA </td>
+                <td>11/05/2017</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>VIVAS BARBARA</td>
+                <td>11/05/2017</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>CUEVAS BRIAN </td>
+                <td>11/05/2017</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>BARRIOS YAMILA ALEJANDRA </td>
+                <td>27/04/2017</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>GHISOLFI INES MATILDE </td>
+                <td>27/04/2017</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>GENTA NAHUEL ANDRES </td>
+                <td>27/04/2017</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>VILLAN NEHEMIAS VALENTIN </td>
+                <td>27/04/2017</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>VILLAN MARIA SOL ELIANA </td>
+                <td>27/04/2017</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>MONTERO PESENTI SERGIO</td>
+                <td>27/04/2017</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>CORREA ANGEL </td>
+                <td>27/04/2017</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>RUIZ DIAZ TOMAS </td>
+                <td>27/04/2017</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>SANCHEZ SEBASTIAN RAMON</td>
+                <td>27/04/2017</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>GALLARDO DANTE MAURICIO RAMON </td>
+                <td>26/04/2017</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>VAZQUEZ FRANCO NICOLAS</td>
+                <td>26/04/2017</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>PEPE CARLOS FEDERICO</td>
+                <td>26/04/2017</td>
+            </tr>
+            
+            <tr>
+                <td>BILLETERA NEGRA DE CUERO </td>
+                <td>GONZALEZ IGNACIO BENJAMIN </td>
+                <td>18/01/2017</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>GONZALEZ IGNACIO BENJAMIN </td>
+                <td>18/01/2017</td>
+            </tr>
+            
+            <tr>
+                <td>CELULARES</td>
+                <td>SIN IDENTIFICAR </td>
+                <td>18/01/2017</td>
+            </tr>
+            
+            <tr>
+                <td>TELEFONO CELULAR </td>
+                <td>SIN IDENTIFICAR </td>
+                <td>18/01/2017</td>
+            </tr>
+            
+            <tr>
+                <td>ANTEOJOS RECETADOS (VARIOS)</td>
+                <td>SIN IDENTIFICAR </td>
+                <td>18/01/2017</td>
+            </tr>
+            
+            <tr>
+                <td>BOLSO DE MUJER </td>
+                <td>SIN IDENTIFICAR </td>
+                <td>18/01/2017</td>
+            </tr>
+            
+            <tr>
+                <td>CALZADO DE NENA</td>
+                <td>SIN IDENTIFICAR </td>
+                <td>18/01/2017</td>
+            </tr>
+            
+            <tr>
+                <td>LICENCIA FUTBOLISTA FEDERADO </td>
+                <td>NAVARRO RENZO </td>
+                <td>09/01/2017</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD </td>
+                <td>TOLEDO DIEGO MARTIN </td>
+                <td>09/01/2017</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>CASTELLI LUIS GABRIEL </td>
+                <td>19/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>LUNA DAIANA SOLEDAD</td>
+                <td>08/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>GORO AXEL THIAGO</td>
+                <td>08/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>CARNET DE DISCAPACIDAD</td>
+                <td>CABALLERO MYRIAM SILVIA</td>
+                <td>08/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASES DE DISCAPACIDAD </td>
+                <td>ORUE ROMINA ELIZABETH</td>
+                <td>08/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>TARJETA DE CRÉDITO</td>
+                <td>FIGUEROA ALAN GABRIEL </td>
+                <td>08/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>INDUMENTARIA/BOLSOS/CALZADOS</td>
+                <td>CONSULTAR </td>
+                <td>04/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>ANTEOJOS RECETADOS</td>
+                <td>CONSULTAR </td>
+                <td>04/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>CARPETA DE DIBUJO </td>
+                <td>HERMOSA JOEL </td>
+                <td>04/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>MONEDERO CON DNI </td>
+                <td>GHISOLFI INES MATILDE </td>
+                <td>04/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>BILLETERA CON CARNET DE CONDUCIR </td>
+                <td>ROLDAN CARLOS ALBERTO</td>
+                <td>04/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>BILLETERA CON PASE DE DISCAPACIDAD </td>
+                <td>MONZON LUCAS EMANUEL </td>
+                <td>04/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>BILLETERA</td>
+                <td>ESCOBAR JOSE LUIS</td>
+                <td>04/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>BILLETERA CON DNI Y TARJETA URBANA </td>
+                <td>SANCHEZ SEBASTIAN RAMON </td>
+                <td>04/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>BILLETERA</td>
+                <td>ROLDAN LUIS</td>
+                <td>04/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>BILLETERA CON DNI </td>
+                <td>CORREA ANGEL JOSE</td>
+                <td>04/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>BILLETERA CON DNI </td>
+                <td>PEPE CARLOS FEDERICO</td>
+                <td>04/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>CARNET DE PAMI </td>
+                <td>VELAZQUEZ ELVA HORTENCIA</td>
+                <td>04/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>CARNET DE PAMI </td>
+                <td>FERNANDEZ MARGARITA ETELVINA</td>
+                <td>04/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>PAN MARTIN NICOLAS</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>MIÑO SILVIO DANIEL</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>CAFFIERO MARIANELA</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>MELLADO CARLOS</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>ORONA OLGA HAYDEE </td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>HERRERA SILVINA BETIANA </td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>ROMERO MARTA</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>HAUPT MARIA JULIA</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>GODOY JUAN MARCELO </td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>GODOY NELIDA </td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>RIVAS DANIEL ALBERTO</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>RIVAS DANIEL </td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>TORRE CAMILA SOLEDAD</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>SAYAGO JUAN GABRIEL</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>INSAURRALDE UBALDA </td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>ARRUA LEOCADIO CONCEPCION</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>PASE DE DISCAPACIDAD</td>
+                <td>ROJO FRANCO NICOLAS </td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>GALLARDO DANTE MAURICIO RAMON </td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>VAZQUEZ FRANCO NICOLAS</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>RODRIGUEZ MIRTA EVA</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>SANCHEZ PAOLA MELINA</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>ALMARA BIANCA VALENTINA</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>RIOS FLORENCIA VICTORIA</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>MARTINEZ RICARDO RAUL</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>LEDESMA ROSANA MARIBEL </td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>DIAZ ELSA TERESITA</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>MESON PEDRO MANUEL</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>VENTRONI ALEJANDRO CARLOS MATIAS</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>GONZALEZ AGUSTIN ALEJANDRO</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>GALLOSO LILIANA AMELIA</td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>DOCUMENTO DE IDENTIDAD</td>
+                <td>GARCIA NELIDA SUSANA </td>
+                <td>03/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>TARJETA DE INGRESO A FABRICA</td>
+                <td>TABOADA OSCAR</td>
+                <td>02/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>TARJETA DE CRÉDITO</td>
+                <td>ACOSTA MARTA DANIELA</td>
+                <td>02/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>TARJETA DE CRÉDITO</td>
+                <td>NARDONE MARCELA</td>
+                <td>02/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>TARJETA DE CRÉDITO</td>
+                <td>VANESA MARTINEZ</td>
+                <td>02/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>TARJETA MUTUAL OSFATLYF</td>
+                <td>CARA LUISINA</td>
+                <td>02/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>TARJETA MUTUAL ACA SALUD</td>
+                <td>LAGOSTENA MIRIAM</td>
+                <td>02/11/2016</td>
+            </tr>
+            
+            <tr>
+                <td>TARJETA MI BOLETO</td>
+                <td>VARETTI RICARDO</td>
+                <td>02/11/2016</td>
+            </tr>
+            
+        </tbody>
+    </table>   
+</div>
+
+
+        </div>
+
+        <div style="clear:both;"></div>
+
+        <div id="footer" class="no-print">
+            <ul class="verticalUL" style="width:120px;">
+                <li><a href="/Empresa/Historia">EMPRESA</a></li>
+                <li><a href="/Curriculum/CargarCV">RRHH</a></li>
+                <li><a href="/Contacto?m=CONSULTA">CONTACTO</a></li>
+            </ul>
+
+            <ul class="verticalUL" style="width:120px;">
+                <li><a href="/Horarios">HORARIOS</a></li>
+                <li><a href="/Recorridos">RECORRIDOS</a></li>
+                <li><a href="/Paradas">PARADAS</a></li>
+            </ul>
+
+            <ul class="verticalUL" style="width:120px;">
+                <li>&nbsp;</li>
+            </ul>
+
+            <ul class="verticalUL" style="width:160px;">
+                <li><a href="/ObjetosPerdidos">OBJETOS PERDIDOS</a></li>
+                <li><a href="/Contacto?m=RECLAMO">RECLAMOS Y SUGERENCIAS</a></li>
+                <li><a href="/PreguntasFrecuentes/Faqs">PREGUNTAS FRECUENTES</a></li>
+            </ul>
+
+            <div class="box">
+                <div class="contentLeft">
+                    EMPRESA VERCELLI HNOS S.A. Av. Perón 2425. San Nicolás. Bs As. Argentina.<br />
+                    Línea telefónica <b>4449400</b>. Por horarios y servicios <b>4449450</b>. Mail:
+                    evhsa@e-evhsa.com.ar<br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal_novedad" title="Novedades en Evhsa" style="display:none;"></div>
+
+    <div id="underconstruction-window" title="Pantalla en construcción" style="display:none;">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Pantalla en construcción
+        </p>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script src="/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+<script src="/js/jquery.unobtrusive-ajax.min.js" type="text/javascript"></script>
+<script src="/js/jquery.ui.effect.js" type="text/javascript"></script>
+<script src="/js/jquery.ui.effect-fade.js" type="text/javascript"></script>
+<script src="/js/startup_master.js" type="text/javascript"></script>
+<script src="/js/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="/js/jquery.galleryview-3.0-dev.js" type="text/javascript"></script>
+<script src="/js/jquery.timers-1.2.js" type="text/javascript"></script>
+<script src="/js/jquery.slides.min.js" type="text/javascript"></script>
+<script src="/js/startup.config.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<script src="/js/sweetalert2.min.js"></script>
+<script>
+
+    $(function () {
+        $(".ver").on("click", function () {
+            var data = $(this).data('src');
+            window.open(data);
+        });
+        $("#modal_novedad, #modalObjetosEncontrados").dialog({
+            position: "top",
+            autoOpen: false,
+            modal: true,
+            dialogClass: 'alert',
+            buttons:
+                [{
+                    text: 'Cerrar',
+                    id: 'btnCloseNews',
+                    click: function () { $(this).dialog("close"); }
+                }],
+            open: function (event, ui) { $("body").css("overflow", "hidden") },
+            close: function (event, ui) { $("body").css("overflow", "auto") },
+            show: { effect: "fade", duration: 500 },
+            hide: { effect: "fade", duration: 200 }
+        });
+        $('#btnCloseNews').focus(function () { $(this).blur() });
+        $("#accordion").accordion({ heightStyle: "content" });
+        $.datepicker.regional['es'] = {
+            closeText: 'Cerrar',
+            prevText: '< Anterior',
+            nextText: 'Siguiente >',
+            currentText: 'Hoy',
+            monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+            dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+            dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
+            dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+            weekHeader: 'Sm',
+            dateFormat: 'dd/mm/yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''
+        };
+        $.datepicker.setDefaults($.datepicker.regional['es']);
+    });
+    function setCharsLeft(src, tgt) {
+        var len = src.val().length;
+        if (len >= 8000) {
+            src.val(src.value.substring(0, 8000));
+        } else {
+            var characters = 8000 - len;
+            tgt.text('Caracteres restantes: ' + characters);
+        }
+    }
+
+    $(".btnNovedad").on("click", async function () {
+        let id = $(this).data("id");
+        const novedad = await $.getJSON("/Novedades/GetNovedadById/" + id);
+        let html = "<div style='max-height: 70vh; overflow-y: scroll;'><h2>" + novedad[0].Titulo + "</h2>";
+        let contImg = 0;
+        if (novedad[0].PathImagen1 != null || novedad[0].PathImagen2 != null || novedad[0].PathImagen3 != null || novedad[0].PathImagen4 != null || novedad[0].PathImagen5 != null) {
+            html += `<div class="photoNews">
+                <ul id="myGallery">`;
+            if (novedad[0].PathImagen1 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen1 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen1 + `" data-description="" border="0" title="` + novedad[0].NombreImagen1 + `" alt="` + novedad[0].NombreImagen1 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen2 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen2 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen2 + `" data-description="" border="0" title="` + novedad[0].NombreImagen2 + `" alt="` + novedad[0].NombreImagen2 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen3 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen3 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen3 + `" data-description="" border="0" title="` + novedad[0].NombreImagen3 + `" alt="` + novedad[0].NombreImagen3 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen4 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen4 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen4 + `" data-description="" border="0" title="` + novedad[0].NombreImagen4 + `" alt="` + novedad[0].NombreImagen4 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen5 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen5 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen5 + `" data-description="" border="0" title="` + novedad[0].NombreImagen5 + `" alt="` + novedad[0].NombreImagen5 + `"/></li>`;
+                contImg++;
+            }
+            html += `</ul> </div>`;
+        }
+
+        html += "<h3>" + novedad[0].Brief + "</h3>" +
+            novedad[0].Descripcion+"</div>";
+        $("#modal_novedad").html(html);
+        $("#modal_novedad").dialog("option", "width", "650").dialog("open");
+
+        if (contImg > 0) {
+            let estado = false;
+            if (contImg > 1) estado = true;
+            $('#myGallery').galleryView({
+                panel_width: 350,
+                panel_height: 275,
+                panel_animation: 'crossfade',
+                panel_scale: 'fit',
+                show_captions: true,
+                autoplay: estado,
+                show_panel_nav: estado,
+                show_filmstrip: estado,
+                show_filmstrip_nav: false
+            });
+        }
+    });
+
+</script>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/south-street/jquery-ui.css" />
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+<script>
+    $(function(){
+        $("#FechaPerdida").datepicker({
+            showAnim: "slideDown",
+            changeMonth: true,
+            changeYear: true,
+            monthNamesShort: [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ],
+            dayNamesMin: [ "Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa" ],
+            yearRange: "-60:+0",
+        });
+    });
+    $("#linkObjetosEncontrados").on("click", function() {
+        $("#modalObjetosEncontrados").dialog("option", "width", "650").dialog("open");
+    });
+
+    $("#btnSubmit").click((e) => {
+        e.preventDefault();
+
+        $("input, textarea").removeClass("input-error");
+        $(".errores").text("");
+
+        if(!Validaciones()) {
+            $("#FechaPerdida").focus().click();
+            return;
+        }
+
+        const errores = new Object();
+
+        if(!$("#LineaID").val()) {
+            errores.linea = "Debe seleccionar la línea donde perdió el objeto.";
+            $("#LineaID").addClass("input-error");
+            $("#LineaID-error").text(errores.linea);
+        }
+
+        if(!$("#RubroID").val()) {
+            errores.rubro = "Debe seleccionar el tipo de objeto que perdió.";
+            $("#RubroID").addClass("input-error");
+            $("#RubroID-error").text(errores.rubro);
+        }
+
+        if(Object.keys(errores).length > 0) return;
+
+        $(".loading").css('display', 'block');
+
+        $("#formulario").submit();
+    });
+
+    function Validaciones() {
+        const errores = new Object();
+
+        if(!$("#FechaPerdida").val()) {
+            errores.fecha = "Debe ingresar la fecha en la que perdió el objeto.";
+            $("#FechaPerdida").addClass("input-error");
+            $("#FechaPerdida-error").text(errores.fecha);
+        }
+
+        if(!$("#DNI").val()) {
+            errores.dni = "Debe ingresar su número de documento.";
+            $("#DNI").addClass("input-error");
+            $("#DNI-error").text(errores.dni);
+        }
+
+        if(!$("#NombreApellido").val()) {
+            errores.nombreapellido = "Debe ingresar su nombre y apellido.";
+            $("#NombreApellido").addClass("input-error");
+            $("#NombreApellido-error").text(errores.nombreapellido);
+        }
+
+        if(!$("#Email").val()) {
+            errores.email = "Debe ingresar su e-mail.";
+            $("#Email").addClass("input-error");
+            $("#Email-error").text(errores.email);
+        }
+
+        if(!$("#Descripcion").val()) {
+            errores.descripcion = "Detalle el objeto perdido.";
+            $("#Descripcion").addClass("input-error");
+            $("#Descripcion-error").text(errores.descripcion);
+        }
+
+        if(Object.keys(errores).length > 0) return;
+
+        return true;
+    }
+</script>
+
+
+</html>

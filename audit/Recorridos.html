@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+    <title>
+Evhsa - Recorridos
+</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=ABeeZee:400,400italic' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css' />
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Bootstrap  -->
+    <link href="/css/Site.css" rel="stylesheet" type="text/css" />
+    <link href="/css/button.css" rel="stylesheet" type="text/css" />
+    <link href="/css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/jquery.galleryview-3.0-dev.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/sweetalert2.min.css">
+    <link rel="stylesheet" href="/css/spinner.css">
+    <style type="text/css">
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        .modal-contenido {
+            width: 100vw;
+            height: 100vh;
+            left: 50vw;
+            top: 50vh;
+            position: relative;
+            font-size: 24px !important;
+        }
+
+        .modal {
+            z-index: 4000;
+            background-color: rgba(0, 0, 0, .8);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            pointer-events: none;
+            transition: all .5s;
+        }
+
+        .mostrar {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .input-error {
+            border: 1px solid #ff0000;
+            background-color: #ffeeee;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        textarea:focus {
+            background-color: #c8d8e3;
+        }
+
+        .msg-error {
+            color: red;
+        }
+
+        .alert-primary {
+            color: #004085;
+            background-color: #cce5ff;
+            border-color: #b8daff;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+
+        .alert {
+            position: relative;
+            padding: .75rem 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            border-radius: .25rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- MODAL CARGANDO -->
+    <div class="loading" style="display:none;">Cargando</div>
+
+    
+    
+
+    <div class="page">
+        <div id="header">
+            <div style="position:absolute;top:10px;left:0px;" class="no-print">
+                <a id="lnkHome" href="/"><img src="/images/logo.png" alt="Evhsa" style="vertical-align:middle;"
+                        border="0" /></a>
+            </div>
+
+            
+
+            <div id="menusuperiorderecho" class="no-print">
+                <ul id="topMenuList">
+                    <li>
+                        <a href="#">EMPRESA&nbsp;&nbsp;&nbsp;</a>
+                        <ul>
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Antecedentes">ANTECEDENTES SOCIALES</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Historia">HISTORIA</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Objetivos">OBJETIVOS</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/QuienesSomos">QUIENES SOMOS</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Servicios">EL SERVICIO</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Calidad">NORMAS Y POLÍTICAS DE CALIDAD</a></li> -->
+                            <li><a href="/Empresa/Antecedentes">ANTECEDENTES SOCIALES</a></li>
+                            <li><a href="/Empresa/Historia">HISTORIA</a></li>
+                            <li><a href="/Empresa/Objetivos">OBJETIVOS</a></li>
+                            <li><a href="/Empresa/QuienesSomos">QUIENES SOMOS</a></li>
+                            <li><a href="/Empresa/Servicios">EL SERVICIO</a></li>
+                            <li><a href="/Empresa/Calidad">NORMAS Y POLÍTICAS DE CALIDAD</a></li>
+                        </ul>
+                    </li>
+                    <li>|</li>
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="http://www.e-evhsa.com.ar/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;
+                    </li> -->
+                    <li>&nbsp;&nbsp;&nbsp;<a href="/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;
+                    </li>
+                    <li>|</li>
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a
+                            href="http://www.e-evhsa.com.ar/Contacto?m=CONSULTA">CONTACTO</a>&nbsp;&nbsp;&nbsp;</li> -->
+                    <!-- PARA WEB NODE -->
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;</li> -->
+                    <!-- PARA WEB PERI -->
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="http://www.e-evhsa.com.ar/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;</li> -->
+                    <!-- <li>|</li> -->
+                    <!-- PARA WEB NODE -->
+                    <li>&nbsp;&nbsp;&nbsp;<a href="/Contacto?m=CONSULTA">CONTACTO</a></li>
+                    <!-- PARA WEB PERI -->
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="http://www.e-evhsa.com.ar/Contacto?m=CONSULTA">CONTACTO</a>&nbsp;&nbsp;&nbsp;</li> -->
+                </ul>
+            </div>
+
+            <!-- Esto es para que tome el MARGIN del div siguiente -->
+            <div style="clear:both;"></div>
+
+            <div id="submenusuperiorderecho" class="no-print">
+                <ul id="topSubMenuList">
+                    <!-- PARA WEB NODE -->
+                    <li><a href="/Horarios">HORARIOS</a></li>
+                    <!-- PARA WEB PERI -->
+                    <!-- <li><a href="http://www.e-evhsa.com.ar/SalidasCabecera/Horarios">HORARIOS</a></li> -->
+                </ul>
+            </div>
+        </div>
+
+        <div id="main">
+            
+
+<style type="text/css">
+    select {
+        width: auto;
+    }
+
+    #footer {
+        display: none;
+    }
+
+    .popup-bubble {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -100%);
+        background-color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-family: sans-serif;
+        overflow-y: auto;
+        max-height: 60px;
+        box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    .popup-bubble-anchor {
+        position: absolute;
+        width: 100%;
+        bottom: 8px;
+        left: 0;
+    }
+
+    .popup-bubble-anchor::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, 0);
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 8px solid white;
+    }
+
+    .popup-container {
+        cursor: auto;
+        height: 0;
+        position: absolute;
+        width: 200px;
+    }
+
+    ul {
+        padding-left: 0;
+        margin: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+</style>
+
+<div class="pageBody">
+    <h1><span class="menu">RECORRIDOS.</span></h1>
+    <fieldset style="margin-bottom:5px;">
+        <legend>Filtros de búsqueda</legend>
+        <text>Linea:</text>
+        <select id="cmbLineas">
+            <option value="">Seleccione..</option>
+        </select>&nbsp;<text>&nbsp;</text>
+        <text>Ramal:</text>
+        <select id="cmbRamal">
+            <!-- <option value="">Seleccione..</option> -->
+        </select>&nbsp;<text>&nbsp;</text>
+        <input type="submit" value="Ver" class="SubmitButton noprint" id="btnBuscar"
+            onclick="calcularYMostrarRecorrido()">
+    </fieldset>
+    <p id="filtro-error" style="display:none;">Debe seleccionar Linea, Ramal y Sentido</p>
+    <fieldset style="margin-bottom:5px; display: none;" id="Referencias">
+        <legend>Referencias</legend>
+        <ul>
+            <li><span style="background: #ff0000; color: #ff0000;">verde</span> Hacia <span id="sentido_ida"></span>
+            </li>
+            <li><span style="background: #007f00; color: #007f00;">verde</span> Hacia <span id="sentido_vuelta"></span>
+            </li>
+        </ul>
+    </fieldset>
+    <div class="map_container">
+        <div id="map" style="height:calc(100vh - 52px);position: relative">
+
+        </div>
+    </div>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7_rlxZI7FwvelRkHLlOlqGOGmkjzmCgo"></script>
+
+
+        </div>
+
+        <div style="clear:both;"></div>
+
+        <div id="footer" class="no-print">
+            <ul class="verticalUL" style="width:120px;">
+                <li><a href="/Empresa/Historia">EMPRESA</a></li>
+                <li><a href="/Curriculum/CargarCV">RRHH</a></li>
+                <li><a href="/Contacto?m=CONSULTA">CONTACTO</a></li>
+            </ul>
+
+            <ul class="verticalUL" style="width:120px;">
+                <li><a href="/Horarios">HORARIOS</a></li>
+                <li><a href="/Recorridos">RECORRIDOS</a></li>
+                <li><a href="/Paradas">PARADAS</a></li>
+            </ul>
+
+            <ul class="verticalUL" style="width:120px;">
+                <li>&nbsp;</li>
+            </ul>
+
+            <ul class="verticalUL" style="width:160px;">
+                <li><a href="/ObjetosPerdidos">OBJETOS PERDIDOS</a></li>
+                <li><a href="/Contacto?m=RECLAMO">RECLAMOS Y SUGERENCIAS</a></li>
+                <li><a href="/PreguntasFrecuentes/Faqs">PREGUNTAS FRECUENTES</a></li>
+            </ul>
+
+            <div class="box">
+                <div class="contentLeft">
+                    EMPRESA VERCELLI HNOS S.A. Av. Perón 2425. San Nicolás. Bs As. Argentina.<br />
+                    Línea telefónica <b>4449400</b>. Por horarios y servicios <b>4449450</b>. Mail:
+                    evhsa@e-evhsa.com.ar<br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal_novedad" title="Novedades en Evhsa" style="display:none;"></div>
+
+    <div id="underconstruction-window" title="Pantalla en construcción" style="display:none;">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Pantalla en construcción
+        </p>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script src="/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+<script src="/js/jquery.unobtrusive-ajax.min.js" type="text/javascript"></script>
+<script src="/js/jquery.ui.effect.js" type="text/javascript"></script>
+<script src="/js/jquery.ui.effect-fade.js" type="text/javascript"></script>
+<script src="/js/startup_master.js" type="text/javascript"></script>
+<script src="/js/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="/js/jquery.galleryview-3.0-dev.js" type="text/javascript"></script>
+<script src="/js/jquery.timers-1.2.js" type="text/javascript"></script>
+<script src="/js/jquery.slides.min.js" type="text/javascript"></script>
+<script src="/js/startup.config.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<script src="/js/sweetalert2.min.js"></script>
+<script>
+
+    $(function () {
+        $(".ver").on("click", function () {
+            var data = $(this).data('src');
+            window.open(data);
+        });
+        $("#modal_novedad, #modalObjetosEncontrados").dialog({
+            position: "top",
+            autoOpen: false,
+            modal: true,
+            dialogClass: 'alert',
+            buttons:
+                [{
+                    text: 'Cerrar',
+                    id: 'btnCloseNews',
+                    click: function () { $(this).dialog("close"); }
+                }],
+            open: function (event, ui) { $("body").css("overflow", "hidden") },
+            close: function (event, ui) { $("body").css("overflow", "auto") },
+            show: { effect: "fade", duration: 500 },
+            hide: { effect: "fade", duration: 200 }
+        });
+        $('#btnCloseNews').focus(function () { $(this).blur() });
+        $("#accordion").accordion({ heightStyle: "content" });
+        $.datepicker.regional['es'] = {
+            closeText: 'Cerrar',
+            prevText: '< Anterior',
+            nextText: 'Siguiente >',
+            currentText: 'Hoy',
+            monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+            dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+            dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
+            dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+            weekHeader: 'Sm',
+            dateFormat: 'dd/mm/yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''
+        };
+        $.datepicker.setDefaults($.datepicker.regional['es']);
+    });
+    function setCharsLeft(src, tgt) {
+        var len = src.val().length;
+        if (len >= 8000) {
+            src.val(src.value.substring(0, 8000));
+        } else {
+            var characters = 8000 - len;
+            tgt.text('Caracteres restantes: ' + characters);
+        }
+    }
+
+    $(".btnNovedad").on("click", async function () {
+        let id = $(this).data("id");
+        const novedad = await $.getJSON("/Novedades/GetNovedadById/" + id);
+        let html = "<div style='max-height: 70vh; overflow-y: scroll;'><h2>" + novedad[0].Titulo + "</h2>";
+        let contImg = 0;
+        if (novedad[0].PathImagen1 != null || novedad[0].PathImagen2 != null || novedad[0].PathImagen3 != null || novedad[0].PathImagen4 != null || novedad[0].PathImagen5 != null) {
+            html += `<div class="photoNews">
+                <ul id="myGallery">`;
+            if (novedad[0].PathImagen1 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen1 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen1 + `" data-description="" border="0" title="` + novedad[0].NombreImagen1 + `" alt="` + novedad[0].NombreImagen1 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen2 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen2 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen2 + `" data-description="" border="0" title="` + novedad[0].NombreImagen2 + `" alt="` + novedad[0].NombreImagen2 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen3 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen3 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen3 + `" data-description="" border="0" title="` + novedad[0].NombreImagen3 + `" alt="` + novedad[0].NombreImagen3 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen4 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen4 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen4 + `" data-description="" border="0" title="` + novedad[0].NombreImagen4 + `" alt="` + novedad[0].NombreImagen4 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen5 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen5 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen5 + `" data-description="" border="0" title="` + novedad[0].NombreImagen5 + `" alt="` + novedad[0].NombreImagen5 + `"/></li>`;
+                contImg++;
+            }
+            html += `</ul> </div>`;
+        }
+
+        html += "<h3>" + novedad[0].Brief + "</h3>" +
+            novedad[0].Descripcion+"</div>";
+        $("#modal_novedad").html(html);
+        $("#modal_novedad").dialog("option", "width", "650").dialog("open");
+
+        if (contImg > 0) {
+            let estado = false;
+            if (contImg > 1) estado = true;
+            $('#myGallery').galleryView({
+                panel_width: 350,
+                panel_height: 275,
+                panel_animation: 'crossfade',
+                panel_scale: 'fit',
+                show_captions: true,
+                autoplay: estado,
+                show_panel_nav: estado,
+                show_filmstrip: estado,
+                show_filmstrip_nav: false
+            });
+        }
+    });
+
+</script>
+
+
+<script type="text/javascript">
+
+    const ip_request = "evhsa.ddns.net";
+    // const ip_request = "evhsa.ddns.net"
+
+    $(function () {
+        getLineasRamales();
+        map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 12,
+            center: { lat: -33.365257, lng: -60.250073 },
+            mapTypeId: 'terrain',
+            mapTypeControl: false,
+        });
+    });
+
+    function setCombos(data) {
+        let html
+        let linea
+        $.each(data, (index, item) => {
+            switch (item.ramales.length) {
+                case 1:
+                    linea = item._id
+
+                    if (linea.indexOf("2342") >= 0) linea = "342 B"
+
+                    html += `<option 
+                            value='${item._id}'
+                            data-ida='${item.ida}'
+                            data-vuelta='${item.vuelta}'
+                            data-cantidad-ramales='${item.ramales.length}'
+
+                            data-ramal1='${item.ramales[0]}'
+
+                            data-ramal1-comp='${item.ramalesComp[0].descripcion}'
+
+                            data-ramal1-mysql='${item.ramalesComp[0].id_mysql}'
+                        >
+                            ${linea}
+                        </option>`
+                    break;
+                case 2:
+                    linea = item._id
+                    // if (linea != "1342") {
+                    if (linea.length == "3" && linea.indexOf("342") >= 0) linea = "342"
+                    if (linea.indexOf("1342") >= 0) linea = "342 A"
+                    if (linea.indexOf("3342") >= 0) linea = "342 C"
+
+                    html += `<option 
+                                value='${item._id}'
+                                data-ida='${item.ida}'
+                                data-vuelta='${item.vuelta}'
+                                data-cantidad-ramales='${item.ramales.length}'
+
+                                data-ramal1='${item.ramales[0]}'
+                                data-ramal2='${item.ramales[1]}'
+
+                                data-ramal1-comp='${item.ramalesComp[0].descripcion}'
+                                data-ramal2-comp='${item.ramalesComp[1].descripcion}'
+
+                                data-ramal1-mysql='${item.ramalesComp[0].id_mysql}'
+                                data-ramal2-mysql='${item.ramalesComp[1].id_mysql}'
+                            >
+                                ${linea}
+                            </option>`
+                    // }
+                    break;
+                case 3:
+                    html += `<option 
+                            value='${item._id}'
+                            data-ida='${item.ida}'
+                            data-vuelta='${item.vuelta}'
+                            data-cantidad-ramales='${item.ramales.length}'
+
+                            data-ramal1='${item.ramales[0]}'
+                            data-ramal2='${item.ramales[1]}'
+                            data-ramal3='${item.ramales[2]}'
+
+                            data-ramal1-comp='${item.ramalesComp[0].descripcion}'
+                            data-ramal2-comp='${item.ramalesComp[1].descripcion}'
+                            data-ramal3-comp='${item.ramalesComp[2].descripcion}'
+
+                            data-ramal1-mysql='${item.ramalesComp[0].id_mysql}'
+                            data-ramal2-mysql='${item.ramalesComp[1].id_mysql}'
+                            data-ramal3-mysql='${item.ramalesComp[2].id_mysql}'
+                        >
+                            ${item._id}
+                        </option>`
+                    break;
+                case 4:
+                    html += `<option 
+                            value='${item._id}'
+                            data-ida='${item.ida}'
+                            data-vuelta='${item.vuelta}'
+                            data-cantidad-ramales='${item.ramales.length}'
+
+                            data-ramal1='${item.ramales[0]}'
+                            data-ramal2='${item.ramales[1]}'
+                            data-ramal3='${item.ramales[2]}'
+                            data-ramal4='${item.ramales[3]}'
+
+                            data-ramal1-comp='${item.ramalesComp[0].descripcion}'
+                            data-ramal2-comp='${item.ramalesComp[1].descripcion}'
+                            data-ramal3-comp='${item.ramalesComp[2].descripcion}'
+                            data-ramal4-comp='${item.ramalesComp[3].descripcion}'
+
+                            data-ramal1-mysql='${item.ramalesComp[0].id_mysql}'
+                            data-ramal2-mysql='${item.ramalesComp[1].id_mysql}'
+                            data-ramal3-mysql='${item.ramalesComp[2].id_mysql}'
+                            data-ramal4-mysql='${item.ramalesComp[3].id_mysql}'
+                        >
+                            ${item._id}
+                        </option>`
+                    break;
+                case 5:
+                    html += `<option 
+                            value='${item._id}'
+                            data-ida='${item.ida}'
+                            data-vuelta='${item.vuelta}'
+                            data-cantidad-ramales='${item.ramales.length}'
+                            
+                            data-ramal1='${item.ramales[0]}'
+                            data-ramal2='${item.ramales[1]}'
+                            data-ramal3='${item.ramales[2]}'
+                            data-ramal4='${item.ramales[3]}'
+                            data-ramal5='${item.ramales[4]}'
+
+                            data-ramal1-comp='${item.ramalesComp[0].descripcion}'
+                            data-ramal2-comp='${item.ramalesComp[1].descripcion}'
+                            data-ramal3-comp='${item.ramalesComp[2].descripcion}'
+                            data-ramal4-comp='${item.ramalesComp[3].descripcion}'
+                            data-ramal5-comp='${item.ramalesComp[4].descripcion}'
+
+                            data-ramal1-mysql='${item.ramalesComp[0].id_mysql}'
+                            data-ramal2-mysql='${item.ramalesComp[1].id_mysql}'
+                            data-ramal3-mysql='${item.ramalesComp[2].id_mysql}'
+                            data-ramal4-mysql='${item.ramalesComp[3].id_mysql}'
+                            data-ramal5-mysql='${item.ramalesComp[4].id_mysql}'
+                        >
+                            ${item._id}
+                        </option>`
+                    break;
+            }
+        });
+        $("#cmbLineas").append(html);
+    }
+
+    $("#cmbLineas").change(() => {
+        $("#cmbSentido, #cmbRamal").html("")
+        let linea = $("#cmbLineas option:selected").text().trim()
+        let num_ramales = $("#cmbLineas option:selected").data('cantidad-ramales')
+        let html = ""
+        let id_ramal_mysql
+        let ramal
+        let sentido
+        let ida
+        let vuelta
+
+        if ($("#cmbLineas").val() == "") return
+
+        for (x = 1; x <= num_ramales; x++) {
+            id_ramal_mysql = $('#cmbLineas option:selected').data('ramal' + x + '-mysql')
+            ramal = $('#cmbLineas option:selected').data('ramal' + x + '-comp').toUpperCase()
+            ramal = ramal.replace("LINEA ", '').replace(linea, '')
+            ramal = ramal.replace("(", '').replace(")", '')
+            ramal = ramal.replace("342 - ", "").replace("342C ", "").replace("342B ", "")
+
+            if (ramal.indexOf("NOCTURNO") < 0 && ramal.indexOf("CEMAC") < 0) {
+                if (
+                    id_ramal_mysql != 124 &&
+                    id_ramal_mysql != 122 &&
+                    id_ramal_mysql != 114 &&
+                    id_ramal_mysql != 113 &&
+                    id_ramal_mysql != 111 &&
+                    id_ramal_mysql != 110 &&
+                    id_ramal_mysql != 108 &&
+                    id_ramal_mysql != 105 &&
+                    id_ramal_mysql != 103 &&
+                    id_ramal_mysql != 116
+                ) {
+                    if (ramal.indexOf("POR TERMINAL") >= 0 || ramal.indexOf("POR AV SAVIO") >= 0) {
+                        ramal = `B° SANTA CLARA - B° SOMISA ${ramal}`
+                    }
+                    html += `<option value="${id_ramal_mysql}">${ramal}</option>`
+                }
+            }
+        }
+
+        $("#cmbRamal").html(html)
+        if ($("#cmbRamal option").length == 1) calcularYMostrarRecorrido()
+    });
+
+    $("#cmbRamal").change(() => {
+        $("#filtro-error").hide()
+
+        if ($("#cmbLineas").val() == "") {
+            $("#filtro-error").show()
+            return
+        }
+
+        let sentido
+        let ida
+        let vuelta
+        let html
+        let combo_ramal = $('#cmbRamal option:selected').text()
+
+        if (combo_ramal.indexOf("-") >= 0) {
+            sentido = $('#cmbRamal option:selected').text().split(' - ');
+            ida = 'Hacia ' + sentido[1]
+            vuelta = 'Hacia ' + sentido[0]
+        } else {
+            ida = $("#cmbLineas option:selected").data('ida')
+            vuelta = $("#cmbLineas option:selected").data('vuelta')
+        }
+
+        html = `<option value="ida">${ida}</option><option value="vuelta">${vuelta}</option>`
+        $("#cmbSentido").html(html)
+    });
+
+    async function getLineasRamales() {
+        const data = await $.getJSON("https://gpsevhsa.com/getLineasRamalesSnyProvi")
+        // const data = await $.getJSON("https://gpsevhsa.com/getlineasramales");
+        setCombos(data.data)
+        $(".loading").css('display', 'none')
+    }
+
+    async function calcularYMostrarRecorrido() {
+        $("#filtro-error").hide()
+        const id_ramal = $("#cmbRamal").val()
+
+        // SI NO ELIGE TODOS LOS CAMPOS
+        if ($("#cmbLineas").val() == "") {
+            $("#cmbRamal").html("")
+            $("#filtro-error").show()
+            return
+        }
+
+        if (!id_ramal) {
+            $("#filtro-error").show()
+            return;
+        }
+
+        $(".loading").css('display', 'block')
+        const data = await $.getJSON("/Recorridos/getRecorridosToWeb/" + id_ramal);
+        console.log(data)
+        dibujarRecorrido(data)
+    }
+
+    function dibujarRecorrido(data) {
+        map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 13,
+            mapTypeId: 'terrain',
+            mapTypeControl: false,
+        });
+
+        let ramal = $("#cmbRamal option:selected").text()
+        console.log(ramal)
+        if (
+            ramal.indexOf("POR TERMINAL") >= 0 ||
+            ramal.indexOf("POR AV SAVIO") >= 0
+        ) {
+            ramal = ramal.replace("Por ", "")
+            ramal = "B° SANTA CLARA - B° SOMISA"
+        }
+
+        if (ramal.indexOf(" Y ") >= 0) ramal = ramal.replace(" Y ", " - ")
+
+        ramal = ramal.split("-")
+
+        if (ramal[0].indexOf("SN") >= 0) ramal[0] = "SAN NICOLAS"
+        if (ramal[1].indexOf("SN") >= 0) ramal[1] = "SAN NICOLAS"
+
+        var centerControlDiv = document.createElement('div')
+        var centerControl = new AgregarReferencias(centerControlDiv, map, ramal[1], ramal[0])
+
+        centerControlDiv.index = 1
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(centerControlDiv)
+
+        let infowindow = new google.maps.InfoWindow();
+
+        function placeMarker(loc) {
+            var marker = new google.maps.Marker({
+                position: {
+                    lat: parseFloat(loc[0].latitud),
+                    lng: parseFloat(loc[0].longitud)
+                },
+                animation: google.maps.Animation.DROP,
+                map: map
+            })
+
+            let descripcion = loc[0].descripcion
+            if (descripcion)
+                if (descripcion.indexOf("SN") >= 0) descripcion = "SAN NICOLAS"
+            if (descripcion.indexOf("342B") >= 0 || descripcion.indexOf("342C") >= 0) {
+                descripcion = descripcion.replace("342B", "")
+                descripcion = descripcion.replace("342C", "")
+            }
+
+            let contentString = '<div id="content">' +
+                '<div id="siteNotice"></div>' +
+                '<h1 id="firstHeading" class="firstHeading">' + descripcion + '</h1>' +
+                '</div>';
+
+            infowindow.close()
+            infowindow.setContent(contentString)
+            infowindow.open(map, marker)
+
+            marker.addListener('mouseover', function () {
+                infowindow.close()
+                infowindow.setContent(contentString)
+                infowindow.open(map, marker)
+            });
+        }
+
+        if (ramal[1].indexOf("RAMALLO") >= 0) {
+            placeMarker([{ latitud: parseFloat(data[0].cabecera_lat), longitud: parseFloat(data[0].cabecera_lng), descripcion: '' }])
+            placeMarker([{ latitud: parseFloat(data[data.length - 1].cabecera_lat), longitud: parseFloat(data[data.length - 1].cabecera_lng), descripcion: '' }])
+        } else {
+            placeMarker([{ latitud: parseFloat(data[0].cabecera_lat), longitud: parseFloat(data[0].cabecera_lng), descripcion: '' }])
+            placeMarker([{ latitud: parseFloat(data[data.length - 1].cabecera_lat), longitud: parseFloat(data[data.length - 1].cabecera_lng), descripcion: '' }])
+        }
+
+        map.setCenter({ lat: parseFloat(data[0].latitud), lng: parseFloat(data[0].longitud) })
+
+        for (x = 1; x < data.length; x++) {
+            let pos = new google.maps.LatLng(data[x - 1].latitud, data[x - 1].longitud)
+            let pos2 = new google.maps.LatLng(data[x].latitud, data[x].longitud)
+            let color = '#ff0000'
+            if (data[x - 1].tipo == 'V') color = '#007f00'
+            new google.maps.Polyline({
+                path: [pos, pos2],
+                geodesic: true,
+                strokeColor: color,
+                strokeOpacity: .9,
+                strokeWeight: 3,
+                map
+            })
+        }
+
+        $(".loading").css('display', 'none')
+    }
+
+    function AgregarReferencias(controlDiv, map, ida, vuelta) {
+        // Set CSS for the control border.
+        var controlUI = document.createElement('div');
+        controlUI.style.backgroundColor = '#fff';
+        controlUI.style.border = '2px solid #fff';
+        controlUI.style.borderRadius = '3px';
+        controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+        controlUI.style.textAlign = 'center';
+        controlDiv.appendChild(controlUI);
+
+        if (ida.indexOf("342B") >= 0 || ida.indexOf("342C") >= 0) {
+            ida = ida.replace("342B", "")
+            ida = ida.replace("342C", "")
+        }
+        if (vuelta.indexOf("342B") >= 0 || vuelta.indexOf("342C") >= 0) {
+            vuelta = vuelta.replace("342B", "")
+            vuelta = vuelta.replace("342C", "")
+        }
+
+        // Set CSS for the control interior.
+        var controlText = document.createElement('div');
+        controlText.style.color = 'rgb(25,25,25)';
+        controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+        controlText.style.fontSize = '12px';
+        controlText.style.lineHeight = '38px';
+        controlText.style.paddingLeft = '15px';
+        controlText.style.paddingRight = '15px';
+        controlText.innerHTML = '<fieldset id="Referencias">' +
+            '<legend style="margin: 0;">Referencias</legend>' +
+            '<ul style="text-align: left;"><li><span style="background: #ff0000; color: #ff0000;">verde</span> Hacia ' + ida + '</li>' +
+            '<li><span style="background: #007f00; color: #007f00;">verde</span> Hacia ' + vuelta + '</li></ul>' +
+            '</fieldset>';
+        controlUI.appendChild(controlText);
+    }
+
+</script>
+
+
+</html>

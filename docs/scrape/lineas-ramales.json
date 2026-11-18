@@ -1,0 +1,745 @@
+﻿{
+    "status":  "OK",
+    "data":  [
+                 {
+                     "_id":  "227",
+                     "ida":  null,
+                     "vuelta":  null,
+                     "ramales":  [
+                                     "5ca824745c40a501af33b4e5",
+                                     "5ca824745c40a501af33b4e3",
+                                     "5ca824745c40a501af33b4e2",
+                                     "5c9700ed3a03e1106902bda2"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5ca824745c40a501af33b4e5",
+                                             "id_mysql":  112,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 227 CONESA - PERGAMINO",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "227",
+                                             "version":  "2022-05-04T04:00:00.000Z",
+                                             "__v":  0
+                                         },
+                                         {
+                                             "_id":  "5ca824745c40a501af33b4e3",
+                                             "id_mysql":  113,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 227 CONESA -PERGAMINO POR ALSINA",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "227",
+                                             "version":  "2022-05-04T04:00:00.000Z",
+                                             "__v":  0
+                                         },
+                                         {
+                                             "_id":  "5ca824745c40a501af33b4e2",
+                                             "id_mysql":  114,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 227 SN - PERGAMINO INGRESO A ROJO",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "227",
+                                             "version":  "2019-04-06T04:00:02.000Z",
+                                             "__v":  0
+                                         },
+                                         {
+                                             "_id":  "5c9700ed3a03e1106902bda2",
+                                             "id_mysql":  106,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 227 SN- PERGAMINO",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "227",
+                                             "version":  "2019-04-06T04:00:02.000Z",
+                                             "__v":  0
+                                         }
+                                     ]
+                 },
+                 {
+                     "_id":  "230",
+                     "ida":  null,
+                     "vuelta":  null,
+                     "ramales":  [
+                                     "5ca824745c40a501af33b4e6",
+                                     "5ca824745c40a501af33b4e4",
+                                     "5ca824745c40a501af33b4e1",
+                                     "5a1df6ec5c9080681586c96d"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5ca824745c40a501af33b4e6",
+                                             "id_mysql":  110,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 230 SN - PERGAMINO INGRESA A ROJO",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "230",
+                                             "version":  "2019-04-06T04:00:02.000Z",
+                                             "__v":  0
+                                         },
+                                         {
+                                             "_id":  "5ca824745c40a501af33b4e4",
+                                             "id_mysql":  111,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 230 SN - PERGAMINO X ALSINA INGRESO A ROJO",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "230",
+                                             "version":  "2019-04-06T04:00:02.000Z",
+                                             "__v":  0
+                                         },
+                                         {
+                                             "_id":  "5ca824745c40a501af33b4e1",
+                                             "id_mysql":  109,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 230 SN - PERGAMINO X ALSINA",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "230",
+                                             "version":  "2019-04-06T04:00:02.000Z",
+                                             "__v":  0
+                                         },
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c96d",
+                                             "id_mysql":  85,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 230 SN - PERGAMINO",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "230",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0
+                                         }
+                                     ]
+                 },
+                 {
+                     "_id":  "342",
+                     "ida":  null,
+                     "vuelta":  null,
+                     "ramales":  [
+                                     "5c9700ed3a03e1106902bda3",
+                                     "5a1df6ec5c9080681586c97f"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5c9700ed3a03e1106902bda3",
+                                             "id_mysql":  105,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "Linea 342 SAN NICOLAS- SANCHEZ",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "342",
+                                             "version":  "2022-08-18T04:00:00.000Z",
+                                             "__v":  0
+                                         },
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c97f",
+                                             "id_mysql":  86,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "Linea 342 SAN NICOLAS- SANCHEZ",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "342",
+                                             "version":  "2022-08-18T04:00:00.000Z",
+                                             "__v":  0
+                                         }
+                                     ]
+                 },
+                 {
+                     "_id":  "374",
+                     "ida":  null,
+                     "vuelta":  null,
+                     "ramales":  [
+                                     "5ca6d2e65c40a501af332cb0",
+                                     "5a1df6ec5c9080681586c95c"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5ca6d2e65c40a501af332cb0",
+                                             "id_mysql":  107,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 374 PARADOR - COMIRSA",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "374",
+                                             "version":  "2019-05-15T21:57:16.000Z",
+                                             "__v":  0
+                                         },
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c95c",
+                                             "id_mysql":  87,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 374 PARADOR - SIDERAR",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "374",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0
+                                         }
+                                     ]
+                 },
+                 {
+                     "_id":  "375",
+                     "ida":  null,
+                     "vuelta":  null,
+                     "ramales":  [
+                                     "5ca6d2e65c40a501af332cb1",
+                                     "5c945de62fd9a657bbadeb28",
+                                     "5a1df6ec5c9080681586c9a4"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5ca6d2e65c40a501af332cb1",
+                                             "id_mysql":  108,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 375 Aº DEL MEDIO -  COMIRSA X PORTERIA 1",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "375",
+                                             "version":  "2019-04-05T04:00:00.000Z",
+                                             "__v":  0
+                                         },
+                                         {
+                                             "_id":  "5c945de62fd9a657bbadeb28",
+                                             "id_mysql":  103,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 375 Aª DEL MEDIO -  SIDERAR x PORTERIA 1",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "375",
+                                             "version":  "2019-04-05T04:00:00.000Z",
+                                             "__v":  0
+                                         },
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c9a4",
+                                             "id_mysql":  88,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 375 Aª DEL MEDIO -  SIDERAR",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "375",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0
+                                         }
+                                     ]
+                 },
+                 {
+                     "_id":  "500",
+                     "ida":  "Hacia Rojo/Conesa",
+                     "vuelta":  "Hacia San Nicolas",
+                     "ramales":  [
+                                     "5a1df6ec5c9080681586c993",
+                                     "5a1df6ec5c9080681586c97e"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c993",
+                                             "id_mysql":  2,
+                                             "id_ramal":  3964,
+                                             "desc_corta":  "001A",
+                                             "descripcion":  "LINEA 500 SN - ROJO",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "500",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0,
+                                             "descripcion_app":  "500 (SN - ROJO/CONESA)",
+                                             "ida":  "Hacia Rojo/Conesa",
+                                             "vuelta":  "Hacia San Nicolas"
+                                         },
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c97e",
+                                             "id_mysql":  81,
+                                             "id_ramal":  3964,
+                                             "desc_corta":  "001B",
+                                             "descripcion":  "LINEA 500 SN - CONESA",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "500",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0,
+                                             "descripcion_app":  "500 (SN - ROJO/CONESA)",
+                                             "ida":  "Hacia Rojo/Conesa",
+                                             "vuelta":  "Hacia San Nicolas"
+                                         }
+                                     ]
+                 },
+                 {
+                     "_id":  "501",
+                     "ida":  "Hacia B° Somisa/Sironi",
+                     "vuelta":  "Hacia B° Santa Clara",
+                     "ramales":  [
+                                     "5d05bef766622c143f7ce8f3",
+                                     "5d05bef766622c143f7ce8f1",
+                                     "5a1df6ec5c9080681586c96f",
+                                     "5a1df6ec5c9080681586c95d"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5d05bef766622c143f7ce8f3",
+                                             "id_mysql":  120,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 501 SANTA CLARA - SIRONI X SAVIO",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "501",
+                                             "version":  "2019-06-16T04:00:00.000Z",
+                                             "__v":  0,
+                                             "ida":  "Hacia B° Somisa/Sironi",
+                                             "vuelta":  "Hacia B° Santa Clara"
+                                         },
+                                         {
+                                             "_id":  "5d05bef766622c143f7ce8f1",
+                                             "id_mysql":  121,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 501 SANTA CLARA - SIRONI X TERMINAL",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "501",
+                                             "version":  "2019-06-16T04:00:00.000Z",
+                                             "__v":  0,
+                                             "ida":  "Hacia B° Somisa/Sironi",
+                                             "vuelta":  "Hacia B° Santa Clara"
+                                         },
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c96f",
+                                             "id_mysql":  4,
+                                             "id_ramal":  4051,
+                                             "desc_corta":  "002B",
+                                             "descripcion":  "LINEA 501 (POR TERMINAL)",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "501",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0,
+                                             "ida":  "Hacia B° Somisa/Sironi",
+                                             "vuelta":  "Hacia B° Santa Clara"
+                                         },
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c95d",
+                                             "id_mysql":  3,
+                                             "id_ramal":  4050,
+                                             "desc_corta":  "002A",
+                                             "descripcion":  "LINEA 501 (POR AV SAVIO)",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "501",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0,
+                                             "ida":  "Hacia B° Somisa/Sironi",
+                                             "vuelta":  "Hacia B° Santa Clara"
+                                         }
+                                     ]
+                 },
+                 {
+                     "_id":  "502",
+                     "ida":  "Hacia Bº Golf",
+                     "vuelta":  "Hacia Floresta",
+                     "ramales":  [
+                                     "5a1df6ec5c9080681586c981"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c981",
+                                             "id_mysql":  6,
+                                             "id_ramal":  4066,
+                                             "desc_corta":  "003A",
+                                             "descripcion":  "LINEA 502 FLORESTA - Bª GOLF",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "502",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0,
+                                             "ida":  "Hacia Bº Golf",
+                                             "vuelta":  "Hacia Floresta"
+                                         }
+                                     ]
+                 },
+                 {
+                     "_id":  "503",
+                     "ida":  "Hacia Bº 7 de Septiembre",
+                     "vuelta":  "Hacia Arroyo del Medio",
+                     "ramales":  [
+                                     "5a1df6ec5c9080681586c994"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c994",
+                                             "id_mysql":  7,
+                                             "id_ramal":  4067,
+                                             "desc_corta":  "004A",
+                                             "descripcion":  "LINEA 503 ARROYO DEL MEDIO Y B° 7 DE SEPTIEMBRE",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "503",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0,
+                                             "ida":  "Hacia Bº 7 de Septiembre",
+                                             "vuelta":  "Hacia Arroyo del Medio"
+                                         }
+                                     ]
+                 },
+                 {
+                     "_id":  "504",
+                     "ida":  "Hacia Bº Santa Rosa",
+                     "vuelta":  "Hacia Bº Suizo",
+                     "ramales":  [
+                                     "5a1df6ec5c9080681586c982"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c982",
+                                             "id_mysql":  8,
+                                             "id_ramal":  4072,
+                                             "desc_corta":  "005A",
+                                             "descripcion":  "LINEA 504 B° SUIZO - B° SANTA ROSA",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "504",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0,
+                                             "ida":  "Hacia Bº Santa Rosa",
+                                             "vuelta":  "Hacia Bº Suizo"
+                                         }
+                                     ]
+                 },
+                 {
+                     "_id":  "505",
+                     "ida":  "Hacia Bº Las Viñas",
+                     "vuelta":  "Hacia Bº Fraga",
+                     "ramales":  [
+                                     "5a1df6ec5c9080681586c970"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c970",
+                                             "id_mysql":  10,
+                                             "id_ramal":  4082,
+                                             "desc_corta":  "006A",
+                                             "descripcion":  "LINEA 505 B° FRAGA - B° LAS VIÑAS",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "505",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0,
+                                             "ida":  "Hacia Bº Las Viñas",
+                                             "vuelta":  "Hacia Bº Fraga"
+                                         }
+                                     ]
+                 },
+                 {
+                     "_id":  "506",
+                     "ida":  "Hacia Bº 12 De Marzo",
+                     "vuelta":  "Hacia Bº Gines Garcia",
+                     "ramales":  [
+                                     "5a1df6ec5c9080681586c94d"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c94d",
+                                             "id_mysql":  11,
+                                             "id_ramal":  4083,
+                                             "desc_corta":  "007A",
+                                             "descripcion":  "LINEA 506 B°GINES GARCIA - B°12 DE MARZO",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "506",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0,
+                                             "ida":  "Hacia Bº 12 De Marzo",
+                                             "vuelta":  "Hacia Bº Gines Garcia"
+                                         }
+                                     ]
+                 },
+                 {
+                     "_id":  "507",
+                     "ida":  "Hacia Bº Sandrina/California/V.Esperanza",
+                     "vuelta":  "Hacia Bº San Jorge",
+                     "ramales":  [
+                                     "5a1df6ec5c9080681586c9a3",
+                                     "5a1df6ec5c9080681586c995",
+                                     "5a1df6ec5c9080681586c95b"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c9a3",
+                                             "id_mysql":  83,
+                                             "id_ramal":  4086,
+                                             "desc_corta":  "008A",
+                                             "descripcion":  "LINEA 507 SAN JORGE - CALIFORNIA",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "507",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0,
+                                             "ida":  "Hacia Bº Sandrina/California/V.Esperanza",
+                                             "vuelta":  "Hacia Bº San Jorge"
+                                         },
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c995",
+                                             "id_mysql":  12,
+                                             "id_ramal":  4086,
+                                             "desc_corta":  "008A",
+                                             "descripcion":  "LINEA 507 B° SAN JORGE - B° SANDRINA",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "507",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0,
+                                             "ida":  "Hacia Bº Sandrina/California/V.Esperanza",
+                                             "vuelta":  "Hacia Bº San Jorge"
+                                         },
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c95b",
+                                             "id_mysql":  82,
+                                             "id_ramal":  4086,
+                                             "desc_corta":  "008A",
+                                             "descripcion":  "LINEA 507 SAN JORGE - V.ESPERANZA",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "507",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0,
+                                             "ida":  "Hacia Bº Sandrina/California/V.Esperanza",
+                                             "vuelta":  "Hacia Bº San Jorge"
+                                         }
+                                     ]
+                 },
+                 {
+                     "_id":  "510",
+                     "ida":  "Hacia Bº Ayres del Sur",
+                     "vuelta":  "Hacia Bº San Francisco",
+                     "ramales":  [
+                                     "5d1833efaa6bda13db860488",
+                                     "5d05bef766622c143f7ce8f2",
+                                     "5a1df6ec5c9080681586c95f"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5d1833efaa6bda13db860488",
+                                             "id_mysql":  124,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "Linea 510 de Escuela 15 a Aires del Sur",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "510",
+                                             "version":  "2019-06-30T04:00:01.000Z",
+                                             "ida":  "Hacia Bº Ayres del Sur",
+                                             "vuelta":  "Hacia Bº San Francisco",
+                                             "__v":  0
+                                         },
+                                         {
+                                             "_id":  "5d05bef766622c143f7ce8f2",
+                                             "id_mysql":  122,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 510 PREDIO -GUEMES",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "510",
+                                             "ida":  "Hacia Bº Ayres del Sur",
+                                             "vuelta":  "Hacia B° San Francisco",
+                                             "version":  "2019-06-16T04:00:00.000Z",
+                                             "__v":  0
+                                         },
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c95f",
+                                             "id_mysql":  14,
+                                             "id_ramal":  4097,
+                                             "desc_corta":  "009A",
+                                             "descripcion":  "LINEA 510 Bº TIERRAS DEL SOL - AYRES DEL SUR",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "510",
+                                             "version":  "2024-07-31T04:00:00.000Z",
+                                             "__v":  0,
+                                             "descripcion_app":  "510 (SAN FRANCISCO - AIRES DEL SUR)",
+                                             "ida":  "Hacia Bº Ayres del Sur",
+                                             "vuelta":  "Hacia Bº San Francisco"
+                                         }
+                                     ]
+                 },
+                 {
+                     "_id":  "512",
+                     "ida":  "Hacia Los Frenos",
+                     "vuelta":  "Hacia La Emilia",
+                     "ramales":  [
+                                     "5d16e269aa6bda13db8574d7",
+                                     "5a1df6ec5c9080681586c996",
+                                     "5a1df6ec5c9080681586c991",
+                                     "5a1df6ec5c9080681586c94e"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5d16e269aa6bda13db8574d7",
+                                             "id_mysql":  123,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "512 NOCTURNO LA EMILIA A GUEMES",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "512",
+                                             "version":  "2019-06-29T04:00:00.000Z",
+                                             "__v":  0,
+                                             "ida":  "Hacia Los Frenos",
+                                             "vuelta":  "Hacia La Emilia"
+                                         },
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c996",
+                                             "id_mysql":  17,
+                                             "id_ramal":  4105,
+                                             "desc_corta":  "010B",
+                                             "descripcion":  "LINEA 512 SERVICIO NOCTURNO",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "512",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0,
+                                             "ida":  "Hacia Los Frenos",
+                                             "vuelta":  "Hacia La Emilia"
+                                         },
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c991",
+                                             "id_mysql":  84,
+                                             "id_ramal":  4104,
+                                             "desc_corta":  "010A",
+                                             "descripcion":  "LINEA 512 CEMAC - LA EMILIA",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "512",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0,
+                                             "ida":  "Hacia Los Frenos",
+                                             "vuelta":  "Hacia La Emilia"
+                                         },
+                                         {
+                                             "_id":  "5a1df6ec5c9080681586c94e",
+                                             "id_mysql":  16,
+                                             "id_ramal":  4104,
+                                             "desc_corta":  "010A",
+                                             "descripcion":  "LINEA 512 LA EMILIA - LOS FRESNOS",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "512",
+                                             "version":  "2018-09-10T21:33:07.000Z",
+                                             "__v":  0,
+                                             "ida":  "Hacia Los Frenos",
+                                             "vuelta":  "Hacia La Emilia"
+                                         }
+                                     ]
+                 },
+                 {
+                     "_id":  "1342",
+                     "ida":  null,
+                     "vuelta":  null,
+                     "ramales":  [
+                                     "5cac18e15c40a501af35586b",
+                                     "5cac18e15c40a501af355869"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5cac18e15c40a501af35586b",
+                                             "id_mysql":  116,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 342A- SAN NICOLAS - RAMALLO",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "1342",
+                                             "version":  "2022-08-18T04:00:00.000Z",
+                                             "__v":  0
+                                         },
+                                         {
+                                             "_id":  "5cac18e15c40a501af355869",
+                                             "id_mysql":  115,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 342A SAN NICOLAS - RAMALLO",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "1342",
+                                             "version":  "2022-08-18T04:00:00.000Z",
+                                             "__v":  0
+                                         }
+                                     ]
+                 },
+                 {
+                     "_id":  "2342",
+                     "ida":  null,
+                     "vuelta":  null,
+                     "ramales":  [
+                                     "5cac18e15c40a501af35586a"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5cac18e15c40a501af35586a",
+                                             "id_mysql":  117,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 342B SAN NICOLAS - SAN PEDRO",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "2342",
+                                             "version":  "2019-04-09T04:00:00.000Z",
+                                             "__v":  0
+                                         }
+                                     ]
+                 },
+                 {
+                     "_id":  "3342",
+                     "ida":  null,
+                     "vuelta":  null,
+                     "ramales":  [
+                                     "5caebbed5c40a501af3671b6",
+                                     "5caebbed5c40a501af3671b5"
+                                 ],
+                     "ramalesComp":  [
+                                         {
+                                             "_id":  "5caebbed5c40a501af3671b6",
+                                             "id_mysql":  118,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 342C STA MONICA -  PARAISO",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "3342",
+                                             "version":  "2019-04-12T04:00:00.000Z",
+                                             "__v":  0
+                                         },
+                                         {
+                                             "_id":  "5caebbed5c40a501af3671b5",
+                                             "id_mysql":  119,
+                                             "id_ramal":  0,
+                                             "desc_corta":  "0000",
+                                             "descripcion":  "LINEA 342C SANTA MONICA - RAMALLO",
+                                             "tipo_linea":  0,
+                                             "activa":  true,
+                                             "linea":  "3342",
+                                             "version":  "2019-04-11T04:00:00.000Z",
+                                             "__v":  0
+                                         }
+                                     ]
+                 }
+             ]
+}

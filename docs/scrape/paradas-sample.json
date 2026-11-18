@@ -1,0 +1,1545 @@
+﻿{
+    "status":  "OK",
+    "data":  [
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a0f7",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c49",
+                                    "latitude":  "-33.34349077146711",
+                                    "longitude":  "-60.22709326498",
+                                    "descripcion":  "Terminal",
+                                    "codigo":  "P1",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.22709326498,
+                                                                    -33.34349077146711
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  1,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a0f8",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c4a",
+                                    "latitude":  "-33.34106224252512",
+                                    "longitude":  "-60.22509596759619",
+                                    "descripcion":  "Pellegrini y Balcarce",
+                                    "codigo":  "P2",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.22509596759619,
+                                                                    -33.34106224252512
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  2,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a0f9",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c4b",
+                                    "latitude":  "-33.3390926088383",
+                                    "longitude":  "-60.22320297705278",
+                                    "descripcion":  "Pellegrini y Alvear",
+                                    "codigo":  "P3",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.22320297705278,
+                                                                    -33.3390926088383
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  3,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a0fa",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c4c",
+                                    "latitude":  "-33.33785453016336",
+                                    "longitude":  "-60.220202147812756",
+                                    "descripcion":  "Savio y Garibaldi",
+                                    "codigo":  "P4",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.220202147812756,
+                                                                    -33.33785453016336
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  4,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a0fb",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c4d",
+                                    "latitude":  "-33.3418699611649",
+                                    "longitude":  "-60.21443198480762",
+                                    "descripcion":  "Savio y Necochea",
+                                    "codigo":  "P5",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.21443198480762,
+                                                                    -33.3418699611649
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  5,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a0fc",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c4e",
+                                    "latitude":  "-33.34437911907012",
+                                    "longitude":  "-60.210813987278584",
+                                    "descripcion":  "Savio y San Lorenzo",
+                                    "codigo":  "P6",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.210813987278584,
+                                                                    -33.34437911907012
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  6,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a0fd",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c4f",
+                                    "latitude":  "-33.3468114642291",
+                                    "longitude":  "-60.207330701176716",
+                                    "descripcion":  "Savio y Cochabamba",
+                                    "codigo":  "P7",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.207330701176716,
+                                                                    -33.3468114642291
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  7,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a0fe",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c50",
+                                    "latitude":  "-33.34965777794365",
+                                    "longitude":  "-60.20325570396403",
+                                    "descripcion":  "Savio y Primavera",
+                                    "codigo":  "P8",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.20325570396403,
+                                                                    -33.34965777794365
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  8,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a0ff",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c51",
+                                    "latitude":  "-33.3525308664856",
+                                    "longitude":  "-60.199086786404905",
+                                    "descripcion":  "Savio y Ponce de Leon",
+                                    "codigo":  "P9",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.199086786404905,
+                                                                    -33.3525308664856
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  9,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a100",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c52",
+                                    "latitude":  "-33.35592814378146",
+                                    "longitude":  "-60.19425423936502",
+                                    "descripcion":  "Savio y Cepeda",
+                                    "codigo":  "P10",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.19425423936502,
+                                                                    -33.35592814378146
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  10,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a101",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c53",
+                                    "latitude":  "-33.357909271882995",
+                                    "longitude":  "-60.191355209976905",
+                                    "descripcion":  "Savio entre Theran y Acevedo",
+                                    "codigo":  "P11",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.191355209976905,
+                                                                    -33.357909271882995
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  11,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a102",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c54",
+                                    "latitude":  "-33.36820282723066",
+                                    "longitude":  "-60.198431297806394",
+                                    "descripcion":  "R188 entre Congreso y Juramento",
+                                    "codigo":  "P12",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.198431297806394,
+                                                                    -33.36820282723066
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  12,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a103",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c55",
+                                    "latitude":  "-33.37214969490004",
+                                    "longitude":  "-60.202674587459796",
+                                    "descripcion":  "R188 Entre la Plata y Tucuman",
+                                    "codigo":  "P13",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.202674587459796,
+                                                                    -33.37214969490004
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  13,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a104",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c56",
+                                    "latitude":  "-33.37512504633712",
+                                    "longitude":  "-60.205877868658035",
+                                    "descripcion":  "R188 Y entrada a Virgen de Lujan",
+                                    "codigo":  "P14",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.205877868658035,
+                                                                    -33.37512504633712
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  14,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a105",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c57",
+                                    "latitude":  "-33.37787256282433",
+                                    "longitude":  "-60.2087085305356",
+                                    "descripcion":  "R188 y Parque Avambae",
+                                    "codigo":  "P15",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.2087085305356,
+                                                                    -33.37787256282433
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  15,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a106",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c58",
+                                    "latitude":  "-33.38170755872115",
+                                    "longitude":  "-60.21298230851693",
+                                    "descripcion":  "R188 y Club 15 de Agosto",
+                                    "codigo":  "P16",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.21298230851693,
+                                                                    -33.38170755872115
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  16,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a107",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c59",
+                                    "latitude":  "-33.3856903483537",
+                                    "longitude":  "-60.2172515525765",
+                                    "descripcion":  "R188 y Bº California",
+                                    "codigo":  "P17",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.2172515525765,
+                                                                    -33.3856903483537
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  17,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a108",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c5a",
+                                    "latitude":  "-33.39245890896135",
+                                    "longitude":  "-60.22437925075894",
+                                    "descripcion":  "R188 y Bº Autopista",
+                                    "codigo":  "P18",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.22437925075894,
+                                                                    -33.39245890896135
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  18,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a109",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c5b",
+                                    "latitude":  "-33.39631807351721",
+                                    "longitude":  "-60.22870863740059",
+                                    "descripcion":  "R188 y Bº Chimpay",
+                                    "codigo":  "P19",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.22870863740059,
+                                                                    -33.39631807351721
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  19,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a10a",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c5c",
+                                    "latitude":  "-33.397485124910176",
+                                    "longitude":  "-60.2300083878186",
+                                    "descripcion":  "R188 y Hogar Lihue Quim Lu",
+                                    "codigo":  "P20",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.2300083878186,
+                                                                    -33.397485124910176
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  20,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a10b",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c5d",
+                                    "latitude":  "-33.40474545446666",
+                                    "longitude":  "-60.237289728468966",
+                                    "descripcion":  "R188 y 2da Garita C.Salles",
+                                    "codigo":  "P21",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.237289728468966,
+                                                                    -33.40474545446666
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  21,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a10c",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c5e",
+                                    "latitude":  "-33.41207333295515",
+                                    "longitude":  "-60.24397636765252",
+                                    "descripcion":  "R188 y Bº Come Hue",
+                                    "codigo":  "P22",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.24397636765252,
+                                                                    -33.41207333295515
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  22,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a10d",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac7a5c806341547c669c5f",
+                                    "latitude":  "-33.425539767888004",
+                                    "longitude":  "-60.2565867743383",
+                                    "descripcion":  "R188 y V. Esperanza",
+                                    "codigo":  "P23",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.2565867743383,
+                                                                    -33.425539767888004
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  23,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a10e",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b924",
+                                    "latitude":  "-33.47348073788",
+                                    "longitude":  "-60.2901508127992",
+                                    "descripcion":  "Gral Rojo (Fuera)",
+                                    "codigo":  "P24",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.2901508127992,
+                                                                    -33.47348073788
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  24,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a10f",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b926",
+                                    "latitude":  "-33.5217063831594",
+                                    "longitude":  "-60.315731249115174",
+                                    "descripcion":  "R188 y Guiraldes",
+                                    "codigo":  "P26",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.315731249115174,
+                                                                    -33.5217063831594
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  25,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a110",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b927",
+                                    "latitude":  "-33.52333424504289",
+                                    "longitude":  "-60.316696844360536",
+                                    "descripcion":  "R188 y Carriego",
+                                    "codigo":  "P27",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.316696844360536,
+                                                                    -33.52333424504289
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  26,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a111",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b928",
+                                    "latitude":  "-33.52600184103307",
+                                    "longitude":  "-60.31814851064189",
+                                    "descripcion":  "R188 y Obligado",
+                                    "codigo":  "P28",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.31814851064189,
+                                                                    -33.52600184103307
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  27,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a112",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b929",
+                                    "latitude":  "-33.593163898924175",
+                                    "longitude":  "-60.35514156839008",
+                                    "descripcion":  "R188 y Mendoza",
+                                    "codigo":  "P29",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.35514156839008,
+                                                                    -33.593163898924175
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  28,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a113",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b92a",
+                                    "latitude":  "-33.59592158732272",
+                                    "longitude":  "-60.35667664685889",
+                                    "descripcion":  "R188 y Chaco",
+                                    "codigo":  "P30",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.35667664685889,
+                                                                    -33.59592158732272
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  29,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a114",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b92b",
+                                    "latitude":  "-33.6002078754127",
+                                    "longitude":  "-60.35914842056957",
+                                    "descripcion":  "R188 Entre Tucuman Y Salta",
+                                    "codigo":  "P31",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.35914842056957,
+                                                                    -33.6002078754127
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  30,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a115",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b92c",
+                                    "latitude":  "-33.665204138023824",
+                                    "longitude":  "-60.39476767912845",
+                                    "descripcion":  "R188 y Ruta a La Violeta",
+                                    "codigo":  "P32",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.39476767912845,
+                                                                    -33.665204138023824
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  31,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a116",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b92d",
+                                    "latitude":  "-33.66993945318053",
+                                    "longitude":  "-60.39743364583114",
+                                    "descripcion":  "R188 y Saenz Peña",
+                                    "codigo":  "P33",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.39743364583114,
+                                                                    -33.66993945318053
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  32,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a117",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b92e",
+                                    "latitude":  "-33.67356702243638",
+                                    "longitude":  "-60.39981090567835",
+                                    "descripcion":  "R188 Y Alberdi",
+                                    "codigo":  "P34",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.39981090567835,
+                                                                    -33.67356702243638
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  33,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a118",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b92f",
+                                    "latitude":  "-33.67741208372009",
+                                    "longitude":  "-60.40038412253017",
+                                    "descripcion":  "R188 Entre Colon y Bolivar",
+                                    "codigo":  "P35",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.40038412253017,
+                                                                    -33.67741208372009
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  34,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a119",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b930",
+                                    "latitude":  "-33.67863412122039",
+                                    "longitude":  "-60.40129645422098",
+                                    "descripcion":  "R188 y km45",
+                                    "codigo":  "P36",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.40129645422098,
+                                                                    -33.67863412122039
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  35,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a11a",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b931",
+                                    "latitude":  "-33.75158681079807",
+                                    "longitude":  "-60.44106386539812",
+                                    "descripcion":  "R188 y Calle 15",
+                                    "codigo":  "P37",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.44106386539812,
+                                                                    -33.75158681079807
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  36,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a11b",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b932",
+                                    "latitude":  "-33.753861517323344",
+                                    "longitude":  "-60.44237278339739",
+                                    "descripcion":  "R188 y Centenario",
+                                    "codigo":  "P38",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.44237278339739,
+                                                                    -33.753861517323344
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  37,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a11c",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b933",
+                                    "latitude":  "-33.756225892806384",
+                                    "longitude":  "-60.443658741617526",
+                                    "descripcion":  "R188 y Calle 7",
+                                    "codigo":  "P39",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.443658741617526,
+                                                                    -33.756225892806384
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  38,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a11d",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b934",
+                                    "latitude":  "-33.75832384536514",
+                                    "longitude":  "-60.445151476146634",
+                                    "descripcion":  "R188 y km 56,5",
+                                    "codigo":  "P40",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.445151476146634,
+                                                                    -33.75832384536514
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  39,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a11e",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b935",
+                                    "latitude":  "-33.759131086642086",
+                                    "longitude":  "-60.44624581742471",
+                                    "descripcion":  "R188 y km56,5",
+                                    "codigo":  "P41",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.44624581742471,
+                                                                    -33.759131086642086
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  40,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a11f",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b936",
+                                    "latitude":  "-33.82789243713908",
+                                    "longitude":  "-60.48548010094299",
+                                    "descripcion":  "R188 y Rojas",
+                                    "codigo":  "P42",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.48548010094299,
+                                                                    -33.82789243713908
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  41,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a120",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b937",
+                                    "latitude":  "-33.8309975994751",
+                                    "longitude":  "-60.487300796596855",
+                                    "descripcion":  "R188 y Lugones",
+                                    "codigo":  "P43",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.487300796596855,
+                                                                    -33.8309975994751
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  42,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a121",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac8255806341547c66b938",
+                                    "latitude":  "-33.83331419292892",
+                                    "longitude":  "-60.48853823152899",
+                                    "descripcion":  "R188 y Marmol",
+                                    "codigo":  "P44",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.48853823152899,
+                                                                    -33.83331419292892
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  43,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a122",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c623",
+                                    "latitude":  "-33.85827285248717",
+                                    "longitude":  "-60.510574711153936",
+                                    "descripcion":  "R188 y Km 66",
+                                    "codigo":  "P45",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.510574711153936,
+                                                                    -33.85827285248717
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  44,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a123",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c624",
+                                    "latitude":  "-33.85998749177258",
+                                    "longitude":  "-60.51250718796996",
+                                    "descripcion":  "R188 y Violeta",
+                                    "codigo":  "P46",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.51250718796996,
+                                                                    -33.85998749177258
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  45,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a124",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c625",
+                                    "latitude":  "-33.86420038290805",
+                                    "longitude":  "-60.517228308032486",
+                                    "descripcion":  "R188 y Victor Regia",
+                                    "codigo":  "P47",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.517228308032486,
+                                                                    -33.86420038290805
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  46,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a125",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c626",
+                                    "latitude":  "-33.86674848888633",
+                                    "longitude":  "-60.519978829837726",
+                                    "descripcion":  "R188 y Magnolia",
+                                    "codigo":  "P48",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.519978829837726,
+                                                                    -33.86674848888633
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  47,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a126",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c627",
+                                    "latitude":  "-33.87023971069699",
+                                    "longitude":  "-60.52382235683149",
+                                    "descripcion":  "R188 y Damico",
+                                    "codigo":  "P49",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.52382235683149,
+                                                                    -33.87023971069699
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  48,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a127",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c628",
+                                    "latitude":  "-33.87378816328814",
+                                    "longitude":  "-60.52773290767101",
+                                    "descripcion":  "R188 y Los Alamos",
+                                    "codigo":  "P50",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.52773290767101,
+                                                                    -33.87378816328814
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  49,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a128",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c629",
+                                    "latitude":  "-33.877075079063694",
+                                    "longitude":  "-60.53140216960338",
+                                    "descripcion":  "R188 y Los Ombues",
+                                    "codigo":  "P51",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.53140216960338,
+                                                                    -33.877075079063694
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  50,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a129",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c62a",
+                                    "latitude":  "-33.883661074278685",
+                                    "longitude":  "-60.53857568447876",
+                                    "descripcion":  "R188 y R32 ",
+                                    "codigo":  "P52",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.53857568447876,
+                                                                    -33.883661074278685
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  51,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a12a",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c62b",
+                                    "latitude":  "-33.887589949739784",
+                                    "longitude":  "-60.5428977238555",
+                                    "descripcion":  "R188 y Pedro Vaños",
+                                    "codigo":  "P53",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.5428977238555,
+                                                                    -33.887589949739784
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  52,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a12b",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c62c",
+                                    "latitude":  "-33.89050299701996",
+                                    "longitude":  "-60.54611035079887",
+                                    "descripcion":  "R188 y Cochet",
+                                    "codigo":  "P54",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.54611035079887,
+                                                                    -33.89050299701996
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  53,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a12c",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c62d",
+                                    "latitude":  "-33.892688747920594",
+                                    "longitude":  "-60.54851175804146",
+                                    "descripcion":  "R188 y Gonzales .M",
+                                    "codigo":  "P55",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.54851175804146,
+                                                                    -33.892688747920594
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  54,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a12d",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac9690806341547c66fb66",
+                                    "latitude":  "-33.89571998193347",
+                                    "longitude":  "-60.55208841772355",
+                                    "descripcion":  "Ugarte y Venini",
+                                    "codigo":  "P7000",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.55208841772355,
+                                                                    -33.89571998193347
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  55,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a12e",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac9690806341547c66fb67",
+                                    "latitude":  "-33.894591368470415",
+                                    "longitude":  "-60.555499328716394",
+                                    "descripcion":  "Ugarte y Colombia ",
+                                    "codigo":  "P7001",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.555499328716394,
+                                                                    -33.894591368470415
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  56,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a12f",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac9690806341547c66fb68",
+                                    "latitude":  "-33.89274565433434",
+                                    "longitude":  "-60.56104880704868",
+                                    "descripcion":  "Ugarte y Menendez",
+                                    "codigo":  "P7002",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.56104880704868,
+                                                                    -33.89274565433434
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  57,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a130",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac9690806341547c66fb69",
+                                    "latitude":  "-33.891790404389084",
+                                    "longitude":  "-60.56380646142287",
+                                    "descripcion":  "Alsina y Rocha",
+                                    "codigo":  "P7003",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.56380646142287,
+                                                                    -33.891790404389084
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  58,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a131",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac9690806341547c66fb6a",
+                                    "latitude":  "-33.89019736635028",
+                                    "longitude":  "-60.568524373004436",
+                                    "descripcion":  "Alsina y Luzuriaga",
+                                    "codigo":  "P7004",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.568524373004436,
+                                                                    -33.89019736635028
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  59,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a132",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac9690806341547c66fb6b",
+                                    "latitude":  "-33.88878520643359",
+                                    "longitude":  "-60.572893740587574",
+                                    "descripcion":  "Alsina y 9 de Julio",
+                                    "codigo":  "P7005",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.572893740587574,
+                                                                    -33.88878520643359
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  60,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a133",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac9690806341547c66fb6c",
+                                    "latitude":  "-33.88697039629256",
+                                    "longitude":  "-60.57834024343185",
+                                    "descripcion":  "Colon y Alsina",
+                                    "codigo":  "P7006",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.57834024343185,
+                                                                    -33.88697039629256
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  61,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a134",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac9690806341547c66fb6d",
+                                    "latitude":  "-33.89034884559764",
+                                    "longitude":  "-60.580106663147546",
+                                    "descripcion":  "Avda de Mayo y Colon",
+                                    "codigo":  "P7007",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.580106663147546,
+                                                                    -33.89034884559764
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  62,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a135",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c638",
+                                    "latitude":  "-33.893576094563194",
+                                    "longitude":  "-60.58164470588122",
+                                    "descripcion":  "Colon y San Martin",
+                                    "codigo":  "P66",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.58164470588122,
+                                                                    -33.893576094563194
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  63,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a136",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c639",
+                                    "latitude":  "-33.8967122237608",
+                                    "longitude":  "-60.5831615890105",
+                                    "descripcion":  "Colon y Castelli",
+                                    "codigo":  "P67",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.5831615890105,
+                                                                    -33.8967122237608
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  64,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a137",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c63a",
+                                    "latitude":  "-33.89826552169679",
+                                    "longitude":  "-60.58392688353911",
+                                    "descripcion":  "Colon y Larrea ",
+                                    "codigo":  "P68",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.58392688353911,
+                                                                    -33.89826552169679
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  65,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a138",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c63b",
+                                    "latitude":  "-33.90225978919197",
+                                    "longitude":  "-60.58580291070302",
+                                    "descripcion":  "Illia Y Laguia",
+                                    "codigo":  "P69",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.58580291070302,
+                                                                    -33.90225978919197
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  66,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a139",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c63c",
+                                    "latitude":  "-33.9051101023534",
+                                    "longitude":  "-60.58712342018305",
+                                    "descripcion":  "Illia Y Balboa",
+                                    "codigo":  "P70",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.58712342018305,
+                                                                    -33.9051101023534
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  67,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a13a",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c63d",
+                                    "latitude":  "-33.909090413662426",
+                                    "longitude":  "-60.58894955281454",
+                                    "descripcion":  "Illia y Liners",
+                                    "codigo":  "P71",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.58894955281454,
+                                                                    -33.909090413662426
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  68,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a13b",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c63e",
+                                    "latitude":  "-33.912163153292376",
+                                    "longitude":  "-60.590398953607234",
+                                    "descripcion":  "Illia y Jose Vela",
+                                    "codigo":  "P72",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.590398953607234,
+                                                                    -33.912163153292376
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  69,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 },
+                 {
+                     "_id":  "5cacbf95a1deb759e9d6a13c",
+                     "linea":  "5ca824745c40a501af33b4e5",
+                     "parada":  {
+                                    "_id":  "5cac863c806341547c66c63f",
+                                    "latitude":  "-33.91389194345328",
+                                    "longitude":  "-60.587015519906004",
+                                    "descripcion":  "Terminal Pergamino",
+                                    "codigo":  "P73",
+                                    "loc":  {
+                                                "type":  "Point",
+                                                "coordinates":  [
+                                                                    -60.587015519906004,
+                                                                    -33.91389194345328
+                                                                ]
+                                            }
+                                },
+                     "sentido":  "ida",
+                     "orden":  70,
+                     "lineatxt":  "227",
+                     "__v":  0
+                 }
+             ]
+}

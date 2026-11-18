@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+    <title> Evhsa - Lista de Paradas </title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=ABeeZee:400,400italic' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css' />
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Bootstrap  -->
+    <link href="/css/Site.css" rel="stylesheet" type="text/css" />
+    <link href="/css/button.css" rel="stylesheet" type="text/css" />
+    <link href="/css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/jquery.galleryview-3.0-dev.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/sweetalert2.min.css">
+    <link rel="stylesheet" href="/css/spinner.css">
+    <style type="text/css">
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        .modal-contenido {
+            width: 100vw;
+            height: 100vh;
+            left: 50vw;
+            top: 50vh;
+            position: relative;
+            font-size: 24px !important;
+        }
+
+        .modal {
+            z-index: 4000;
+            background-color: rgba(0, 0, 0, .8);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            pointer-events: none;
+            transition: all .5s;
+        }
+
+        .mostrar {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .input-error {
+            border: 1px solid #ff0000;
+            background-color: #ffeeee;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        textarea:focus {
+            background-color: #c8d8e3;
+        }
+
+        .msg-error {
+            color: red;
+        }
+
+        .alert-primary {
+            color: #004085;
+            background-color: #cce5ff;
+            border-color: #b8daff;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+
+        .alert {
+            position: relative;
+            padding: .75rem 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            border-radius: .25rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- MODAL CARGANDO -->
+    <div class="loading" style="display:none;">Cargando</div>
+
+    
+    
+
+    <div class="page">
+        <div id="header">
+            <div style="position:absolute;top:10px;left:0px;" class="no-print">
+                <a id="lnkHome" href="/"><img src="/images/logo.png" alt="Evhsa" style="vertical-align:middle;"
+                        border="0" /></a>
+            </div>
+
+            
+
+            <div id="menusuperiorderecho" class="no-print">
+                <ul id="topMenuList">
+                    <li>
+                        <a href="#">EMPRESA&nbsp;&nbsp;&nbsp;</a>
+                        <ul>
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Antecedentes">ANTECEDENTES SOCIALES</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Historia">HISTORIA</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Objetivos">OBJETIVOS</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/QuienesSomos">QUIENES SOMOS</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Servicios">EL SERVICIO</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Calidad">NORMAS Y POLÍTICAS DE CALIDAD</a></li> -->
+                            <li><a href="/Empresa/Antecedentes">ANTECEDENTES SOCIALES</a></li>
+                            <li><a href="/Empresa/Historia">HISTORIA</a></li>
+                            <li><a href="/Empresa/Objetivos">OBJETIVOS</a></li>
+                            <li><a href="/Empresa/QuienesSomos">QUIENES SOMOS</a></li>
+                            <li><a href="/Empresa/Servicios">EL SERVICIO</a></li>
+                            <li><a href="/Empresa/Calidad">NORMAS Y POLÍTICAS DE CALIDAD</a></li>
+                        </ul>
+                    </li>
+                    <li>|</li>
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="http://www.e-evhsa.com.ar/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;
+                    </li> -->
+                    <li>&nbsp;&nbsp;&nbsp;<a href="/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;
+                    </li>
+                    <li>|</li>
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a
+                            href="http://www.e-evhsa.com.ar/Contacto?m=CONSULTA">CONTACTO</a>&nbsp;&nbsp;&nbsp;</li> -->
+                    <!-- PARA WEB NODE -->
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;</li> -->
+                    <!-- PARA WEB PERI -->
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="http://www.e-evhsa.com.ar/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;</li> -->
+                    <!-- <li>|</li> -->
+                    <!-- PARA WEB NODE -->
+                    <li>&nbsp;&nbsp;&nbsp;<a href="/Contacto?m=CONSULTA">CONTACTO</a></li>
+                    <!-- PARA WEB PERI -->
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="http://www.e-evhsa.com.ar/Contacto?m=CONSULTA">CONTACTO</a>&nbsp;&nbsp;&nbsp;</li> -->
+                </ul>
+            </div>
+
+            <!-- Esto es para que tome el MARGIN del div siguiente -->
+            <div style="clear:both;"></div>
+
+            <div id="submenusuperiorderecho" class="no-print">
+                <ul id="topSubMenuList">
+                    <!-- PARA WEB NODE -->
+                    <li><a href="/Horarios">HORARIOS</a></li>
+                    <!-- PARA WEB PERI -->
+                    <!-- <li><a href="http://www.e-evhsa.com.ar/SalidasCabecera/Horarios">HORARIOS</a></li> -->
+                </ul>
+            </div>
+        </div>
+
+        <div id="main">
+            
+
+<style>
+  .tHead { font-size: 12px; color: black; background-color: #a0a0a0; text-align: center;  }
+  #tabla_prueba td { height: 20px; font-size: small; padding: 3px; }
+  #footer { display: none; }
+</style>
+
+<div class="container-form">
+    <div class="pageBody" id="DivIdToPrint">
+        <h1><span class="menu">PARADAS.</span>&nbsp;<span class="submenu">Lista de Paradas por línea.</span></h1>
+        <fieldset style="margin-bottom:5px;">
+            <legend style="margin-bottom: 0;" class="no-print">Filtros de búsqueda</legend>
+            Linea: 
+            <select id="cmbLinea" name="cmbLinea" style="width:auto;">
+                <option value="0">Seleccione..</option>
+            </select>
+            <input type="button" value="Ver Paradas" class="SubmitButton" id="btnVerParadas" onclick="VerParadas()">
+        </fieldset>
+        <div id="divContent"></div>
+        <p id="pAvisoError" style="display: none;">No hay paradas cargados para los filtros seleccionados.</p>
+    </div>
+</div>
+
+
+        </div>
+
+        <div style="clear:both;"></div>
+
+        <div id="footer" class="no-print">
+            <ul class="verticalUL" style="width:120px;">
+                <li><a href="/Empresa/Historia">EMPRESA</a></li>
+                <li><a href="/Curriculum/CargarCV">RRHH</a></li>
+                <li><a href="/Contacto?m=CONSULTA">CONTACTO</a></li>
+            </ul>
+
+            <ul class="verticalUL" style="width:120px;">
+                <li><a href="/Horarios">HORARIOS</a></li>
+                <li><a href="/Recorridos">RECORRIDOS</a></li>
+                <li><a href="/Paradas">PARADAS</a></li>
+            </ul>
+
+            <ul class="verticalUL" style="width:120px;">
+                <li>&nbsp;</li>
+            </ul>
+
+            <ul class="verticalUL" style="width:160px;">
+                <li><a href="/ObjetosPerdidos">OBJETOS PERDIDOS</a></li>
+                <li><a href="/Contacto?m=RECLAMO">RECLAMOS Y SUGERENCIAS</a></li>
+                <li><a href="/PreguntasFrecuentes/Faqs">PREGUNTAS FRECUENTES</a></li>
+            </ul>
+
+            <div class="box">
+                <div class="contentLeft">
+                    EMPRESA VERCELLI HNOS S.A. Av. Perón 2425. San Nicolás. Bs As. Argentina.<br />
+                    Línea telefónica <b>4449400</b>. Por horarios y servicios <b>4449450</b>. Mail:
+                    evhsa@e-evhsa.com.ar<br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal_novedad" title="Novedades en Evhsa" style="display:none;"></div>
+
+    <div id="underconstruction-window" title="Pantalla en construcción" style="display:none;">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Pantalla en construcción
+        </p>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script src="/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+<script src="/js/jquery.unobtrusive-ajax.min.js" type="text/javascript"></script>
+<script src="/js/jquery.ui.effect.js" type="text/javascript"></script>
+<script src="/js/jquery.ui.effect-fade.js" type="text/javascript"></script>
+<script src="/js/startup_master.js" type="text/javascript"></script>
+<script src="/js/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="/js/jquery.galleryview-3.0-dev.js" type="text/javascript"></script>
+<script src="/js/jquery.timers-1.2.js" type="text/javascript"></script>
+<script src="/js/jquery.slides.min.js" type="text/javascript"></script>
+<script src="/js/startup.config.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<script src="/js/sweetalert2.min.js"></script>
+<script>
+
+    $(function () {
+        $(".ver").on("click", function () {
+            var data = $(this).data('src');
+            window.open(data);
+        });
+        $("#modal_novedad, #modalObjetosEncontrados").dialog({
+            position: "top",
+            autoOpen: false,
+            modal: true,
+            dialogClass: 'alert',
+            buttons:
+                [{
+                    text: 'Cerrar',
+                    id: 'btnCloseNews',
+                    click: function () { $(this).dialog("close"); }
+                }],
+            open: function (event, ui) { $("body").css("overflow", "hidden") },
+            close: function (event, ui) { $("body").css("overflow", "auto") },
+            show: { effect: "fade", duration: 500 },
+            hide: { effect: "fade", duration: 200 }
+        });
+        $('#btnCloseNews').focus(function () { $(this).blur() });
+        $("#accordion").accordion({ heightStyle: "content" });
+        $.datepicker.regional['es'] = {
+            closeText: 'Cerrar',
+            prevText: '< Anterior',
+            nextText: 'Siguiente >',
+            currentText: 'Hoy',
+            monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+            dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+            dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
+            dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+            weekHeader: 'Sm',
+            dateFormat: 'dd/mm/yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''
+        };
+        $.datepicker.setDefaults($.datepicker.regional['es']);
+    });
+    function setCharsLeft(src, tgt) {
+        var len = src.val().length;
+        if (len >= 8000) {
+            src.val(src.value.substring(0, 8000));
+        } else {
+            var characters = 8000 - len;
+            tgt.text('Caracteres restantes: ' + characters);
+        }
+    }
+
+    $(".btnNovedad").on("click", async function () {
+        let id = $(this).data("id");
+        const novedad = await $.getJSON("/Novedades/GetNovedadById/" + id);
+        let html = "<div style='max-height: 70vh; overflow-y: scroll;'><h2>" + novedad[0].Titulo + "</h2>";
+        let contImg = 0;
+        if (novedad[0].PathImagen1 != null || novedad[0].PathImagen2 != null || novedad[0].PathImagen3 != null || novedad[0].PathImagen4 != null || novedad[0].PathImagen5 != null) {
+            html += `<div class="photoNews">
+                <ul id="myGallery">`;
+            if (novedad[0].PathImagen1 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen1 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen1 + `" data-description="" border="0" title="` + novedad[0].NombreImagen1 + `" alt="` + novedad[0].NombreImagen1 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen2 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen2 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen2 + `" data-description="" border="0" title="` + novedad[0].NombreImagen2 + `" alt="` + novedad[0].NombreImagen2 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen3 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen3 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen3 + `" data-description="" border="0" title="` + novedad[0].NombreImagen3 + `" alt="` + novedad[0].NombreImagen3 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen4 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen4 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen4 + `" data-description="" border="0" title="` + novedad[0].NombreImagen4 + `" alt="` + novedad[0].NombreImagen4 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen5 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen5 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen5 + `" data-description="" border="0" title="` + novedad[0].NombreImagen5 + `" alt="` + novedad[0].NombreImagen5 + `"/></li>`;
+                contImg++;
+            }
+            html += `</ul> </div>`;
+        }
+
+        html += "<h3>" + novedad[0].Brief + "</h3>" +
+            novedad[0].Descripcion+"</div>";
+        $("#modal_novedad").html(html);
+        $("#modal_novedad").dialog("option", "width", "650").dialog("open");
+
+        if (contImg > 0) {
+            let estado = false;
+            if (contImg > 1) estado = true;
+            $('#myGallery').galleryView({
+                panel_width: 350,
+                panel_height: 275,
+                panel_animation: 'crossfade',
+                panel_scale: 'fit',
+                show_captions: true,
+                autoplay: estado,
+                show_panel_nav: estado,
+                show_filmstrip: estado,
+                show_filmstrip_nav: false
+            });
+        }
+    });
+
+</script>
+
+<script type="text/javascript">
+
+$(function() {
+  Init()
+});
+
+async function Init() {
+    const lineasramales = await $.getJSON("https://gpsevhsa.com/getLineasRamalesSnyProvi");
+    let html = "" 
+    lineasramales.data.map(item => {
+        switch(item.ramales.length) {
+            case 1:
+                var linea = item._id
+                if ( linea.indexOf("2342") >= 0 ) linea = "342 B"
+                html += `<option value="${item._id}" data-cantramales="${item.ramales.length}" data-ramal1="${item.ramales[0]}">${linea}</option>`
+                break;
+            case 2:
+                var linea = item._id
+                if ( linea.indexOf("1342") >= 0 ) linea = "342 A"
+                if ( linea.indexOf("3342") >= 0 ) linea = "342 C"
+                html += `<option value="${item._id}" data-cantramales="${item.ramales.length}" data-ramal1="${item.ramales[0]}" data-ramal2="${item.ramales[1]}">${linea}</option>`
+                break;
+            case 3:
+                html += `<option value="${item._id}" data-cantramales="${item.ramales.length}" data-ramal1="${item.ramales[0]}" data-ramal2="${item.ramales[1]}" data-ramal3="${item.ramales[2]}">${item._id}</option>`
+                break;
+            case 4:
+                html += `<option value="${item._id}" data-cantramales="${item.ramales.length}" data-ramal1="${item.ramales[0]}" data-ramal2="${item.ramales[1]}" data-ramal3="${item.ramales[2]}" data-ramal4="${item.ramales[3]}">${item._id}</option>`
+                break;
+            case 5:
+                html += `<option value="${item._id}" data-cantramales="${item.ramales.length}" data-ramal1="${item.ramales[0]}" data-ramal2="${item.ramales[1]}" data-ramal3="${item.ramales[2]}" data-ramal4="${item.ramales[3]}" data-ramal5="${item.ramales[4]}">${item._id}</option>`
+                break;
+        }
+    })
+
+    $("#cmbLinea").append(html)
+}
+
+printDiv = function() {
+    var divToPrint=document.getElementById('DivIdToPrint');
+    var newWin=window.open('','Print-Window');
+    newWin.document.open();
+    newWin.document.write('<html>'+
+                            '<link href="/css/bootstrap.css" rel="stylesheet">'+
+                            '<link href="/css/signin.css" rel="stylesheet">'+
+                            '<link href="/css/public_site_inicio.css" rel="stylesheet">'+
+                            '<style>'+
+                                '.no-print{display:none;}'+
+                                '.tHead { font-size: 12px; color: black; background-color: #a0a0a0; text-align: center;  }'+
+                                '#tabla_prueba td { height: 20px; font-size: small; padding: 3px; }'+
+                            '</style>'+
+                            '<body onload="window.print()">'+
+                                '<div style="font-size: 8px !important;">'+divToPrint.innerHTML+'</div>'+
+                            '</body></html>');
+    newWin.document.close();
+    setTimeout(function(){newWin.close();},10);
+}
+
+function sortNumber(a, b) {
+    return b - a;
+}
+
+async function VerParadas(){
+    $("#pAvisoError").hide();
+    $("#divContent").empty();
+
+    var linea = $("#cmbLinea").val();
+    if(linea == 0){
+        $("#pAvisoError").show()
+        return;
+    }
+    $(".loading").css('display', 'block');
+    let lineasramales = await $.getJSON("https://gpsevhsa.com/getLineasRamalesSnyProvi");
+    lineasramales = lineasramales.data;
+
+    var cant_ramales = $("#cmbLinea option:selected").attr('data-cantramales');
+    var html = "<table style='width: 100%; border: 1px solid #487251' border='1' id='tabla_prueba'><tr>";
+
+    if ( cant_ramales == 1 ){
+        let ramal1 = $("#cmbLinea").find(':selected').data('ramal1')
+
+        let obj1 = { 'sentido': 'ida', 'id_ramal': ramal1 }
+        let obj2 = { 'sentido': 'vuelta', 'id_ramal': ramal1 }
+
+        let ida = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj1)
+        let vuelta = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj2)
+
+        ida = ida.data
+        vuelta = vuelta.data
+        
+        $("#divContent").empty()
+        let cant_col = 0
+
+        if ( ida.length ) cant_col++
+        if ( vuelta.length ) cant_col++
+
+        let cant_filas = [ ida.length, vuelta.length ]
+        cant_filas.sort(sortNumber)
+        cant_filas.join(", ")
+        cant_filas = cant_filas[0]
+
+        for(x = 0; x < cant_col; x++) {
+            html += "<th class='tHead' style='width: "+100 / cant_col+"%'></th>"
+        }
+        
+        html += "</tr>"
+        for(x = 0; x < cant_filas; x++){
+            html += "<tr><td></td><td></td></tr>"
+        }
+        html += "</table>"
+        $("#divContent").append(html)
+
+        let index = 0
+        if ( ida.length ) {
+            let idatxt = "Ida"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( ida[0].linea == lineasramales[x].ramales[0] ) {
+                    idatxt = lineasramales[x].ramalesComp[0].descripcion
+                    idatxt = idatxt.replace("LINEA "+lineasramales[x]._id, "")
+                    idatxt = idatxt.replace("REF 114", "")
+                    idatxt = idatxt.replace("(", "")
+                    idatxt = idatxt.replace(")", "")
+                    if ( idatxt.indexOf(" Y ") >= 0 ) idatxt = idatxt.replace(" Y ", " - ")
+                    idatxt = idatxt.replace("LINEA 342B", "")
+                }
+
+                if (
+                    idatxt.indexOf("POR TERMINAL") >= 0 ||
+                    idatxt.indexOf("POR AV SAVIO") >= 0 ||
+                    idatxt.indexOf("NOCTURNO") >= 0 || 
+                    idatxt.indexOf("SERVICIO NOCTURNO") >= 0
+                ) {
+                    if ( idatxt.indexOf(" Y ") >= 0 ) idatxt = idatxt.replace(" Y ", " - ")
+                    idatxt = lineasramales[x].ida
+                    idatxt = idatxt.replace("Hacia ", "")
+                    idatxt += ` - ${lineasramales[x].vuelta.replace("Hacia ", "")} (${idatxt.trim().replace("SERVICIO ", "")})`
+                }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(idatxt)
+            for(x = 0; x < ida.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(ida[x].parada.descripcion)
+            }
+            index++
+        }
+        
+        if ( vuelta.length ) {
+            let vueltatxt = "Vuelta"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( vuelta[0].linea == lineasramales[x].ramales[0] ) {
+                    vueltatxt = lineasramales[x].ramalesComp[0].descripcion
+                    vueltatxt = vueltatxt.replace("LINEA "+lineasramales[x]._id, "")
+                    vueltatxt = vueltatxt.replace("REF 114", "")
+                    vueltatxt = vueltatxt.replace("(", "")
+                    vueltatxt = vueltatxt.replace(")", "")
+                    vueltatxt = vueltatxt.replace("LINEA 342B", "")
+
+                    if ( vueltatxt.indexOf(" Y ") >= 0 ) vueltatxt = vueltatxt.replace(" Y ", " - ")
+                    
+                    let aVuelta = vueltatxt.split("-")
+                    if ( aVuelta.length > 1 ) {
+                        vueltatxt = `${aVuelta[1]} - ${aVuelta[0]}`
+                    } else {
+                        vueltatxt = aVuelta[0]
+                    }
+
+                    if ( 
+                        vueltatxt.indexOf("POR TERMINAL") >= 0 || 
+                        vueltatxt.indexOf("POR AV SAVIO") >= 0 || 
+                        vueltatxt.indexOf("NOCTURNO") >= 0
+                    ) {
+                        vueltatxt = lineasramales[x].ida
+                        vueltatxt = vueltatxt.replace("Hacia ", "")
+                        vueltatxt += ` - ${lineasramales[x].vuelta.replace("Hacia ", "")} (${vueltatxt.trim()})`
+                    }
+                }
+            }
+            
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(vueltatxt)
+            for(var x = 0; x < vuelta.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(vuelta[x].parada.descripcion);
+            }
+            index++
+        }
+    }
+
+    if ( cant_ramales == 2 ){
+        let ramal1 = $("#cmbLinea").find(':selected').data('ramal1')
+        let ramal2 = $("#cmbLinea").find(':selected').data('ramal2')
+
+        let obj1 = { 'sentido': 'ida', 'id_ramal': ramal1 }
+        let obj2 = { 'sentido': 'vuelta', 'id_ramal': ramal1 }
+        let obj3 = { 'sentido': 'ida', 'id_ramal': ramal2 }
+        let obj4 = { 'sentido': 'vuelta',  'id_ramal': ramal2 }
+
+        let ida = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj1)
+        let vuelta = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj2)
+        let ida2 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj3)
+        let vuelta2 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj4)
+
+        ida = ida.data
+        vuelta = vuelta.data
+        ida2 = ida2.data
+        vuelta2 = vuelta2.data
+
+        $("#divContent").empty()
+
+        var cant_col = 0;
+
+        if ( ida.length ) cant_col++
+        if ( vuelta.length ) cant_col++
+        if ( ida2.length ) cant_col++
+        if ( vuelta2.length ) cant_col++
+
+        let cant_filas = [
+            ida.length,
+            vuelta.length, 
+            ida2.length, 
+            vuelta2.length
+        ]
+
+        cant_filas.sort(sortNumber)
+        cant_filas.join(", ")
+        cant_filas = cant_filas[0]
+        
+        for ( x = 0; x < cant_col; x++ ) {
+            html += `<th class='tHead' style='width: ${100 / cant_col}%'></th>`
+        }
+
+        html += "</tr>"
+
+        for ( x = 0; x < cant_filas; x++ ) {
+            html += "<tr>"
+            for ( y = 0; y < cant_col; y++ ) { html += "<td></td>" }
+            html += "</tr>"     
+        }
+
+        html += "</table>"
+        $("#divContent").append(html)
+
+        let index = 0
+        if ( ida.length ) {
+            console.log(ida);
+            let idatxt = "Ida"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( ida[0].linea == lineasramales[x].ramales[0] ) {
+                    idatxt = lineasramales[x].ramalesComp[0].descripcion
+                    idatxt = idatxt.replace("LINEA "+lineasramales[x]._id, "")
+                    idatxt = idatxt.replace("REF 114", "")
+                    idatxt = idatxt.replace("(", "")
+                    idatxt = idatxt.replace(")", "")
+                    idatxt = idatxt.replace("LINEA 342C", "")
+                    idatxt = idatxt.replace("LINEA 342 -", "")
+                }
+
+                if ( 
+                    idatxt.indexOf("POR TERMINAL") >= 0  || 
+                    idatxt.indexOf("POR AV SAVIO") >= 0 || 
+                    idatxt.indexOf("NOCTURNO") >= 0 || 
+                    idatxt.indexOf("SERVICIO NOCTURNO") >= 0
+                ){
+                    idatxt = lineasramales[x].ida
+                    idatxt.replace("Hacia ", "")
+                    idatxt += ` - ${lineasramales[x].vuelta.replace("Hacia ", "")} (${idatxt.trim().replace("SERVICIO ", "")})`
+                }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(idatxt);
+            for(x = 0; x < ida.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(ida[x].parada.descripcion)
+            }
+            index++;
+        }
+
+        if( vuelta.length ) {
+            let vueltatxt = "Vuelta"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( vuelta[0].linea == lineasramales[x].ramales[0] ) {
+                    vueltatxt = lineasramales[x].ramalesComp[0].descripcion
+                    vueltatxt = vueltatxt.replace("LINEA "+lineasramales[x]._id, "")
+                    vueltatxt = vueltatxt.replace("REF 114", "")
+                    vueltatxt = vueltatxt.replace("(", "")
+                    vueltatxt = vueltatxt.replace(")", "")
+                    vueltatxt = vueltatxt.replace("LINEA 342C", "")
+                    vueltatxt = vueltatxt.replace("LINEA 342 -", "")
+
+                    let aVuelta = vueltatxt.split(" - ")
+                    if ( aVuelta.length ) {
+                        vueltatxt = `${aVuelta[1]} - ${aVuelta[0]}`
+                    } else {
+                        vueltatxt = aVuelta[0]
+                    }
+
+                    if ( 
+                        vueltatxt.indexOf("POR TERMINAL") >= 0 || 
+                        vueltatxt.indexOf("POR AV SAVIO") >= 0 || 
+                        vueltatxt.indexOf("NOCTURNO") >= 0
+                    ) {
+                        vueltatxt = lineasramales[x].vuelta
+                        vueltatxt.replace("Hacia ", "")
+                        vueltatxt += ` - ${lineasramales[x].ida.replace("Hacia ", "")} (${vueltatxt.trim()})`
+                    }
+                }
+            }
+            
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(vueltatxt)
+            for( x = 0; x < vuelta.length; x++ ) {
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(vuelta[x].parada.descripcion)
+            }
+            index++
+        }                                    
+
+        if ( ida2.length ) {
+            let ida2txt = "Ida 2"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( ida2[0].linea == lineasramales[x].ramales[1] ) {
+                    ida2txt = lineasramales[x].ramalesComp[1].descripcion
+                    ida2txt = ida2txt.replace("LINEA "+lineasramales[x]._id, "")
+                    ida2txt = ida2txt.replace("REF 114", "")
+                    ida2txt = ida2txt.replace("(", "")
+                    ida2txt = ida2txt.replace(")", "")
+                    ida2txt = ida2txt.replace("LINEA 342C ", "")
+                    ida2txt = ida2txt.replace("LINEA 342 -", "")
+                }
+
+                if (
+                    ida2txt.indexOf("POR TERMINAL") >= 0 || 
+                    ida2txt.indexOf("POR AV SAVIO") >= 0
+                ) {
+                    ida2txt = lineasramales[x].ida
+                    ida2txt.replace("Hacia ", "")
+                    ida2txt += ` - ${lineasramales[x].vuelta.replace("Hacia ", "")} (${ida2txt.trim().replace("SERVICIO ", "")})`
+                }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(ida2txt)
+            for ( x = 0; x < ida2.length; x++ ) {
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(ida2[x].parada.descripcion)
+            }
+            index++
+        }
+
+        if ( vuelta2.length ) {
+            let vuelta2txt = "Vuelta 2"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( vuelta2[0].linea == lineasramales[x].ramales[1] ) {
+                    vuelta2txt = lineasramales[x].ramalesComp[1].descripcion
+                    vuelta2txt = vuelta2txt.replace("LINEA "+lineasramales[x]._id, "")
+                    vuelta2txt = vuelta2txt.replace("REF 114", "")
+                    vuelta2txt = vuelta2txt.replace("(", "")
+                    vuelta2txt = vuelta2txt.replace(")", "")
+                    vuelta2txt = vuelta2txt.replace("LINEA 342C ", "")
+                    vuelta2txt = vuelta2txt.replace("LINEA 342 -", "")
+
+                    let aVuelta = vuelta2txt.split(" - ")
+                    if ( aVuelta.length ) {
+                        vuelta2txt = `${aVuelta[1]} - ${aVuelta[0]}`
+                    } else {
+                        vuelta2txt = aVuelta[0]
+                    }
+
+                    if ( 
+                        vuelta2txt.indexOf("POR TERMINAL") >= 0 || 
+                        vuelta2txt.indexOf("POR AV SAVIO") >= 0
+                    ) {
+                        vuelta2txt = lineasramales[x].vuelta
+                        vuelta2txt.replace("Hacia ", "")
+                        vuelta2txt += ` - ${lineasramales[x].ida.replace("Hacia ", "")} (${vuelta2txt.trim()})`
+                    }
+                }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(vuelta2txt);
+            for ( x = 0; x < vuelta2.length; x++ ) {
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(vuelta2[x].parada.descripcion)
+            }
+            index++
+        }
+    }
+
+    if ( cant_ramales == 3 ){
+        let ramal1 = $("#cmbLinea").find(':selected').data('ramal1')
+        let ramal2 = $("#cmbLinea").find(':selected').data('ramal2')
+        let ramal3 = $("#cmbLinea").find(':selected').data('ramal3')
+
+        let obj1 = { 'sentido': 'ida', 'id_ramal': ramal1 }
+        let obj2 = { 'sentido': 'vuelta', 'id_ramal': ramal1 }
+        let obj3 = { 'sentido': 'ida', 'id_ramal': ramal2 }
+        let obj4 = { 'sentido': 'vuelta', 'id_ramal': ramal2 }
+        let obj5 = { 'sentido': 'ida', 'id_ramal': ramal3 }
+        let obj6 = { 'sentido': 'vuelta', 'id_ramal': ramal3 }
+        
+        let ida = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj1)
+        let vuelta = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj2)
+        let ida2 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj3)
+        let vuelta2 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj4)
+        let ida3 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj5)
+        let vuelta3 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj6)
+
+        ida = ida.data
+        vuelta = vuelta.data
+        ida2 = ida2.data
+        vuelta2 = vuelta2.data
+        ida3 = ida3.data
+        vuelta3 = vuelta3.data
+        
+        $("#divContent").empty()
+
+        let cant_col = 0
+
+        if ( ida.length ) cant_col++
+        if ( vuelta.length ) cant_col++
+        if ( ida2.length ) cant_col++
+        if ( vuelta2.length ) cant_col++
+        if ( ida3.length ) cant_col++
+        if ( vuelta3.length ) cant_col++
+
+        let cant_filas = [
+            ida.length,
+            vuelta.length,
+            ida2.length,
+            vuelta2.length,
+            ida3.length,
+            vuelta3.length
+        ]
+
+        cant_filas.sort(sortNumber)
+        cant_filas.join(", ")
+        cant_filas = cant_filas[0]
+
+        for(x = 0; x < cant_col; x++) {
+            html += `<th class='tHead' style='width: ${100 / cant_col}%'></th>`
+        }
+        
+        html += "</tr>"
+
+        for( x = 0; x < cant_filas; x++ ) {
+            html += "<tr>"
+            for ( y = 0; y < cant_col; y++ ) { html += "<td></td>" }
+            html += "</tr>"
+        }
+
+        html += "</table>"
+        $("#divContent").append(html)
+
+        var index = 0
+
+        if(ida.length > 0){
+            var idatxt = "Ida";
+            for(x = 0; x < lineasramales.length; x++){
+                if(ida[0].linea == lineasramales[x].ramales[0]) idatxt = lineasramales[x].ramalesComp[0].descripcion.replace("LINEA "+lineasramales[x]._id,"").replace("REF 114", "").replace("(", "").replace(")", "");
+                // if(idatxt.trim() == "POR TERMINAL" || idatxt.trim() == "POR AV SAVIO" || idatxt.trim() == "NOCTURNO" || idatxt.trim() == "SERVICIO NOCTURNO") idatxt = lineasramales[x].vuelta.replace("Hacia ", "")+" - "+lineasramales[x].ida.replace("Hacia ", "")+" ("+idatxt.trim().replace("SERVICIO ", "")+")";
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(idatxt)
+            for(x = 0; x < ida.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(ida[x].parada.descripcion)
+            }
+            index++
+        }
+
+        if(vuelta.length > 0){
+            var vueltatxt = "Vuelta";
+            for(var x = 0; x < lineasramales.length; x++){
+                if(vuelta[0].linea == lineasramales[x].ramales[0]){
+                    vueltatxt = lineasramales[x].ramalesComp[0].descripcion.replace("LINEA "+lineasramales[x]._id,"").replace("REF 114", "").replace("(", "").replace(")", "");
+                    var aVuelta = vueltatxt.split(" - ");
+                    if(aVuelta.length > 1) 
+                        vueltatxt = aVuelta[1]+" - "+aVuelta[0];
+                    else
+                        vueltatxt = aVuelta[0];
+                    // if(vueltatxt.trim() == "POR TERMINAL" || vueltatxt.trim() == "POR AV SAVIO" || vueltatxt.trim() == "NOCTURNO" || vueltatxt.trim() == "SERVICIO NOCTURNO"){
+                    //     vueltatxt = lineasramales[x].ida.replace("Hacia ", "")+" - "+lineasramales[x].vuelta.replace("Hacia ", "")+" ("+vueltatxt.trim().replace("SERVICIO ", "")+")";
+                    // }
+                }
+            }
+            
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(vueltatxt);
+            for(var x = 0; x < vuelta.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(vuelta[x].parada.descripcion);
+            }
+            index++;
+        }
+
+        if(ida2.length > 0){
+            var ida2txt = "Ida 2";
+            for(var x = 0; x < lineasramales.length; x++){
+                if(ida2[0].linea == lineasramales[x].ramales[1])
+                    ida2txt = lineasramales[x].ramalesComp[1].descripcion.replace("LINEA "+lineasramales[x]._id,"").replace("REF 114", "").replace("(", "").replace(")", "");
+                // if(ida2txt.trim() == "POR TERMINAL" || ida2txt.trim() == "POR AV SAVIO" || ida2txt.trim() == "NOCTURNO" || ida2txt.trim() == "SERVICIO NOCTURNO"){
+                //     ida2txt = lineasramales[x].vuelta.replace("Hacia ", "")+" - "+lineasramales[x].ida.replace("Hacia ", "")+" ("+ida2txt.trim().replace("SERVICIO ", "")+")";
+                // }
+            }
+            
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(ida2txt);
+            for(var x = 0; x < ida2.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(ida2[x].parada.descripcion);
+            }
+            index++;
+        }
+
+        if(vuelta2.length > 0){
+            var vuelta2txt = "Vuelta 2";
+            for(x = 0; x < lineasramales.length; x++){
+                if(vuelta2[0].linea == lineasramales[x].ramales[1]){
+                    vuelta2txt = lineasramales[x].ramalesComp[1].descripcion.replace("LINEA "+lineasramales[x]._id,"").replace("REF 114", "").replace("(", "").replace(")", "");
+                    var aVuelta = vuelta2txt.split(" - ");
+                    if(aVuelta.length > 1)
+                        vuelta2txt = aVuelta[1]+" - "+aVuelta[0];
+                    else
+                        vuelta2txt = aVuelta[0];
+                    // if(vuelta2txt.trim() == "POR TERMINAL" || vuelta2txt.trim() == "POR AV SAVIO" || vuelta2txt.trim() == "NOCTURNO" || vuelta2txt.trim() == "SERVICIO NOCTURNO"){
+                    //     vuelta2txt = lineasramales[x].ida.replace("Hacia ", "")+" - "+lineasramales[x].vuelta.replace("Hacia ", "")+" ("+vuelta2txt.trim().replace("SERVICIO ", "")+")";
+                    // }
+                }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(vuelta2txt);
+            for(var x = 0; x < vuelta2.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(vuelta2[x].parada.descripcion);
+            }
+            index++;
+        }
+
+        if(ida3.length > 0){
+            var ida3txt = "Ida 3";
+            for(x = 0; x < lineasramales.length; x++){
+                if(ida3[0].linea == lineasramales[x].ramales[2])
+                    ida3txt = lineasramales[x].ramalesComp[2].descripcion.replace("LINEA "+lineasramales[x]._id,"").replace("REF 114", "").replace("(", "").replace(")", "");
+                // if(ida3txt.trim() == "POR TERMINAL" || ida3txt.trim() == "POR AV SAVIO" || ida3txt.trim() == "NOCTURNO" || ida3txt.trim() == "SERVICIO NOCTURNO"){
+                //     ida3txt = lineasramales[x].vuelta.replace("Hacia ", "")+" - "+lineasramales[x].ida.replace("Hacia ", "")+" ("+ida3txt.trim().replace("SERVICIO ", "")+")";
+                // }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(ida3txt);
+            for(x = 0; x < ida3.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(ida3[x].parada.descripcion);
+            }
+            index++;
+        }
+
+        if(vuelta3.length > 0){
+            var vuelta3txt = "Vuelta 3";
+            for(x = 0; x < lineasramales.length; x++){
+                if(vuelta3[0].linea == lineasramales[x].ramales[2]){
+                    vuelta3txt = lineasramales[x].ramalesComp[2].descripcion.replace("LINEA "+lineasramales[x]._id,"").replace("REF 114", "").replace("(", "").replace(")", "");
+                    var aVuelta = vuelta3txt.split("-");
+                    if(aVuelta.length > 1)
+                        vuelta3txt = aVuelta[1]+" - "+aVuelta[0];
+                    else
+                        vuelta3txt = aVuelta[0];
+                    // if(vuelta3txt.trim() == "POR TERMINAL" || vuelta3txt.trim() == "POR AV SAVIO" || vuelta3txt.trim() == "NOCTURNO" || vuelta3txt.trim() == "SERVICIO NOCTURNO" ){
+                    //     vuelta3txt = lineasramales[x].ida.replace("Hacia ", "")+" - "+lineasramales[x].vuelta.replace("Hacia ", "")+" ("+vuelta3txt.trim().replace("SERVICIO ", "")+")";
+                    // }
+                } 
+            }
+            
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(vuelta3txt);
+            for(var x = 0; x < vuelta3.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").append(vuelta3[x].parada.descripcion);
+            }
+            index++;
+        }
+    }
+
+    if ( cant_ramales == 4 ){
+        let ramal1 = $("#cmbLinea").find(':selected').data('ramal1')
+        let ramal2 = $("#cmbLinea").find(':selected').data('ramal2')
+        let ramal3 = $("#cmbLinea").find(':selected').data('ramal3')
+        let ramal4 = $("#cmbLinea").find(':selected').data('ramal4')
+
+        let obj1 = { 'sentido': 'ida', 'id_ramal': ramal1 }
+        let obj2 = { 'sentido': 'vuelta', 'id_ramal': ramal1 }
+        let obj3 = { 'sentido': 'ida', 'id_ramal': ramal2 }
+        let obj4 = { 'sentido': 'vuelta', 'id_ramal': ramal2 }
+        let obj5 = { 'sentido': 'ida', 'id_ramal': ramal3 }
+        let obj6 = { 'sentido': 'vuelta',  'id_ramal': ramal3 }
+        let obj7 = { 'sentido': 'ida', 'id_ramal': ramal4 }
+        let obj8 = { 'sentido': 'vuelta',  'id_ramal': ramal4 }
+
+        let ida = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj1)
+        let vuelta = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj2)
+        let ida2 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj3)
+        let vuelta2 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj4)
+        let ida3 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj5)
+        let vuelta3 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj6)
+        let ida4 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj7)
+        let vuelta4 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj8)
+
+        ida = ida.data
+        vuelta = vuelta.data
+        ida2 = ida2.data
+        vuelta2 = vuelta2.data
+        ida3 = ida3.data
+        vuelta3 = vuelta3.data
+        ida4 = ida4.data
+        vuelta4 = vuelta4.data
+
+        $("#divContent").empty()
+
+        let cant_col = 0;
+
+        if ( ida.length ) cant_col++
+        if ( vuelta.length ) cant_col++
+        if ( ida2.length ) cant_col++
+        if ( vuelta2.length ) cant_col++
+        if ( ida3.length ) cant_col++
+        if ( vuelta3.length ) cant_col++
+        if ( ida4.length ) cant_col++
+        if ( vuelta4.length ) cant_col++
+
+        let cant_filas = [
+            ida.length, 
+            vuelta.length, 
+            ida2.length, 
+            vuelta2.length, 
+            ida3.length, 
+            vuelta3.length, 
+            ida4.length, 
+            vuelta4.length
+        ]
+
+        cant_filas.sort(sortNumber)
+        cant_filas.join(", ")
+        cant_filas = cant_filas[0]
+
+        for(x = 0; x < cant_col; x++) {
+            html += "<th class='tHead' style='width: "+100 / cant_col+"%'></th>";
+        }
+        
+        html += "</tr>"
+        for ( x = 0; x < cant_filas; x++ ) {
+            html += "<tr>"
+            for(y = 0; y < cant_col; y++){ html += "<td></td>" }
+            html += "</tr>"
+        }
+        html += "</table>"
+        $("#divContent").append(html)
+        
+        let index = 0
+
+        if ( ida.length ) {
+            let idatxt = "Ida"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( ida[0].linea == lineasramales[x].ramales[0] ) {
+                    idatxt = lineasramales[x].ramalesComp[0].descripcion
+                    idatxt = idatxt.replace(`LINEA ${lineasramales[x]._id}`, "")
+                    idatxt = idatxt.replace("REF 114", "")
+                    idatxt = idatxt.replace("(", "").replace(")", "")
+                    idatxt = idatxt.replace("Hacia ", "")
+
+                    if ( idatxt.indexOf("X ALSINA") >= 0 ) {
+                        idatxt = idatxt.replace("X ALSINA", "")
+                        idatxt += "X ALSINA"
+                    }
+                }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(idatxt)
+            for( x = 0; x < ida.length; x++ ) {
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(ida[x].parada.descripcion)
+            }
+            index++
+        }
+
+        if ( vuelta.length ) {
+            var vueltatxt = "Vuelta";
+            for(var x = 0; x < lineasramales.length; x++){
+                if(vuelta[0].linea == lineasramales[x].ramales[0]){
+                    vueltatxt = lineasramales[x].ramalesComp[0].descripcion
+                    vueltatxt = vueltatxt.replace("LINEA "+lineasramales[x]._id,"")
+                    vueltatxt = vueltatxt.replace("REF 114", "")
+                    vueltatxt = vueltatxt.replace("(", "").replace(")", "")
+                    let aVuelta = vueltatxt.split("-")
+                    if ( aVuelta.length > 1 ) {
+                        vueltatxt = `${aVuelta[1]} - ${aVuelta[0]}`
+                    } else {
+                        vueltatxt = aVuelta[0]
+                    }
+
+                    if ( vueltatxt.indexOf("X ALSINA") >= 0 ) {
+                        vueltatxt = vueltatxt.replace("X ALSINA", "")
+                        vueltatxt += "X ALSINA"
+                    }
+                }  
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(vueltatxt)
+            for(var x = 0; x < vuelta.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(vuelta[x].parada.descripcion)
+            }
+            index++
+        }
+
+        if ( ida2.length ) {
+            let ida2txt = "Ida 2"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( ida2[0].linea == lineasramales[x].ramales[1] ) {
+                    ida2txt = lineasramales[x].ramalesComp[1].descripcion
+                    ida2txt = ida2txt.replace("LINEA "+lineasramales[x]._id,"")
+                    ida2txt = ida2txt.replace("REF 114", "")
+                    ida2txt = ida2txt.replace("(", "").replace(")", "")
+                    ida2txt = ida2txt.replace("Hacia ", "")
+
+                    if ( ida2txt.indexOf("X ALSINA") >= 0 ) {
+                        ida2txt = ida2txt.replace("X ALSINA", "")
+                        ida2txt += "X ALSINA"
+                    }
+
+                    // if ( 
+                    //     ida2txt.indexOf("POR TERMINAL") >= 0 || 
+                    //     ida2txt.indexOf("POR AV SAVIO") >= 0 || 
+                    //     ida2txt.indexOf("NOCTURNO") >= 0 || 
+                    //     ida2txt.indexOf("SERVICIO NOCTURNO") >= 0
+                    // ) {
+                    //     ida2txt = lineasramales[x].ida
+                    //     ida2txt = ida2txt.replace("Hacia ", "")
+                    //     ida2txt += ` - ${lineasramales[x].vuelta.replace("Hacia ", "")} (${ida2txt.trim().replace("SERVICIO ", "")})`
+                    // }
+                }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(ida2txt)
+            for(var x = 0; x < ida2.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(ida2[x].parada.descripcion)
+            }
+            index++
+        }
+
+        if ( vuelta2.length ) {
+            let vuelta2txt = "Vuelta 2"
+            for( x = 0; x < lineasramales.length; x++){
+                if( vuelta2[0].linea == lineasramales[x].ramales[1] ) {
+                    vuelta2txt = lineasramales[x].ramalesComp[1].descripcion
+                    vuelta2txt = vuelta2txt.replace("LINEA "+lineasramales[x]._id, "")
+                    vuelta2txt = vuelta2txt.replace("REF 114", "")
+                    vuelta2txt = vuelta2txt.replace("(", "").replace(")", "")
+                    let aVuelta = vuelta2txt.split("-")
+                    
+                    if ( aVuelta.length > 1 ) {
+                        vuelta2txt = `${aVuelta[1]} - ${aVuelta[0]}`
+                    } else {
+                        vuelta2txt = aVuelta[0]
+                    }
+
+                    if ( vuelta2txt.indexOf("X ALSINA") >= 0 ) {
+                        vuelta2txt = vuelta2txt.replace("X ALSINA", "")
+                        vuelta2txt += "X ALSINA"
+                    }
+                    
+                    // if ( 
+                    //     vuelta2txt.indexOf("POR TERMINAL") >= 0 ||
+                    //     vuelta2txt.indexOf("POR AV SAVIO") >= 0 ||
+                    //     vuelta2txt.indexOf("NOCTURNO") >= 0
+                    // ) {
+                    //     vuelta2txt = lineasramales[x].vuelta
+                    //     vuelta2txt = vuelta2txt.replace("Hacia ", "")
+                    //     vuelta2txt += ` - ${lineasramales[x].ida.replace("Hacia ", "")} (${vuelta2txt.trim()})`
+                    // }
+                }
+            }
+            
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(vuelta2txt)
+            for ( x = 0; x < vuelta2.length; x++ ) {
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(vuelta2[x].parada.descripcion)
+            }
+            index++
+        }
+
+        if ( ida3.length ) {
+            let ida3txt = "Ida 3"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( ida3[0].linea == lineasramales[x].ramales[2] ) {
+                    ida3txt = lineasramales[x].ramalesComp[2].descripcion
+                    ida3txt = ida3txt.replace("LINEA "+lineasramales[x]._id,"")
+                    ida3txt = ida3txt.replace("REF 114", "")
+                    ida3txt = ida3txt.replace("(", "").replace(")", "")
+                    ida3txt = ida3txt.replace("Hacia ", "")
+
+                    if ( ida3txt.indexOf("X ALSINA") >= 0 ) {
+                        ida3txt = ida3txt.replace("X ALSINA", "")
+                        ida3txt += "X ALSINA"
+                    }
+                }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(ida3txt)
+            for ( x = 0; x < ida3.length; x++ ) {
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(ida3[x].parada.descripcion)
+            }
+            index++
+        }
+
+        if ( vuelta3.length ) {
+            let vuelta3txt = "Vuelta 3"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( vuelta3[0].linea == lineasramales[x].ramales[2] ) {
+                    vuelta3txt = lineasramales[x].ramalesComp[2].descripcion
+                    vuelta3txt = vuelta3txt.replace("LINEA "+lineasramales[x]._id,"")
+                    vuelta3txt = vuelta3txt.replace("REF 114", "")
+                    vuelta3txt = vuelta3txt.replace("(", "").replace(")", "")
+                    
+                    let aVuelta = vuelta3txt.split("-")
+                    if ( aVuelta.length > 1 ) {
+                        vuelta3txt = `${aVuelta[1]} - ${aVuelta[0]}`
+                    } else {
+                        vuelta3txt = aVuelta[0]
+                    }
+
+                    if ( vuelta3txt.indexOf("X ALSINA") >= 0 ) {
+                        vuelta3txt = vuelta3txt.replace("X ALSINA", "")
+                        vuelta3txt += "X ALSINA"
+                    }
+
+                    // if ( 
+                    //     vuelta3txt.indexOf("POR TERMINAL") >= 0 || 
+                    //     vuelta3txt.indexOf("POR AV SAVIO") >= 0 || 
+                    //     vuelta3txt.indexOf("NOCTURNO") >= 0
+                    // ) {
+                    //     vuelta3txt = lineasramales[x].vuelta
+                    //     vuelta3txt = vuelta3txt.replace("Hacia ", "")
+                    //     vuelta3txt += ` - ${lineasramales[x].ida.replace("Hacia ", "")} (${vuelta3txt.trim()})`
+                    //     vuelta3txt = vuelta3txt.replace("/California/V.Esperanza", "")
+                    // }
+                }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(vuelta3txt)
+            for ( x = 0; x < vuelta3.length; x++ ) {
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(vuelta3[x].parada.descripcion)
+            }
+            index++
+        }
+
+        if ( ida4.length ) {
+            let ida4txt = "Ida 4"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( ida4[0].linea == lineasramales[x].ramales[3]) {
+                    ida4txt = lineasramales[x].ramalesComp[3].descripcion
+                    ida4txt = ida4txt.replace("LINEA "+lineasramales[x]._id,"")
+                    ida4txt = ida4txt.replace("REF 114", "")
+                    ida4txt = ida4txt.replace("(", "").replace(")", "")
+
+                    if ( ida4txt.indexOf("X ALSINA") >= 0 ) {
+                        ida4txt = ida4txt.replace("X ALSINA", "")
+                        ida4txt += "X ALSINA"
+                    }
+
+                    // if ( 
+                    //     ida4txt.indexOf("POR TERMINAL") >= 0 || 
+                    //     ida4txt.indexOf("POR AV SAVIO") >= 0 || 
+                    //     ida4txt.indexOf("NOCTURNO") >= 0
+                    // ) {
+                    //     ida4txt = lineasramales[x].ida
+                    //     ida4txt = ida4txt.replace("Hacia ", "")
+                    //     ida4txt += ` - ${lineasramales[x].vuelta.replace("Hacia ", "")} (${ida4txt.trim().replace("SERVICIO ", "")})`
+                    // }
+                }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(ida4txt)
+            for ( x = 0; x < ida4.length; x++ ) {
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(ida4[x].parada.descripcion)
+            }
+            index++
+        }
+
+        if(vuelta4.length > 0){
+            let vuelta4txt = "Vuelta 4"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( vuelta4[0].linea == lineasramales[x].ramales[3] ) {
+                    vuelta4txt = lineasramales[x].ramalesComp[3].descripcion
+                    vuelta4txt = vuelta4txt.replace("LINEA "+lineasramales[x]._id,"")
+                    vuelta4txt = vuelta4txt.replace("REF 114", "")
+                    vuelta4txt = vuelta4txt.replace("(", "").replace(")", "")
+                    
+                    let aVuelta = vuelta4txt.split("-")                                                                
+                    if ( aVuelta.length > 1 ) {
+                        vuelta4txt = `${aVuelta[1]} - ${aVuelta[0]}`
+                    } else {
+                        vuelta4txt = aVuelta[0]
+                    }
+
+                    if ( vuelta4txt.indexOf("X ALSINA") >= 0 ) {
+                        vuelta4txt = vuelta4txt.replace("X ALSINA", "")
+                        vuelta4txt += "X ALSINA"
+                    }
+
+                    // if ( 
+                    //     vuelta4txt.indexOf("POR TERMINAL") >= 0 || 
+                    //     vuelta4txt.indexOf("POR AV SAVIO") >= 0 || 
+                    //     vuelta4txt.indexOf("NOCTURNO") >= 0
+                    // ) {
+                    //     vuelta4txt = lineasramales[x].vuelta
+                    //     vuelta4txt = vuelta4txt.replace("Hacia ", "")
+                    //     vuelta4txt += ` - ${lineasramales[x].ida.replace("Hacia ", "")} (${vuelta4txt.trim()})`
+                    // }
+                }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(vuelta4txt)
+            for ( x = 0; x < vuelta4.length; x++ ) {
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(vuelta4[x].parada.descripcion)
+            }
+            index++
+        }
+    }
+
+    if ( cant_ramales == 5 ){
+        var ramal1 = $("#cmbLinea").find(':selected').data('ramal1')
+        var ramal2 = $("#cmbLinea").find(':selected').data('ramal2')
+        var ramal3 = $("#cmbLinea").find(':selected').data('ramal3')
+        var ramal4 = $("#cmbLinea").find(':selected').data('ramal4')
+        var ramal5 = $("#cmbLinea").find(':selected').data('ramal5')
+
+        var obj1 = { 'sentido': 'ida', 'id_ramal': ramal1 }
+        var obj2 = { 'sentido': 'vuelta', 'id_ramal': ramal1 }
+        var obj3 = { 'sentido': 'ida', 'id_ramal': ramal2 }
+        var obj4 = { 'sentido': 'vuelta', 'id_ramal': ramal2 }
+        var obj5 = { 'sentido': 'ida', 'id_ramal': ramal3 }
+        var obj6 = { 'sentido': 'vuelta',  'id_ramal': ramal3 }
+        var obj7 = { 'sentido': 'ida', 'id_ramal': ramal4 }
+        var obj8 = { 'sentido': 'vuelta',  'id_ramal': ramal4 }
+        var obj9 = { 'sentido': 'ida', 'id_ramal': ramal5 }
+        var obj10 = { 'sentido': 'vuelta',  'id_ramal': ramal5 }
+
+        let ida = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj1)
+        let vuelta = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj2)
+        let ida2 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj3)
+        let vuelta2 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj4)
+        let ida3 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj5)
+        let vuelta3 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj6)
+        let ida4 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj7)
+        let vuelta4 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj8)
+        let ida5 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj9)
+        let vuelta5 = await $.post("https://gpsevhsa.com/paradasbysentidoramal", obj10)
+
+        ida = ida.data
+        vuelta = vuelta.data
+        ida2 = ida2.data
+        vuelta2 = vuelta2.data
+        ida3 = ida3.data
+        vuelta3 = vuelta3.data
+        ida4 = ida4.data
+        vuelta4 = vuelta4.data
+        ida5 = ida5.data
+        vuelta5 = vuelta5.data
+
+        $("#divContent").empty()
+
+        //
+        //
+        /////////           DIBUJO LAS FILAS Y COLUMNAS             //////
+        //
+        //
+
+        let cant_col = 0
+
+        if ( ida.length ) cant_col++
+        if ( vuelta.length ) cant_col++
+        if ( ida2.length ) cant_col++
+        if ( vuelta2.length ) cant_col++
+        if ( ida3.length ) cant_col++
+        if ( vuelta3.length ) cant_col++
+        if ( ida4.length ) cant_col++
+        if ( vuelta4.length ) cant_col++
+        if ( ida5.length ) cant_col++
+        if ( vuelta5.length ) cant_col++
+
+        var cant_filas = [
+            ida.length, 
+            vuelta.length, 
+            ida2.length, 
+            vuelta2.length, 
+            ida3.length, 
+            vuelta3.length, 
+            ida4.length, 
+            vuelta4.length, 
+            ida5.length, 
+            vuelta5.length
+        ]
+        
+        cant_filas.sort(sortNumber)
+        cant_filas.join(", ")
+        cant_filas = cant_filas[0]
+
+        for ( x = 0; x < cant_col; x++ ) {
+            html += `<th class='tHead' style='width: ${100 / cant_col}%'></th>`
+        }
+        
+        html += "</tr>"
+
+        for( x = 0; x < cant_filas; x++ ) {
+            html += "<tr>"
+            for ( y = 0; y < cant_col; y++ ) { html += "<td></td>" }
+            html += "</tr>"     
+        }
+
+        html += "</table>"
+        $("#divContent").append(html)
+
+        //
+        //
+        /////////           RELLENO LA TABLA CON INFO             //////
+        //
+        //
+
+        let index = 0
+        if ( ida.length ) {
+            let idatxt = "Ida"
+            for ( var x = 0; x < lineasramales.length; x++ ) {
+                if ( ida[0].linea == lineasramales[x].ramales[0] ) {
+                    idatxt = lineasramales[x].ramalesComp[0].descripcion
+                    idatxt = idatxt.replace("LINEA "+lineasramales[x]._id, "")
+                    idatxt = idatxt.replace("REF 114", "")
+                    idatxt = idatxt.replace("(", "")
+                    idatxt = idatxt.replace(")", "")
+                }
+
+                if ( idatxt.indexOf("X SAVIO") >= 0 ) {
+                    idatxt = idatxt.replace("X SAVIO", "")
+                    idatxt += "X SAVIO"
+                }
+                
+                if ( idatxt.indexOf("X TERMINAL") >= 0 ) {
+                    idatxt = idatxt.replace("X TERMINAL", "")
+                    idatxt += "X TERMINAL"
+                }
+
+                // if ( 
+                //     idatxt.indexOf("POR TERMINAL") >= 0 || 
+                //     idatxt.indexOf("POR AV SAVIO") >= 0 || 
+                //     idatxt.indexOf("NOCTURNO") >= 0 || 
+                //     idatxt.indexOf("SERVICIO NOCTURNO") >= 0
+                // ) {
+                //     idatxt = lineasramales[x].ida
+                //     idatxt = idatxt.replace("Hacia ", "")
+                //     idatxt += ` - ${lineasramales[x].vuelta.replace("Hacia ", "")} (${idatxt.trim().replace("SERVICIO ", "")})`
+                // }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(idatxt)
+            for ( x = 0; x < ida.length; x++ ) {
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(ida[x].parada.descripcion)
+            }
+            index++
+        }
+
+        if ( vuelta.length ) {
+            let vueltatxt = "Vuelta"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( vuelta[0].linea == lineasramales[x].ramales[0] ) {
+                    vueltatxt = lineasramales[x].ramalesComp[0].descripcion
+                    vueltatxt = vueltatxt.replace("LINEA "+lineasramales[x]._id, "")
+                    vueltatxt = vueltatxt.replace("REF 114", "")
+                    vueltatxt = vueltatxt.replace("(", "")
+                    vueltatxt = vueltatxt.replace(")", "")
+
+                    let aVuelta = vueltatxt.split("-")
+                    if ( aVuelta.length ) {
+                        vueltatxt = `${aVuelta[1]} - ${aVuelta[0]}`
+                    } else {
+                        vueltatxt = aVuelta[0]
+                    }
+
+                    if ( vueltatxt.indexOf("X SAVIO") >= 0 ) {
+                        vueltatxt = vueltatxt.replace("X SAVIO", "")
+                        vueltatxt += "X SAVIO"
+                    }
+                    
+                    if ( vueltatxt.indexOf("X TERMINAL") >= 0 ) {
+                        vueltatxt = vueltatxt.replace("X TERMINAL", "")
+                        vueltatxt += "X TERMINAL"
+                    }
+                }  
+
+                // if (
+                //     vueltatxt.indexOf("POR TERMINAL") >= 0 ||
+                //     vueltatxt.indexOf("POR AV SAVIO") >= 0 || 
+                //     vueltatxt.indexOf("NOCTURNO") >= 0
+                // ) {
+                //     vueltatxt = lineasramales[x].vuelta
+                //     vueltatxt = vueltatxt.replace("Hacia ", "")
+                //     vueltatxt += ` - ${lineasramales[x].ida.replace("Hacia ", "")} (${vueltatxt.trim()})`
+                // }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(vueltatxt)
+            for(var x = 0; x < vuelta.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(vuelta[x].parada.descripcion)
+            }
+            index++
+        }
+
+        if ( ida2.length ) {
+            let ida2txt = "Ida 2"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( ida2[0].linea == lineasramales[x].ramales[1] ) {
+                    ida2txt = lineasramales[x].ramalesComp[1].descripcion
+                    ida2txt = ida2txt.replace("LINEA "+lineasramales[x]._id, "")
+                    ida2txt = ida2txt.replace("REF 114", "")
+                    ida2txt = ida2txt.replace("(", "")
+                    ida2txt = ida2txt.replace(")", "")
+                }
+
+                if ( ida2txt.indexOf("X SAVIO") >= 0 ) {
+                    ida2txt = ida2txt.replace("X SAVIO", "")
+                    ida2txt += "X SAVIO"
+                }
+                
+                if ( ida2txt.indexOf("X TERMINAL") >= 0 ) {
+                    ida2txt = ida2txt.replace("X TERMINAL", "")
+                    ida2txt += "X TERMINAL"
+                }
+
+                // if (
+                //     ida2txt.indexOf("POR TERMINAL") >= 0 ||
+                //     ida2txt.indexOf("POR AV SAVIO") >= 0 ||
+                //     ida2txt.indexOf("NOCTURNO") >= 0 || 
+                //     ida2txt.indexOf("SERVICIO NOCTURNO") >= 0
+                // ) {
+                //     ida2txt = lineasramales[x].ida
+                //     ida2txt = ida2txt.replace("Hacia ", "")
+                //     ida2txt += ` - ${lineasramales[x].vuelta.replace("Hacia ", "")} (${ida2txt.trim().replace("SERVICIO ", "")})`
+                // }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(ida2txt)
+            for(var x = 0; x < ida2.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(ida2[x].parada.descripcion)
+            }
+            index++
+        }
+
+        if ( vuelta2.length ) {
+            let vuelta2txt = "Vuelta 2"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( vuelta2[0].linea == lineasramales[x].ramales[1] ) {
+                    vuelta2txt = lineasramales[x].ramalesComp[1].descripcion
+                    vuelta2txt = vuelta2txt.replace("LINEA "+lineasramales[x]._id, "")
+                    vuelta2txt = vuelta2txt.replace("REF 114", "")
+                    vuelta2txt = vuelta2txt.replace("(", "")
+                    vuelta2txt = vuelta2txt.replace(")", "")
+                    
+                    let aVuelta = vuelta2txt.split("-")
+                    if ( aVuelta.length ) {
+                        vuelta2txt = `${aVuelta[1]} - ${aVuelta[0]}`
+                    } else {
+                        vuelta2txt = aVuelta[0]
+                    }
+
+                    if ( vuelta2txt.indexOf("X SAVIO") >= 0 ) {
+                        vuelta2txt = vuelta2txt.replace("X SAVIO", "")
+                        vuelta2txt += "X SAVIO"
+                    }
+                    
+                    if ( vuelta2txt.indexOf("X TERMINAL") >= 0 ) {
+                        vuelta2txt = vuelta2txt.replace("X TERMINAL", "")
+                        vuelta2txt += "X TERMINAL"
+                    }
+                }
+            }
+            
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(vuelta2txt)
+            for(var x = 0; x < vuelta2.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(vuelta2[x].parada.descripcion)
+            }
+            index++
+        }
+
+        if ( ida3.length ) {
+            let ida3txt = "Ida 3"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( ida3[0].linea == lineasramales[x].ramales[2] ) {
+                    ida3txt = lineasramales[x].ramalesComp[2].descripcion
+                    ida3txt = ida3txt.replace("LINEA "+lineasramales[x]._id, "")
+                    ida3txt = ida3txt.replace("REF 114", "")
+                    ida3txt = ida3txt.replace("(", "")
+                    ida3txt = ida3txt.replace(")", "")
+
+                    if ( ida3txt.indexOf("X SAVIO") >= 0 ) {
+                        ida3txt = ida3txt.replace("X SAVIO", "")
+                        ida3txt += "X SAVIO"
+                    }
+                    
+                    if ( ida3txt.indexOf("X TERMINAL") >= 0 ) {
+                        ida3txt = ida3txt.replace("X TERMINAL", "")
+                        ida3txt += "X TERMINAL"
+                    }
+
+                    if ( 
+                        ida3txt.indexOf("POR TERMINAL") >= 0 || 
+                        ida3txt.indexOf("POR AV SAVIO") >= 0 || 
+                        ida3txt.indexOf("NOCTURNO") >= 0 || 
+                        ida3txt.indexOf("SERVICIO NOCTURNO") >= 0
+                    ) {
+                        let hacia = lineasramales[x].vuelta
+                        hacia = hacia.toUpperCase().replace("HACIA", "")
+                        ida3txt = `${hacia} - B° SOMISA ${ida3txt.trim()}`
+                    }
+                }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(ida3txt)
+            for(var x = 0; x < ida3.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(ida3[x].parada.descripcion)
+            }
+            index++ 
+        }
+
+        if ( vuelta3.length ) {
+            let vuelta3txt = "Vuelta 3"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( vuelta3[0].linea == lineasramales[x].ramales[2] ) {
+                    vuelta3txt = lineasramales[x].ramalesComp[2].descripcion
+                    vuelta3txt = vuelta3txt.replace("LINEA "+lineasramales[x]._id, "")
+                    vuelta3txt = vuelta3txt.replace("REF 114", "")
+                    vuelta3txt = vuelta3txt.replace("(", "")
+                    vuelta3txt = vuelta3txt.replace(")", "")
+                    
+                    let aVuelta = vuelta3txt.split("-")
+
+                    if ( aVuelta.length > 1) {
+                        vuelta3txt = `${aVuelta[1]} - ${aVuelta[0]}`
+                    } else {
+                        vuelta3txt = aVuelta[0]
+                    }
+
+                    if ( 
+                        vuelta3txt.indexOf("TERMINAL") >= 0 || 
+                        vuelta3txt.indexOf("SAVIO") >= 0
+                    ) {
+                        let desde = 'B° SOMISA'
+                        let hasta = lineasramales[x].vuelta.toUpperCase().replace("HACIA", "")
+                        vuelta3txt = `${desde} - ${hasta} ${vuelta3txt}`
+                    }
+                }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(vuelta3txt)
+            for(var x = 0; x < vuelta3.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(vuelta3[x].parada.descripcion)
+            }
+            index++
+        }
+
+        if ( ida4.length ) {
+            let ida4txt = "Ida 4"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( ida4[0].linea == lineasramales[x].ramales[3] ) {
+                    ida4txt = lineasramales[x].ramalesComp[3].descripcion
+                    ida4txt = ida4txt.replace("LINEA "+lineasramales[x]._id, "")
+                    ida4txt = ida4txt.replace("REF 114", "")
+                    ida4txt = ida4txt.replace("(", "")
+                    ida4txt = ida4txt.replace(")", "")
+
+                    if (
+                        ida4txt.indexOf("POR TERMINAL") >= 0 || 
+                        ida4txt.indexOf("POR AV SAVIO") >= 0 || 
+                        ida4txt.indexOf("NOCTURNO") >= 0 || 
+                        ida4txt.indexOf("SERVICIO NOCTURNO") >= 0
+                    ) {
+                        let desde = lineasramales[x].vuelta
+                        let hacia = "B° SOMISA" 
+                        desde = desde.toUpperCase().replace("HACIA", "")
+                        ida4txt = `${desde} - ${hacia} ${ida4txt.trim()}`
+                    }
+                }
+
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(ida4txt)
+            for ( x = 0; x < ida4.length; x++ ) {
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(ida4[x].parada.descripcion)
+            }
+            index++
+        }
+
+        if ( vuelta4.length ) {
+            let vuelta4txt = "Vuelta 4"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( vuelta4[0].linea == lineasramales[x].ramales[3] ) {
+                    vuelta4txt = lineasramales[x].ramalesComp[3].descripcion
+                    vuelta4txt = vuelta4txt.replace("LINEA "+lineasramales[x]._id, "")
+                    vuelta4txt = vuelta4txt.replace("REF 114", "")
+                    vuelta4txt = vuelta4txt.replace("(", "")
+                    vuelta4txt = vuelta4txt.replace(")", "")
+                    
+                    let aVuelta = vuelta4txt.split("-")
+                    if ( aVuelta.length > 1 ) {
+                        vuelta4txt = `${aVuelta[1]} - ${aVuelta[0]}`
+                    } else {
+                        vuelta4txt = aVuelta[0]
+                    }
+
+                    if ( 
+                        vuelta4txt.indexOf("TERMINAL") >= 0 || 
+                        vuelta4txt.indexOf("SAVIO") >= 0
+                    ) {
+                        let desde = 'B° SOMISA'
+                        let hasta = lineasramales[x].vuelta.toUpperCase().replace("HACIA", "")
+                        vuelta4txt = `${desde} - ${hasta} ${vuelta4txt}`
+                    }
+                }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(vuelta4txt)
+            for(var x = 0; x < vuelta4.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(vuelta4[x].parada.descripcion)
+            }
+            index++
+        }
+
+        if( ida5.length ) {
+            let ida5txt = "Ida 5"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( ida5[0].linea == lineasramales[x].ramales[4] ) {
+                    ida5txt = lineasramales[x].ramalesComp[4].descripcion
+                    ida5txt = ida5txt.replace("LINEA "+lineasramales[x]._id, "")
+                    ida5txt = ida5txt.replace("REF 114", "")
+                    ida5txt = ida5txt.replace("(", "")
+                    ida5txt = ida5txt.replace(")", "")
+
+                    if ( 
+                        ida5txt.indexOf("TERMINAL") >= 0 || 
+                        ida5txt.indexOf("SAVIO") >= 0
+                    ) {
+                        let hacia = lineasramales[x].vuelta
+                        hacia = hacia.toUpperCase().replace("HACIA", "")
+                        ida5txt = `B° SOMISA - ${hacia} ${ida5txt.trim()}`
+                    }
+                }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(ida5txt)
+            for(var x = 0; x < ida5.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(ida5[x].parada.descripcion)
+            }
+            index++
+        }
+
+        if( vuelta5.length ) {
+            let vuelta5txt = "Vuelta 5"
+            for ( x = 0; x < lineasramales.length; x++ ) {
+                if ( vuelta5[0].linea == lineasramales[x].ramales[4] ) {
+                    vuelta5txt = lineasramales[x].ramalesComp[4].descripcion
+                    vuelta5txt = vuelta5txt.replace("LINEA "+lineasramales[x]._id, "")
+                    vuelta5txt = vuelta5txt.replace("REF 114", "")
+                    vuelta5txt = vuelta5txt.replace("(", "")
+                    vuelta5txt = vuelta5txt.replace(")", "")
+                    
+                    let aVuelta = vuelta5txt.split("-")
+                    if ( aVuelta.length > 1 ) {
+                        vuelta5txt = `${aVuelta[1]} - ${aVuelta[0]}`
+                    } else {
+                        vuelta5txt = aVuelta[0]
+                    }
+
+                    if ( 
+                        vuelta5txt.indexOf("TERMINAL") >= 0 || 
+                        vuelta5txt.indexOf("SAVIO") >= 0
+                    ) {
+                        let desde = lineasramales[x].vuelta.toUpperCase().replace("HACIA", "")
+                        let hasta = 'B° SOMISA'
+                        vuelta5txt = `${desde} - ${hasta} ${vuelta5txt}`
+                    }
+                }
+            }
+
+            $("#tabla_prueba tr:eq(0) th:eq("+index+")").text(vuelta5txt)
+            for(var x = 0; x < vuelta5.length; x++){
+                $("#tabla_prueba tr:eq("+(x+1)+") td:eq("+index+")").text(vuelta5[x].parada.descripcion)
+            }
+            index++
+        }
+    }
+
+    //
+    //
+    /////////           OCULTO SI ES NOCTURNO O CEMAC             //////
+    //
+    //
+
+    $.each($("th"), function(i, item) {
+        if($(item).text().search("NOCTURNO") != -1 || $(item).text().search("CEMAC") != -1){
+            var index = $(item).index()
+            $("th:eq("+index+")").hide()
+            $.each($("tr"), function(i2, item2){ 
+                $(item2).find(`td:eq(${index})`).hide() 
+            })
+        }
+    })
+
+    $(".loading").css('display', 'none')
+}
+
+</script>
+
+
+</html>

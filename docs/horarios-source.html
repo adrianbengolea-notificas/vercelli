@@ -1,0 +1,775 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+    <title> Evhsa - Horarios de Lineas </title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=ABeeZee:400,400italic' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css' />
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Bootstrap  -->
+    <link href="/css/Site.css" rel="stylesheet" type="text/css" />
+    <link href="/css/button.css" rel="stylesheet" type="text/css" />
+    <link href="/css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/jquery.galleryview-3.0-dev.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/sweetalert2.min.css">
+    <link rel="stylesheet" href="/css/spinner.css">
+    <style type="text/css">
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        .modal-contenido {
+            width: 100vw;
+            height: 100vh;
+            left: 50vw;
+            top: 50vh;
+            position: relative;
+            font-size: 24px !important;
+        }
+
+        .modal {
+            z-index: 4000;
+            background-color: rgba(0, 0, 0, .8);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            pointer-events: none;
+            transition: all .5s;
+        }
+
+        .mostrar {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .input-error {
+            border: 1px solid #ff0000;
+            background-color: #ffeeee;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        textarea:focus {
+            background-color: #c8d8e3;
+        }
+
+        .msg-error {
+            color: red;
+        }
+
+        .alert-primary {
+            color: #004085;
+            background-color: #cce5ff;
+            border-color: #b8daff;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+
+        .alert {
+            position: relative;
+            padding: .75rem 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            border-radius: .25rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- MODAL CARGANDO -->
+    <div class="loading" style="display:none;">Cargando</div>
+
+    
+    
+
+    <div class="page">
+        <div id="header">
+            <div style="position:absolute;top:10px;left:0px;" class="no-print">
+                <a id="lnkHome" href="/"><img src="/images/logo.png" alt="Evhsa" style="vertical-align:middle;"
+                        border="0" /></a>
+            </div>
+
+            
+
+            <div id="menusuperiorderecho" class="no-print">
+                <ul id="topMenuList">
+                    <li>
+                        <a href="#">EMPRESA&nbsp;&nbsp;&nbsp;</a>
+                        <ul>
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Antecedentes">ANTECEDENTES SOCIALES</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Historia">HISTORIA</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Objetivos">OBJETIVOS</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/QuienesSomos">QUIENES SOMOS</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Servicios">EL SERVICIO</a></li> -->
+                            <!-- <li><a href="http://www.e-evhsa.com.ar/Home/Calidad">NORMAS Y POLÍTICAS DE CALIDAD</a></li> -->
+                            <li><a href="/Empresa/Antecedentes">ANTECEDENTES SOCIALES</a></li>
+                            <li><a href="/Empresa/Historia">HISTORIA</a></li>
+                            <li><a href="/Empresa/Objetivos">OBJETIVOS</a></li>
+                            <li><a href="/Empresa/QuienesSomos">QUIENES SOMOS</a></li>
+                            <li><a href="/Empresa/Servicios">EL SERVICIO</a></li>
+                            <li><a href="/Empresa/Calidad">NORMAS Y POLÍTICAS DE CALIDAD</a></li>
+                        </ul>
+                    </li>
+                    <li>|</li>
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="http://www.e-evhsa.com.ar/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;
+                    </li> -->
+                    <li>&nbsp;&nbsp;&nbsp;<a href="/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;
+                    </li>
+                    <li>|</li>
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a
+                            href="http://www.e-evhsa.com.ar/Contacto?m=CONSULTA">CONTACTO</a>&nbsp;&nbsp;&nbsp;</li> -->
+                    <!-- PARA WEB NODE -->
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;</li> -->
+                    <!-- PARA WEB PERI -->
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="http://www.e-evhsa.com.ar/Curriculum/CargarCV">RRHH</a>&nbsp;&nbsp;&nbsp;</li> -->
+                    <!-- <li>|</li> -->
+                    <!-- PARA WEB NODE -->
+                    <li>&nbsp;&nbsp;&nbsp;<a href="/Contacto?m=CONSULTA">CONTACTO</a></li>
+                    <!-- PARA WEB PERI -->
+                    <!-- <li>&nbsp;&nbsp;&nbsp;<a href="http://www.e-evhsa.com.ar/Contacto?m=CONSULTA">CONTACTO</a>&nbsp;&nbsp;&nbsp;</li> -->
+                </ul>
+            </div>
+
+            <!-- Esto es para que tome el MARGIN del div siguiente -->
+            <div style="clear:both;"></div>
+
+            <div id="submenusuperiorderecho" class="no-print">
+                <ul id="topSubMenuList">
+                    <!-- PARA WEB NODE -->
+                    <li><a href="/Horarios">HORARIOS</a></li>
+                    <!-- PARA WEB PERI -->
+                    <!-- <li><a href="http://www.e-evhsa.com.ar/SalidasCabecera/Horarios">HORARIOS</a></li> -->
+                </ul>
+            </div>
+        </div>
+
+        <div id="main">
+            
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/south-street/jquery-ui.css" />
+<link rel="stylesheet" href="/css/horarios.css">
+<style>
+    .tHead { font-size: 12px!important; color: black!important; background-color: #a0a0a0!important; text-align: center!important;  }
+    table td { height: 26px!important; font-size: small!important; padding: 3px!important; }
+</style>
+
+<div class="imageOnTop no-print" style="overflow: hidden;">
+    <img id="imgHeader" src="/Uploads/hdr_horarios.jpg" alt="Imagen institucional" title="EVHSA" border="0" style="display: inline;">
+</div>
+<div class="pageBody">
+    <h1 class="no-print"><span class="menu">HORARIOS.</span>&nbsp;<span class="submenu">Cronograma de horarios por línea.</span></h1>
+    <!-- <fieldset class="no-print" style="margin-bottom:5px;">
+        10/02/2021 Fede Soffredi: Fausto me pidio que desabilite esta utilidad y que ponga un cartel
+        <div style="display: flex;">
+            <img src="/images/uderconstruction.png" style="height: 140px">
+            <div style="padding-top: 8px;">
+                <span style="font-size: 20px;margin-left: 20px;font-weight: 600;color: #f00;">Momentaneamente fuera de servicio por mantenimiento</span>
+                <br>
+                <span style="font-size: 15px;margin-left: 20px;color: #928383;font-weight: 600;">Puede consultar los horarios en nuestras redes sociales</span>
+                <br>
+                <a href="https://es-la.facebook.com/empVercelli/" style="margin-left: 20px;"><img src="/images/facebook.png" style="height: 35px;margin: 10px 0;"></a>
+                <a href="https://www.instagram.com/evhsatransporte/?hl=es" style="margin-left: 30px;"><img src="/images/instagram.png" style="height: 35px;margin: 10px 0;"></a>
+                <br>
+                <span style="font-size: 15px;margin-left: 20px;color: #444040;">Seguinos en nuestras redes sociales para manternte informados con las ultimas novedades.</span>
+            </div>
+        </div>
+    </fieldset> -->
+    <fieldset class="no-print" style="margin-bottom:5px;">
+        <legend>Filtros de búsqueda</legend>
+        <div style="display: flex; align-items: center; margin-right: 5px;">
+            <div style="margin-right: 15px;">
+                <text>Fecha:</text>
+                <input type="text" id="dtpFecha" style="width: 80px; text-align: center;" autocomplete="off">
+                <img class="ui-datepicker-trigger" src="/images/ico_calendar.png">
+                <span class="msg-error errores" id="fecha-error"></span>
+            </div>
+            <div style="margin-right: 5px;">
+                <text>Linea:</text>
+                <select id="cmbLineas" name="cmbLineas" style="width:auto;cursor: no-drop;">
+                    <option value="">Seleccione..</option>
+                    
+                        <option value="1" data-nro="227">227</option>
+                    
+                        <option value="2" data-nro="230">230</option>
+                    
+                        <option value="3" data-nro="342">342</option>
+                    
+                        <option value="4" data-nro="374">374</option>
+                    
+                        <option value="5" data-nro="375">375</option>
+                    
+                        <option value="6" data-nro="500">500</option>
+                    
+                        <option value="7" data-nro="501">501</option>
+                    
+                        <option value="8" data-nro="502">502</option>
+                    
+                        <option value="9" data-nro="503">503</option>
+                    
+                        <option value="10" data-nro="504">504</option>
+                    
+                        <option value="11" data-nro="505">505</option>
+                    
+                        <option value="12" data-nro="506">506</option>
+                    
+                        <option value="13" data-nro="507">507</option>
+                    
+                        <option value="14" data-nro="510">510</option>
+                    
+                        <option value="15" data-nro="512">512</option>
+                    
+                        <option value="16" data-nro="520">520</option>
+                    
+                        <option value="17" data-nro="521">521</option>
+                    
+                        <option value="18" data-nro="522">522</option>
+                    
+                        <option value="19" data-nro="523">523</option>
+                    
+                        <option value="20" data-nro="524">524</option>
+                    
+                        <option value="21" data-nro="1342">1342</option>
+                    
+                        <option value="22" data-nro="2342">2342</option>
+                    
+                        <option value="23" data-nro="3342">3342</option>
+                    
+                        <option value="24" data-nro="4342">4342</option>
+                    
+                        <option value="25" data-nro="500R">500R</option>
+                    
+                </select>
+            </div>
+            <input type="submit" value="Ver horarios" class="SubmitButton noprint" id="btnBuscar">
+        </div>
+    </fieldset>
+    <!-- <p class="no-print" id="no_horarios" style="display: none;">No hay horarios cargados para los filtros seleccionados.</p>
+    <p id="si_horarios" class="no-print" style="margin-bottom:0px; display:none;">A continuación se listan los horarios
+        para la línea seleccionada agrupados por tipo de servicio, días y su respectiva cabecera de salida:</p>
+    <div class="no-print horarios_rojo" style="display: none; color:#ff3e3e;background-color: #fec0c0;border: 1px solid #ff3e3e; padding:5px;margin:5px auto;">
+        Los horarios en color colorado poseen referencia. Hacer click arriba del mismo para conocer la información.
+    </div>
+    <table id="tblServicios" cellpadding="0" cellspacing="0" class="Horarios" style="display: none;">
+        <tbody id="tbody">
+            <tr id="trServicios"></tr>
+            <tr id="trTable"></tr>
+        </tbody>
+    </table>
+    <div id="referencias" style="display: none;">
+        <h5 style="margin-bottom:0px;">Referencias sobre los horarios</h5>
+        <ul style="font-size:12px;" id="ref_comments"></ul>
+    </div>
+    <table id="tblPtosRef" style="display:none;" cellpadding="0" cellspacing="0" class="PtosRefencias">
+        <tbody>
+            <tr>
+                <th class="HeaderL0">PUNTOS DE REFERENCIA</th>
+            </tr>
+            <tr>
+                <td>
+                    <table id="tblTiposDiasPtoRef" cellpadding="0" cellspacing="0" style="width:100%;">
+                        <tbody>
+                            <tr id="PtosDias"></tr>
+                            <tr id="PtosTablas"></tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table> -->
+    <div id="divHorarios" style="display: flex;"></div>
+    <p id="pAvisoError" style="display: none;">No hay paradas cargados para los filtros seleccionados.</p>
+</div>
+
+
+        </div>
+
+        <div style="clear:both;"></div>
+
+        <div id="footer" class="no-print">
+            <ul class="verticalUL" style="width:120px;">
+                <li><a href="/Empresa/Historia">EMPRESA</a></li>
+                <li><a href="/Curriculum/CargarCV">RRHH</a></li>
+                <li><a href="/Contacto?m=CONSULTA">CONTACTO</a></li>
+            </ul>
+
+            <ul class="verticalUL" style="width:120px;">
+                <li><a href="/Horarios">HORARIOS</a></li>
+                <li><a href="/Recorridos">RECORRIDOS</a></li>
+                <li><a href="/Paradas">PARADAS</a></li>
+            </ul>
+
+            <ul class="verticalUL" style="width:120px;">
+                <li>&nbsp;</li>
+            </ul>
+
+            <ul class="verticalUL" style="width:160px;">
+                <li><a href="/ObjetosPerdidos">OBJETOS PERDIDOS</a></li>
+                <li><a href="/Contacto?m=RECLAMO">RECLAMOS Y SUGERENCIAS</a></li>
+                <li><a href="/PreguntasFrecuentes/Faqs">PREGUNTAS FRECUENTES</a></li>
+            </ul>
+
+            <div class="box">
+                <div class="contentLeft">
+                    EMPRESA VERCELLI HNOS S.A. Av. Perón 2425. San Nicolás. Bs As. Argentina.<br />
+                    Línea telefónica <b>4449400</b>. Por horarios y servicios <b>4449450</b>. Mail:
+                    evhsa@e-evhsa.com.ar<br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal_novedad" title="Novedades en Evhsa" style="display:none;"></div>
+
+    <div id="underconstruction-window" title="Pantalla en construcción" style="display:none;">
+        <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Pantalla en construcción
+        </p>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script src="/js/jquery.js" type="text/javascript"></script>
+<script src="/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+<script src="/js/jquery.unobtrusive-ajax.min.js" type="text/javascript"></script>
+<script src="/js/jquery.ui.effect.js" type="text/javascript"></script>
+<script src="/js/jquery.ui.effect-fade.js" type="text/javascript"></script>
+<script src="/js/startup_master.js" type="text/javascript"></script>
+<script src="/js/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="/js/jquery.galleryview-3.0-dev.js" type="text/javascript"></script>
+<script src="/js/jquery.timers-1.2.js" type="text/javascript"></script>
+<script src="/js/jquery.slides.min.js" type="text/javascript"></script>
+<script src="/js/startup.config.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+<script src="/js/sweetalert2.min.js"></script>
+<script>
+
+    $(function () {
+        $(".ver").on("click", function () {
+            var data = $(this).data('src');
+            window.open(data);
+        });
+        $("#modal_novedad, #modalObjetosEncontrados").dialog({
+            position: "top",
+            autoOpen: false,
+            modal: true,
+            dialogClass: 'alert',
+            buttons:
+                [{
+                    text: 'Cerrar',
+                    id: 'btnCloseNews',
+                    click: function () { $(this).dialog("close"); }
+                }],
+            open: function (event, ui) { $("body").css("overflow", "hidden") },
+            close: function (event, ui) { $("body").css("overflow", "auto") },
+            show: { effect: "fade", duration: 500 },
+            hide: { effect: "fade", duration: 200 }
+        });
+        $('#btnCloseNews').focus(function () { $(this).blur() });
+        $("#accordion").accordion({ heightStyle: "content" });
+        $.datepicker.regional['es'] = {
+            closeText: 'Cerrar',
+            prevText: '< Anterior',
+            nextText: 'Siguiente >',
+            currentText: 'Hoy',
+            monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+            monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+            dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+            dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
+            dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+            weekHeader: 'Sm',
+            dateFormat: 'dd/mm/yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ''
+        };
+        $.datepicker.setDefaults($.datepicker.regional['es']);
+    });
+    function setCharsLeft(src, tgt) {
+        var len = src.val().length;
+        if (len >= 8000) {
+            src.val(src.value.substring(0, 8000));
+        } else {
+            var characters = 8000 - len;
+            tgt.text('Caracteres restantes: ' + characters);
+        }
+    }
+
+    $(".btnNovedad").on("click", async function () {
+        let id = $(this).data("id");
+        const novedad = await $.getJSON("/Novedades/GetNovedadById/" + id);
+        let html = "<div style='max-height: 70vh; overflow-y: scroll;'><h2>" + novedad[0].Titulo + "</h2>";
+        let contImg = 0;
+        if (novedad[0].PathImagen1 != null || novedad[0].PathImagen2 != null || novedad[0].PathImagen3 != null || novedad[0].PathImagen4 != null || novedad[0].PathImagen5 != null) {
+            html += `<div class="photoNews">
+                <ul id="myGallery">`;
+            if (novedad[0].PathImagen1 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen1 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen1 + `" data-description="" border="0" title="` + novedad[0].NombreImagen1 + `" alt="` + novedad[0].NombreImagen1 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen2 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen2 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen2 + `" data-description="" border="0" title="` + novedad[0].NombreImagen2 + `" alt="` + novedad[0].NombreImagen2 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen3 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen3 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen3 + `" data-description="" border="0" title="` + novedad[0].NombreImagen3 + `" alt="` + novedad[0].NombreImagen3 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen4 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen4 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen4 + `" data-description="" border="0" title="` + novedad[0].NombreImagen4 + `" alt="` + novedad[0].NombreImagen4 + `"/></li>`;
+                contImg++;
+            }
+            if (novedad[0].PathImagen5 != null) {
+                html += `<li><img src="/Uploads/Novedades/` + novedad[0].PathImagen5 + `" data-frame="/Uploads/Novedades/` + novedad[0].PathImagen5 + `" data-description="" border="0" title="` + novedad[0].NombreImagen5 + `" alt="` + novedad[0].NombreImagen5 + `"/></li>`;
+                contImg++;
+            }
+            html += `</ul> </div>`;
+        }
+
+        html += "<h3>" + novedad[0].Brief + "</h3>" +
+            novedad[0].Descripcion+"</div>";
+        $("#modal_novedad").html(html);
+        $("#modal_novedad").dialog("option", "width", "650").dialog("open");
+
+        if (contImg > 0) {
+            let estado = false;
+            if (contImg > 1) estado = true;
+            $('#myGallery').galleryView({
+                panel_width: 350,
+                panel_height: 275,
+                panel_animation: 'crossfade',
+                panel_scale: 'fit',
+                show_captions: true,
+                autoplay: estado,
+                show_panel_nav: estado,
+                show_filmstrip: estado,
+                show_filmstrip_nav: false
+            });
+        }
+    });
+
+</script>
+
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#dtpFecha").datepicker({
+            showAnim: "slideDown",
+            changeMonth: true,
+            changeYear: true,
+            monthNamesShort: [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ],
+            dayNamesMin: [ "Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa" ],
+            yearRange: "-60:+0",
+        })
+        $("#dtpFecha").val(generateTodayDate())
+    })
+
+    $('#btnBuscar').on('click', async function(){
+        $(".loading").css('display', 'block')
+        if($('#cmbLineas').val().length){
+            let fecha = $('#dtpFecha').val(),
+                nroLinea = $('#cmbLineas option:selected').data('nro')
+            res = await $.post("/Horarios/Filtro", { fecha, nroLinea })
+            !res.data.length ? $('#pAvisoError').show() : $('#pAvisoError').hide(), CargarTabla(res.data, res.rows)
+        }else{
+            $(".loading").css('display', 'none')
+            $('#pAvisoError').show()
+        }
+    })
+
+    CargarTabla = (data, rows) => {
+        let html='', ult=null
+
+        for(let i=0; i<data.length; i++){
+            html +=
+            `<table style="width: 100%; border: 1px solid #487251;">
+                <thead>
+                    <tr>
+                        <th class="tHead">${data[i][0].cabeceraTxt}</th>
+                    </tr>
+                </thead>
+                <tbody>`
+                    for(let h=0; h<data[i].length; h++) html += `<tr style="border: 1px solid #487251; text-align:center;"><td>${data[i][h].horaTxt}</td></tr>`, ult = h
+                    if(rows != data[i].length) for(let r=ult; r<rows-1; r++) html += `<tr style="border: 1px solid #487251;"><td></td></tr>`
+                html += `
+                </tbody>
+            </table>`
+        }
+        $('#divHorarios table').remove()
+        $(".loading").css('display', 'none')
+        $('#divHorarios').html(html)
+    }
+
+
+
+
+    // $(document).ready(function () {
+    //     $("#comments-window").dialog({
+    //         resizable: false,
+    //         height: 160,
+    //         width: 250,
+    //         modal: true,
+    //         autoOpen: false,
+    //         show: { effect: "fade", duration: 500 },
+    //         hide: { effect: "fade", duration: 200 },
+    //         buttons: [{
+    //             text: 'Cerrar',
+    //             id: 'btnCerrar',
+    //             click: function () { $(this).dialog("close"); }
+    //         }]
+    //     });
+    //     $('.ui-dialog').css('font-size', '11px');
+    //     $('#btnCerrar').focus(function () { $(this).blur() });
+        // GetLineas();
+    // });
+
+    // function showMessage(el) {
+    //     let strMessage = $(el).attr("data-mensaje");
+    //     var msg = `
+    //         <p>
+    //             <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+    //             ${strMessage}
+    //         </p>
+    //     `;
+    //     $('#comments-window').html(msg).dialog("option", "resizable", true).dialog('open');
+    // }
+
+    // function sortNumber(a, b) {
+    //     return b - a;
+    // }
+
+    // async function GetLineas() {
+    //     const data = await $.getJSON("/Horarios/Lineas");
+    //     let html = `<option value="">Seleccione..</option>`
+    //     // console.log(data);
+    //     data.map(linea => {
+    //         switch (linea.IdLinea) {
+    //             case 44:
+    //                 html += `<option value="${linea.IdLinea}">342 A</option>`;
+    //                 break;
+    //             case 69:
+    //                 html += `<option value="${linea.IdLinea}">342 B</option>`;
+    //                 break;
+    //             case 70:
+    //                 html += `<option value="${linea.IdLinea}">342 C</option>`;
+    //                 break;
+    //             default:
+    //                 html += `<option value="${linea.IdLinea}">${linea.NroLinea}</option>`
+    //                 break;
+    //         }
+    //     });
+    //     $("#cmbLineas").html(html);
+    // }
+
+    // async function FiltroHorarios() {
+    //     $("#trServicios, #PtosDias, #PtosTablas, #trTable, #comentarios, #horarios").html("");
+    //     $("#referencias, .horarios_rojo, #si_horarios, .horarios_rojo, #tblPtosRef").hide();
+
+    //     let idLinea = $('#cmbLineas').val();
+
+    //     if (!idLinea) {
+    //         location.reload();
+    //         return;
+    //     }
+
+    //     if (idLinea == "44") idLinea = "84";
+    //     $(".loading").css('display', 'block');
+    //     const data = await $.post("/Horarios/Filtro", { idLinea });
+    //     $(".loading").css('display', 'none');
+
+    //     // console.log(data);
+    //     // SI NO HAY HORARIOS CARGADOS REFRESCO
+    //     if (data.error) {
+    //         // location.reload();
+    //         $(".loading").css('display', 'none');
+    //         return;
+    //     }
+
+    //     // MUESTRO LOS CARTELES
+    //     $("#si_horarios").show();
+    //     $(".horarios_rojo").show();
+    //     $("#no_horarios").hide();
+
+    //     // ********* TABLA HORARIOS ********* //
+
+    //     // ARMO ARRAY CON LOS TIPOS DE SERVICIOS
+    //     var TiposServicios = _.chain(data.Salidas).groupBy("TipoServicio_Desc").map(function (currentItem) {
+    //         return currentItem;
+    //     }).value();
+
+    //     $.each(TiposServicios, (index, item) => {
+    //         var html = '<th class="HeaderL0" ';
+    //         if (index == 0) html += 'style="border-left: 1px solid #487251;" ';
+    //         html += '>' + item[index].TipoServicio_Desc + '</th>'
+    //         $("#trServicios").append(html);
+
+    //         // DIAS SEGUN SERVICIO
+    //         var TiposDias = _.chain(TiposServicios[index]).groupBy("TipoDias_Desc").map(function (currentItem) {
+    //             return currentItem;
+    //         }).value();
+
+    //         html = '<td style="vertical-align: top;">' +
+    //             '<table id="tblDias" cellpadding="0" cellspacing="0">' +
+    //             '<tbody><tr>';
+
+
+    //         $.each(TiposDias, (index2, item2) => {
+    //             html += '<th class="HeaderL1" ';
+    //             if (index2 == 0 && index == 0) html += 'style="border-left: 1px solid #487251;"';
+    //             html += '>' + item2[index2].TipoDias_Desc + '</th>';
+    //         });
+    //         html += '</tr><tr>';
+
+    //         var TiposCabeceras;
+    //         var TiposHorarios;
+
+    //         // CABECERAS Y HORARIOS SEGUN DIA Y SERVICIO
+    //         $.each(TiposDias, (index2, item2) => {
+    //             TiposCabeceras = _.chain(TiposDias[index2]).groupBy("Cabecera_Desc").map(function (currentItem) {
+    //                 return currentItem;
+    //             }).value();
+
+    //             html += '<td style="vertical-align: top">' +
+    //                 '<table id="tblCabeceras" cellpadding="0" cellspacing="0">' +
+    //                 '<tbody><tr>'
+
+    //             var html2 = "<tr>";
+
+    //             $.each(TiposCabeceras, (index3, item3) => {
+    //                 // console.log(item3)
+    //                 // console.log("item3[index3].Cabecera_Desc ", item3[0].Cabecera_Desc)
+    //                 html += '<th class="HeaderL2">' + item3[0].Cabecera_Desc + '</th>'
+    //                 html2 += "<td style='vertical-align: top;'><table id='tblhorarios' class='tblhorarios' cellpadding='0' cellspacing='0'><tbody class='tbodyhorarios'>"
+    //                 TiposCabeceras[index3] = _.sortBy(TiposCabeceras[index3], ['HoraSalida', 'hora']);
+    //                 $.each(TiposCabeceras[index3], (index4, item4) => {
+    //                     html2 += "<tr>" +
+    //                         "<td class='border'>" +
+    //                         "<p class='fstoprint' style='text-align: center; font-weight: normal; margin: 3px 0px;'>";
+    //                     if (item4.Comentario != null && item4.Comentario != "") {
+    //                         html2 += `<a class='comentario' data-mensaje='${item4.Comentario}' onclick="showMessage(this)" style='color:red;' title='Haga clic aquí para ver el comentario'>* ${item4.HoraSalida}:${item4.hora} hs</a>`;
+    //                     } else {
+    //                         if (item4.Rampa != false) html2 += '<img src="/images/ico_discapacitado.png" title="Unidad equipada con rampa para discapacitado" alt="Unidad equipada con rampa para discapacitado" border="0" width="16"> ';
+    //                         html2 += item4.HoraSalida + ":" + item4.hora + " hs";
+    //                     }
+    //                     html2 += "</p></td></tr>";
+    //                 });
+    //                 html2 += "</tbody></table></td>";
+    //             });
+    //             html += '</tr>' + html2 + "</tr></tbody></table></td>";
+    //         });
+    //         html += '</tr></tbody></table></td>';
+    //         $("#trTable").append(html);
+    //     });
+
+    //     var Headers = 100 / $(".HeaderL2").length;
+    //     $(".HeaderL2").css("width", Headers + "%");
+
+    //     var CantidadFilas = [];
+    //     $.each($(".tblhorarios"), (index, item) => {
+    //         CantidadFilas.push($(item).find("tr").length);
+    //     });
+
+    //     // CALCULO LA TABLA QUE TIENE MAYOR CANTIDAD DE FILAS
+    //     CantidadFilas.sort(sortNumber);
+    //     CantidadFilas.join(", ")
+    //     CantidadFilas = CantidadFilas[0];
+
+    //     // RELLENO LAS FILAS VACIAS
+    //     $.each($(".tbodyhorarios"), (index, item) => {
+    //         var len = CantidadFilas - $(item).find("td").length;
+    //         if (len > 0) {
+    //             for (x = 0; x < len; x++) {
+    //                 $(item).append("<tr><td class='border'></td></tr>");
+    //             }
+    //         }
+    //     });
+
+    //     $(".tbodyhorarios:eq(0) td").css("border-left", "1px solid #487251");
+    //     $(".HeaderL2:eq(0)").css("border-left", "1px solid #487251");
+    //     $(".comentario").hover(function () {
+    //         $(this).css("cursor", "pointer");
+    //     });
+
+    //     // ********* REFERENCIAS SOBRE LOS HORARIOS ********* //
+    //     if (data.referencias.length > 0) {
+    //         $("#referencias").show();
+    //         var comentarios = ""
+    //         $.each(data.referencias, (index, item) => {
+    //             comentarios += "<li><b>Horario " + item.HoraSalida + ":" + item.hora + " hs.</b>: " + item.Comentario + "</li>";
+    //         });
+    //         $("#ref_comments").html(comentarios);
+    //     }
+
+    //     // ********* PUNTOS DE REFERENCIAS ********* //
+    //     if (data.puntos.length > 0) {
+    //         $("#tblPtosRef").show();
+    //         var PtosTiposServicios = _.chain(data.puntos).groupBy("Descripcion").map(function (currentItem) {
+    //             return currentItem;
+    //         }).value();
+
+    //         var html = "";
+    //         var html2 = "";
+    //         $.each(PtosTiposServicios, (index, item) => {
+    //             html += '<th class="HeaderL1" style="width: ' + 100 / PtosTiposServicios.length + '%">' + item[index].Descripcion + '</th>'
+    //             html2 = '<td>' +
+    //                 '<table id="tblCabecerasPtosRef" cellpadding="0" cellspacing="0">' +
+    //                 '<tbody>' +
+    //                 '<tr>';
+    //             var PtosTitulo = _.chain(PtosTiposServicios[index]).groupBy("DescripcionCabecera").map(function (currentItem) {
+    //                 return currentItem;
+    //             }).value();
+
+    //             $.each(PtosTitulo, (index2, item2) => {
+    //                 html2 += '<th class="HeaderL2" style="width: ' + 100 / PtosTitulo.length + '%">' + item2[index2].DescripcionCabecera + '</th>';
+    //             });
+
+    //             html2 += '</tr><tr>';
+
+    //             var html3 = "";
+    //             $.each(PtosTitulo, (index2, item2) => {
+    //                 html3 += '<td>' +
+    //                     '<table id="tblPuntos" cellpadding="0" cellspacing="0">' +
+    //                     '<tbody>';
+    //                 $.each(PtosTitulo[index2], (index3, item3) => {
+    //                     html3 += '<tr><td class="PtoRefClass">- ' + item3.Parada + '&nbsp;&nbsp;&nbsp;' + item3.TiempoLlegada + ' min.</td></tr>';
+    //                 });
+    //                 html3 += '</tbody></table></td>';
+    //             });
+    //             html2 += html3 + '</tr>';
+    //             $("#PtosTablas").append(html2);
+    //         });
+    //         $("#PtosDias").append(html);
+    //     }
+    // }
+</script>
+
+
+</html>
