@@ -13,12 +13,21 @@ App web: `vercellihnos` (`1:641113588096:web:ec4453a34669f5da010165`)
 5. Crear `administrators/{uid}` con `{ "active": true, "role": "admin", "email": "..." }`.
 6. `firebase deploy --only firestore:rules,storage`
 
-## Producción (cuando haya autorización)
+## App Hosting (Next.js)
 
-Next.js no debe servirse como sitio estático puro si se usan API routes. Opciones:
+Este sitio usa API routes, así que se publica con **Firebase App Hosting**, no como estático.
 
-- **Firebase App Hosting** (recomendada para Next.js).
-- Cloud Run + rewrites de Firebase Hosting.
+1. Conectar el repositorio `adrianbengolea-notificas/vercelli` en Firebase Console → App Hosting.
+2. Backend: `vercelli`, rama `main`, directorio raíz `/`.
+3. Cada `git push` a `main` dispara un rollout.
+4. La URL inicial será `https://vercelli--vercelli-2665c.<region>.hosted.app`.
+
+Despliegue local (requiere la cuenta con permisos del proyecto):
+
+```bash
+firebase deploy --only apphosting --project vercelli-2665c
+firebase deploy --only firestore:rules,storage --project vercelli-2665c
+```
 
 No cambiar DNS ni el correo de `e-evhsa.com.ar` sin autorización explícita. El MX debe permanecer intacto durante cualquier corte de dominio.
 
